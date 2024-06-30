@@ -70,7 +70,7 @@ public class EnemyManeger : MonoBehaviour
     private void ATK2()
     {
         attack2.SetActive(true);
-        Invoke("EndATK", 0.6f);
+        Invoke("EndATK", 0.4f);
     }
     private void EndATK()
     {

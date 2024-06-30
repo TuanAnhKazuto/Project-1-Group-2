@@ -11,6 +11,8 @@ TagManager:
   - Lamp
   - Onigiri
   - Sakekasu
+  - EnemyATK
+  - BossATK
   layers:
   - Default
   - TransparentFX
