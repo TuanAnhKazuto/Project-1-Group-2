@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ground
+  - Coin
+  - Enemy
+  - Boss
+  - Lamp
+  - Onigiri
+  - Sakekasu
   layers:
   - Default
   - TransparentFX
@@ -40,4 +47,22 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BackGround
+    uniqueID: 719477893
+    locked: 0
+  - name: Ground
+    uniqueID: 2564534091
+    locked: 0
+  - name: Item
+    uniqueID: 2373114009
+    locked: 0
+  - name: Player
+    uniqueID: 3016818571
+    locked: 0
+  - name: Enemy
+    uniqueID: 2478425103
+    locked: 0
+  - name: UI
+    uniqueID: 1972940853
     locked: 0
