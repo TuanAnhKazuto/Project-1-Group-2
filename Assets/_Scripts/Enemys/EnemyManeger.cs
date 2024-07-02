@@ -1,15 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class EnemyManeger : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 2f;
+    private float moveSpeed = 2f;
     [SerializeField] private float leftPosition;
     [SerializeField] private float rightPosition;
     private int moveDiretion = 1;
+    [SerializeField] protected float timeStartATK;
+    [SerializeField] protected float timEndATK1;
     [SerializeField] private GameObject attack1;
+    [SerializeField] protected float timeNextATK2;
     [SerializeField] private GameObject attack2;
+    [SerializeField] protected float timeEndATK;
+    [SerializeField] protected float timeResetSeePlayer;
     Animator animator;
 
     private void Update()
@@ -45,9 +51,9 @@ public class EnemyManeger : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             moveSpeed = 0;
-            Invoke("StartATK", 0.7f);
+            Invoke("StartATK", timeStartATK);
             animator.SetBool("isSeePlayer", true);
-            Invoke("ResetSeePlayer", 2f);
+            Invoke("ResetSeePlayer", timeResetSeePlayer);
         }
     }
 
@@ -60,17 +66,17 @@ public class EnemyManeger : MonoBehaviour
     private void StartATK()
     {
         attack1.SetActive(true);
-        Invoke("ATK1", 0.6f);
+        Invoke("ATK1",  timEndATK1);
     }
     private void ATK1()
     {
         attack1.SetActive(false);
-        Invoke("ATK2", 0.6f);
+        Invoke("ATK2", timeNextATK2);
     }
     private void ATK2()
     {
         attack2.SetActive(true);
-        Invoke("EndATK", 0.4f);
+        Invoke("EndATK", timeEndATK);
     }
     private void EndATK()
     {
