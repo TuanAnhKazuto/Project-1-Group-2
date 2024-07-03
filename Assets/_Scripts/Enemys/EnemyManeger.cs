@@ -16,36 +16,24 @@ public class EnemyManeger : MonoBehaviour
     [SerializeField] private GameObject attack2;
     [SerializeField] protected float timeEndATK;
     [SerializeField] protected float timeResetSeePlayer;
+    [SerializeField] private float maxHp = 3;
+    private float curHp;
     Animator animator;
+    private void Start()
+    {
+        curHp = maxHp;
+        animator = GetComponent<Animator>();
+        animator.SetBool("isSeePlayer", false);
+    }
 
     private void Update()
     {
         EnemyMove();
+        GetAttack();
     }
 
-    public void EnemyMove()
-    {
-        transform.Translate(Vector2.right *  moveSpeed * moveDiretion * Time.deltaTime);
-        Vector2 scale = transform.localScale;
-        if(transform.position.x <= leftPosition)
-        {
-            scale.x = 1;
-            moveDiretion = 1;
-        }
-        if(transform.position.x >= rightPosition)
-        {
-            scale.x = -1;
-            moveDiretion = -1;
-        }
-        transform.localScale = scale;
 
-    }
-
-    private void Start()
-    {
-        animator = GetComponent<Animator>();
-        animator.SetBool("isSeePlayer", false);
-    }
+    //Attack
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -53,13 +41,12 @@ public class EnemyManeger : MonoBehaviour
             moveSpeed = 0;
             Invoke("StartATK", timeStartATK);
             animator.SetBool("isSeePlayer", true);
-            Invoke("ResetSeePlayer", timeResetSeePlayer);
+            Invoke("ResetSpeed", timeResetSeePlayer);
         }
     }
 
-    private void ResetSeePlayer()
+    private void ResetSpeed()
     {
-        animator.SetBool("isSeePlayer", false);
         moveSpeed = 2f;
     }
 
@@ -81,5 +68,46 @@ public class EnemyManeger : MonoBehaviour
     private void EndATK()
     {
         attack2.SetActive(false);
+    }
+
+
+    //Move
+    public void EnemyMove()
+    {
+        transform.Translate(Vector2.right * moveSpeed * moveDiretion * Time.deltaTime);
+        Vector2 scale = transform.localScale;
+        if (transform.position.x <= leftPosition)
+        {
+            scale.x = 1;
+            moveDiretion = 1;
+        }
+        if (transform.position.x >= rightPosition)
+        {
+            scale.x = -1;
+            moveDiretion = -1;
+        }
+        transform.localScale = scale;
+
+    }
+
+    //Get attack
+    public void GetAttack()
+    {
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            animator.SetBool("isTakeHit", true);
+            curHp -= 1;
+            moveSpeed = 0;
+            Invoke("ResetSpeed", 0.3f);
+            Debug.Log(curHp);
+            if(curHp == 0)
+            {
+                Destroy(gameObject);
+            }
+        }
+        else
+        {
+            animator.SetBool("isTakeHit", false);
+        }
     }
 }
