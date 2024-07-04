@@ -38,15 +38,17 @@ public class EnemyManeger : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            ResetAction("isSeePlayer");
             moveSpeed = 0;
             Invoke("StartATK", timeStartATK);
             animator.SetBool("isSeePlayer", true);
-            Invoke("ResetSpeed", timeResetSeePlayer);
+            Invoke("ResetAction", timeResetSeePlayer);
         }
     }
 
-    private void ResetSpeed()
+    public void ResetAction(string nameAnimator)
     {
+        animator.SetBool(nameAnimator, false);
         moveSpeed = 2f;
     }
 
@@ -98,7 +100,7 @@ public class EnemyManeger : MonoBehaviour
             animator.SetBool("isTakeHit", true);
             curHp -= 1;
             moveSpeed = 0;
-            Invoke("ResetSpeed", 0.3f);
+            Invoke("ResetAction", 0.3f);
             Debug.Log(curHp);
             if(curHp == 0)
             {
