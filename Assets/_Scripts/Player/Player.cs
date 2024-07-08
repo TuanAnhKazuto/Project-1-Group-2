@@ -6,13 +6,9 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private BoxCollider2D coll;
+    private CapsuleCollider2D coll;
     private SpriteRenderer sprite;
     private Animator anim;
-
-    private static int lives = 3;
-
-    private static int _score = 1000;
 
 
     [SerializeField] public GameObject bulletprefabs;
@@ -31,7 +27,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        coll = GetComponent<BoxCollider2D>();
+        coll = GetComponent<CapsuleCollider2D>();
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
     }
@@ -106,34 +102,6 @@ public class Player : MonoBehaviour
             Destroy(oneBullet, 2f); //Đạn biến mất sau 2 giây
         }
     }
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "Top")
-        {
-            string name = other.attachedRigidbody.name;
-            Destroy(GameObject.Find(name));
-        }
-        if (other.gameObject.tag == "EnemieRed")
-        {
-            lives -= 1;
-            if (lives > 0)
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            }
-            else
-            {
-                Destroy(gameObject);
-                _gameOverPanel.SetActive(true);
-                // dung game 
-                Time.timeScale = 0;
-            }
-        }
-    }
-    public int GetScore()
-    {
-        return _score;
-    }
-
 }
 
 
