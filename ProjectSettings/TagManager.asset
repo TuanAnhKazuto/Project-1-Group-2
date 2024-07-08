@@ -13,6 +13,7 @@ TagManager:
   - Sakekasu
   - EnemyATK
   - BossATK
+  - Trap
   layers:
   - Default
   - TransparentFX
