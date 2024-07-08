@@ -16,22 +16,28 @@ public class Attack : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.J) && !isAttacking)
         {
-            StartCoroutine(AttackCoroutine());
+            isAttacking = true;
+            // Trigger animation
+            animator.SetBool("isATK", true);
+            //StartCoroutine(AttackCoroutine());
+            Invoke("AttackCoroutine", 1f);
         }
     }
-
-    IEnumerator AttackCoroutine()
+    public void AttackCoroutine()
     {
-        isAttacking = true;
-        // Trigger animation
-        animator.SetTrigger("Attack");
+            animator.SetBool("isATK", false);
+        isAttacking = false;
 
+    }
+    /*IEnumerator AttackCoroutine()
+    {
+        
         // Wait for the animation to finish
         float animationLength = animator.GetCurrentAnimatorClipInfo(0)[0].clip.length;
         yield return new WaitForSeconds(animationLength);
 
         isAttacking = false;
-    }
+    }*/
 }
 
 
