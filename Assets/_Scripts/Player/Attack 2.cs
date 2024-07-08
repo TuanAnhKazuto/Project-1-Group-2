@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Attack2 : MonoBehaviour
 {
-    public float moveSpeed = 5f;
     public float attackRange = 0.5f;
     public int attackDamage = 1;
     public Transform attackPoint;
@@ -29,12 +28,6 @@ public class Attack2 : MonoBehaviour
         {
             Attack();
         }
-    }
-
-    void FixedUpdate()
-    {
-        // Di chuyển nhân vật
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
     void Attack()
