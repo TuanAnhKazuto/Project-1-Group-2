@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 221898738}
   - component: {fileID: 221898737}
   - component: {fileID: 221898736}
+  - component: {fileID: 221898741}
   m_Layer: 0
   m_Name: Samurai
   m_TagString: Player
@@ -175,7 +176,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.0154064}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -186,7 +187,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.92, y: 1.16}
+  m_Size: {x: 0.92, y: 1.1291871}
   m_EdgeRadius: 0
 --- !u!50 &221898737
 Rigidbody2D:
@@ -303,6 +304,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &221898741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221898735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d71f4fa63d051d45a2d772235504eb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletprefabs: {fileID: 0}
+  _isMovingRight: 1
+  _gameOverPanel: {fileID: 0}
+  jumpableGround:
+    serializedVersion: 2
+    m_Bits: 8
+  guntransform: {fileID: 0}
+  moveSpeed: 4
+  jumpForce: 7
 --- !u!1 &395874923
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,9 +428,9 @@ GameObject:
   - component: {fileID: 2112138278}
   - component: {fileID: 2112138277}
   - component: {fileID: 2112138279}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SPA_Rock_Grass_Water_1
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -512,18 +534,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.27333426, y: 0}
+  m_Offset: {x: -0.2733345, y: -0.017873269}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 30, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 14.867441, y: 0.32}
+  m_Size: {x: 14.867441, y: 0.28425345}
   m_EdgeRadius: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
