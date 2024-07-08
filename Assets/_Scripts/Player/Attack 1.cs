@@ -20,14 +20,24 @@ public class Attack : MonoBehaviour
             // Trigger animation
             animator.SetBool("isATK", true);
             //StartCoroutine(AttackCoroutine());
-            Invoke("AttackCoroutine", 1f);
+            Invoke("AttackCoroutine", 0.5f);
+        }
+       
+        if (Input.GetKeyDown(KeyCode.K) && !isAttacking)
+        {
+            isAttacking = true;
+            // Trigger animation
+            animator.SetBool("isATK2", true);
+            //StartCoroutine(AttackCoroutine());
+            Invoke("AttackCoroutine", 0.55f);
         }
     }
+
     public void AttackCoroutine()
     {
-            animator.SetBool("isATK", false);
+        animator.SetBool("isATK", false);
+        animator.SetBool("isATK2", false);
         isAttacking = false;
-
     }
     /*IEnumerator AttackCoroutine()
     {
