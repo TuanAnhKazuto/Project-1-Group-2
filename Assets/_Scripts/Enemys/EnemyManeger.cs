@@ -9,16 +9,8 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private float leftPosition;
     [SerializeField] private float rightPosition;
     private int moveDiretion = 1;
-    [SerializeField] protected float timeResetSeePlayer;
     Animator animator;
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            moveSpeed = 0;
-        }
-    }
 
     private void Start()
     {

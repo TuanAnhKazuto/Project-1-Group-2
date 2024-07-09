@@ -10,7 +10,7 @@ public class EnemyAttack : MonoBehaviour
     [SerializeField] protected float timeNextATK2;
     [SerializeField] private GameObject attack2;
     [SerializeField] protected float timeEndATK;
-    [SerializeField] protected float timeResetSeePlayer;
+    [SerializeField] protected float timeResetAction;
     private EnemyManager enemyManager;
 
     Animator animator;
@@ -29,7 +29,7 @@ public class EnemyAttack : MonoBehaviour
             ResetAction();
             Invoke("StartATK", timeStartATK);
             animator.SetBool("isSeePlayer", true);
-            Invoke("ResetAction", timeResetSeePlayer);
+            Invoke("ResetAction", timeResetAction);
         }
     }
 
