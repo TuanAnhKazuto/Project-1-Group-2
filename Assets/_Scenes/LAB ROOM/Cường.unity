@@ -135,9 +135,10 @@ GameObject:
   - component: {fileID: 221898739}
   - component: {fileID: 221898738}
   - component: {fileID: 221898737}
+  - component: {fileID: 221898744}
   - component: {fileID: 221898742}
   - component: {fileID: 221898743}
-  - component: {fileID: 221898744}
+  - component: {fileID: 221898745}
   m_Layer: 0
   m_Name: Samurai
   m_TagString: Player
@@ -254,7 +255,7 @@ Transform:
   m_GameObject: {fileID: 221898735}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.97, y: -1.8, z: 0}
+  m_LocalPosition: {x: -7.8, y: -1.8, z: 0}
   m_LocalScale: {x: 1.8912351, y: 1.8912351, z: 1.8912351}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -328,6 +329,20 @@ CapsuleCollider2D:
   m_Offset: {x: 0.08521951, y: -0.0013277167}
   m_Size: {x: 0.4712957, y: 1.1626556}
   m_Direction: 0
+--- !u!114 &221898745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221898735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f116f96eb54cca48ba4340fc615a3fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRange: 1.5
+  Enemy: {fileID: 0}
 --- !u!1 &395874923
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,8 +448,9 @@ GameObject:
   - component: {fileID: 1876773993}
   - component: {fileID: 1876773992}
   - component: {fileID: 1876773991}
+  - component: {fileID: 1876773996}
   m_Layer: 6
-  m_Name: Attack_0 (1)
+  m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -586,12 +602,26 @@ Transform:
   m_GameObject: {fileID: 1876773990}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.75, y: -1.19, z: 0}
+  m_LocalPosition: {x: -0.34, y: -1.57, z: 0}
   m_LocalScale: {x: 2.0465, y: 2.0465, z: 2.0465}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1876773996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876773990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f116f96eb54cca48ba4340fc615a3fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRange: 1.5
+  Enemy: {fileID: 221898740}
 --- !u!1 &2112138276
 GameObject:
   m_ObjectHideFlags: 0
