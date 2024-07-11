@@ -512,6 +512,8 @@ MonoBehaviour:
   moveSpeed: 2
   leftPosition: -6.52
   rightPosition: 0
+  moveDiretion: 1
+  animator: {fileID: 0}
 --- !u!50 &361365078
 Rigidbody2D:
   serializedVersion: 4
@@ -836,6 +838,7 @@ GameObject:
   - component: {fileID: 828424764}
   - component: {fileID: 828424766}
   - component: {fileID: 828424765}
+  - component: {fileID: 828424767}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Untagged
@@ -860,6 +863,7 @@ Transform:
   - {fileID: 1555144208}
   - {fileID: 1686594232}
   - {fileID: 256100736}
+  - {fileID: 865422872}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &828424765
@@ -910,6 +914,57 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &828424767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828424763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47936eb061a944043b28ca5ba3adb99b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rayCast: {fileID: 865422872}
+  rayCastMask:
+    serializedVersion: 2
+    m_Bits: 128
+  rayCastLength: 6
+  attackDistance: 2
+  moveSpeed: 2
+  timer: 0
+--- !u!1 &865422871
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 865422872}
+  m_Layer: 0
+  m_Name: rayCast
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &865422872
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865422871}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 828424764}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1552049374
 GameObject:
   m_ObjectHideFlags: 0
@@ -1118,7 +1173,7 @@ GameObject:
   - component: {fileID: 1686594232}
   - component: {fileID: 1686594233}
   m_Layer: 0
-  m_Name: atkBox
+  m_Name: hitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1277,7 +1332,7 @@ GameObject:
   - component: {fileID: 1907810183}
   - component: {fileID: 1907810182}
   - component: {fileID: 1907810181}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerFake
   m_TagString: Player
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
@@ -1380,7 +1435,7 @@ Transform:
   m_GameObject: {fileID: 1907810180}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.18, y: -3.16, z: 0}
+  m_LocalPosition: {x: 2, y: -3.05, z: 0}
   m_LocalScale: {x: 0.7334, y: 0.7334, z: 0.7334}
   m_ConstrainProportionsScale: 0
   m_Children: []
