@@ -16,13 +16,15 @@ public class TakeHit : MonoBehaviour
         if (other.gameObject.tag == "PlayerATK")
         {
             enemyBhv.animator.SetBool("takeHit", true);
-            Invoke("SetBoolFalse", 0.2f);
+            enemyBhv.moveSpeed = 0.1f;
+            Invoke("SetBoolFalse", 0.4f);
             enemyBhv.curLife -= 1;
         }
     }
 
     private void SetBoolFalse()
     {
+        enemyBhv.moveSpeed = 2;
         enemyBhv.animator.SetBool("takeHit", false);
     }
 
