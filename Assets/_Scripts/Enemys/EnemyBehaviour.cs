@@ -5,23 +5,35 @@ using UnityEngine;
 
 public class EnemyBehaviour : MonoBehaviour
 {
-    [HideInInspector] public float moveSpeed = 2;
+    [HideInInspector] public Animator animator;
+
+    //move
+    /*[HideInInspector] */public float moveSpeed = 2;
     [SerializeField] private float leftPosition;
     [SerializeField] private float rightPosition;
     private int moveDiretion = 1;
 
+    //attack
     public float timeStopAtk;
 
-    Animator animator;
+    //take hit
+    private float maxLife = 3;
+    [HideInInspector] public float curLife;
+    [SerializeField] private GameObject enemyCollider;
+    Rigidbody2D rigidbody2D;
+
 
     private void Start()
     {
+        curLife = maxLife;
         animator = GetComponent<Animator>();
+        rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
     {
         Move();
+        BeAttack();
     }
 
     private void Move()
@@ -61,5 +73,24 @@ public class EnemyBehaviour : MonoBehaviour
     {
         moveSpeed = 2;
         animator.SetBool("attack", false);
+    }
+
+    private void BeAttack()
+    {
+        if(curLife <= 0)
+        {
+            enemyCollider.SetActive(false);
+            rigidbody2D.gravityScale = 0;
+            StartCoroutine(Die());
+        }
+    }
+
+    IEnumerator Die()
+    {
+        do
+        {
+            yield return new WaitForSeconds(0.3f);
+        } while (!animator.GetCurrentAnimatorStateInfo(0).IsName("TakeHit"));
+        Destroy(gameObject);
     }
 }
