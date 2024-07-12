@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8477007901740699085}
+  - component: {fileID: 1728943781769916737}
   - component: {fileID: 3514887887815134828}
   m_Layer: 0
   m_Name: collider
@@ -32,6 +33,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 918782640693497780}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1728943781769916737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325987032790343040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2b77302eeb0764b9bb3a9c7c347224, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!70 &3514887887815134828
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -393,7 +406,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4974f5b47bec948b576ea0959d1449, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   moveSpeed: 2
   leftPosition: -5
   rightPosition: 0
   timeStopAtk: 0.9
+  curLife: 0
+  enemyCollider: {fileID: 325987032790343040}

@@ -8,7 +8,7 @@ public class EnemyBehaviour : MonoBehaviour
     [HideInInspector] public Animator animator;
 
     //move
-    /*[HideInInspector] */public float moveSpeed = 2;
+    [HideInInspector] public float moveSpeed = 2;
     [SerializeField] private float leftPosition;
     [SerializeField] private float rightPosition;
     private int moveDiretion = 1;
