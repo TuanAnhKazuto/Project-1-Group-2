@@ -20,14 +20,14 @@ public class EnemyBehaviour : MonoBehaviour
     private float maxLife = 3;
     [HideInInspector] public float curLife;
     [SerializeField] private GameObject enemyCollider;
-    Rigidbody2D rigidbody2D;
+    Rigidbody2D rg;
 
 
     private void Start()
     {
         curLife = maxLife;
         animator = GetComponent<Animator>();
-        rigidbody2D = GetComponent<Rigidbody2D>();
+        rg = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
@@ -80,7 +80,7 @@ public class EnemyBehaviour : MonoBehaviour
         if(curLife <= 0)
         {
             enemyCollider.SetActive(false);
-            rigidbody2D.gravityScale = 0;
+            rg.gravityScale = 0;
             StartCoroutine(Die());
         }
     }
