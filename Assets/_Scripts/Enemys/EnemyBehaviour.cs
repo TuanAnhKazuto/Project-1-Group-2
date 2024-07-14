@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,7 +10,7 @@ public class EnemyBehaviour : MonoBehaviour
     [HideInInspector] public float moveSpeed = 2;
     [SerializeField] private float leftPosition;
     [SerializeField] private float rightPosition;
-    private int moveDiretion = 1;
+    private int moveDirection = 1;
 
     //attack
     public float timeStopAtk;
@@ -20,8 +19,10 @@ public class EnemyBehaviour : MonoBehaviour
     private float maxLife = 3;
     [HideInInspector] public float curLife;
     [SerializeField] private GameObject enemyCollider;
-    Rigidbody2D rg;
+    private Rigidbody2D rg;
 
+    //set damage
+    public int damage; // Ensure this is public
 
     private void Start()
     {
@@ -38,17 +39,17 @@ public class EnemyBehaviour : MonoBehaviour
 
     private void Move()
     {
-        transform.Translate(Vector2.right * moveSpeed * moveDiretion * Time.deltaTime);
+        transform.Translate(Vector2.right * moveSpeed * moveDirection * Time.deltaTime);
 
         Vector2 scale = transform.localScale;
-        if(transform.position.x <= leftPosition)
+        if (transform.position.x <= leftPosition)
         {
-            moveDiretion = 1;
+            moveDirection = 1;
             scale.x = 1;
         }
-        else if(transform.position.x >= rightPosition)
+        else if (transform.position.x >= rightPosition)
         {
-            moveDiretion = -1;
+            moveDirection = -1;
             scale.x = -1;
         }
         transform.localScale = scale;
@@ -56,7 +57,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
             Attack();
         }
@@ -77,7 +78,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     private void BeAttack()
     {
-        if(curLife <= 0)
+        if (curLife <= 0)
         {
             enemyCollider.SetActive(false);
             rg.gravityScale = 0;
