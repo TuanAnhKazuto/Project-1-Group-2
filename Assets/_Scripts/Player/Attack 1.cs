@@ -39,15 +39,7 @@ public class Attack : MonoBehaviour
         animator.SetBool("isATK2", false);
         isAttacking = false;
     }
-    /*IEnumerator AttackCoroutine()
-    {
-        
-        // Wait for the animation to finish
-        float animationLength = animator.GetCurrentAnimatorClipInfo(0)[0].clip.length;
-        yield return new WaitForSeconds(animationLength);
-
-        isAttacking = false;
-    }*/
+  
 }
 
 
