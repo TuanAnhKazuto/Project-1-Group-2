@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,6 +15,9 @@ public class Lamp : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             animator.SetBool("isCheckPoint", true);
+            PlayerPrefs.SetFloat("PlayerPosX", transform.position.x);
+            PlayerPrefs.SetFloat("PlayerPosY", transform.position.y);
+            Debug.Log("Saved checkpoint: " + transform.position);
         }
     }
 }
