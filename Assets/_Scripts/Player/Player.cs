@@ -15,20 +15,19 @@ public class Player : MonoBehaviour
     [SerializeField] private bool _isMovingRight = true;
     [SerializeField] private GameObject _gameOverPanel;
     [SerializeField] private LayerMask jumpableGround;
-    public Transform guntransform;
-
+  
     private float dirX = 0f;
     [SerializeField] private float moveSpeed = 4f;
     [SerializeField] private float jumpForce = 4f;
-    private enum MovementState { NhanVatDungYen, NhanVatChay, NhanVatDiChuyen, NhanVatDap }
+    private enum MovementState { NhanVatDungYen, NhanVatChay, NhanVatDiChuyen, NhanVatTiepDat }
 
 
     // Start is called before the first frame update
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        coll = GetComponent<CapsuleCollider2D>();
-        sprite = GetComponent<SpriteRenderer>();
+        coll = GetComponentInChildren<CapsuleCollider2D>();
+        sprite = GetComponentInChildren<SpriteRenderer>();
         anim = GetComponent<Animator>();
     }
 
@@ -43,7 +42,6 @@ public class Player : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
 
-        Fire();
         UpdateAnimationState();
 
     }
@@ -73,7 +71,7 @@ public class Player : MonoBehaviour
         }
         else if (rb.velocity.y < -.1f)
         {
-            state = MovementState.NhanVatDap;
+            state = MovementState.NhanVatTiepDat;
         }
         anim.SetInteger("state", (int)state);
 
@@ -83,25 +81,6 @@ public class Player : MonoBehaviour
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
     }
 
-    private void Fire()
-    {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            // Tạo viên đạn tại vị trí Gun
-            var oneBullet = Instantiate(bulletprefabs, guntransform.position, Quaternion.identity);
-            // cho viên đạn bay theo hướng của nhân vật
-
-            if (_isMovingRight == true)
-            {
-                oneBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(5f, 0);
-            }
-            else
-            {
-                oneBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-5f, 0);
-            }
-            Destroy(oneBullet, 2f); //Đạn biến mất sau 2 giây
-        }
-    }
 }
 
 
