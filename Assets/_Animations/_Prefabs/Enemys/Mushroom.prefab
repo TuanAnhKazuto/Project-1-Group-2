@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5662472498957460122}
   - component: {fileID: 5544219620486525997}
+  - component: {fileID: 6247066880486041101}
   m_Layer: 0
   m_Name: collider
   m_TagString: Untagged
@@ -67,6 +68,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0.3452196, y: -0.1375624}
   m_Size: {x: 0.38187885, y: 0.9335964}
   m_Direction: 0
+--- !u!114 &6247066880486041101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187619890017393913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2b77302eeb0764b9bb3a9c7c347224, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2371427424781262182
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,6 +243,7 @@ GameObject:
   - component: {fileID: 1006577687993839918}
   - component: {fileID: 7270965453012276306}
   - component: {fileID: 2698444359012148441}
+  - component: {fileID: 561269493424598174}
   m_Layer: 0
   m_Name: Mushroom
   m_TagString: Enemy
@@ -246,7 +260,7 @@ Transform:
   m_GameObject: {fileID: 5155453015066722268}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.155, y: -3.114, z: 0}
+  m_LocalPosition: {x: -5.34, y: -3.21, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -316,10 +330,65 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4974f5b47bec948b576ea0959d1449, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   moveSpeed: 2
   leftPosition: -5
   rightPosition: 0
   timeStopAtk: 1
+  curLife: 0
+  enemyCollider: {fileID: 187619890017393913}
+--- !u!212 &561269493424598174
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5155453015066722268}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &7656864213122616237
 GameObject:
   m_ObjectHideFlags: 0
