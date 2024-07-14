@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b9c36cf85b7148c419005800d7097c11
+guid: be74035908985d14b98c80750cf5cb7e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,148 +110,274 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fire_0
+      name: nha_0
       rect:
         serializedVersion: 2
-        x: 56
-        y: 249
-        width: 149
-        height: 14
+        x: 10
+        y: 254
+        width: 113
+        height: 72
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4e0e9782a9542c45b88152e88a0a9bf
-      internalID: -1787600592
+      spriteID: c0b54ba6561e744478e8b436330eb6eb
+      internalID: 118228745
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire_1
+      name: nha_1
       rect:
         serializedVersion: 2
-        x: 55
-        y: 223
-        width: 152
-        height: 22
+        x: 127
+        y: 254
+        width: 113
+        height: 63
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 945f87c6aff37774a831dcc4b45497ac
-      internalID: -99750850
+      spriteID: 17432767298289841b7d69141f1e5d58
+      internalID: 1292757851
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire_2
+      name: nha_2
       rect:
         serializedVersion: 2
-        x: 55
-        y: 182
-        width: 152
-        height: 38
+        x: 241
+        y: 252
+        width: 112
+        height: 85
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a0b25049952442468f203c9801aa0b5
-      internalID: -1547793138
+      spriteID: ceb42fa840bc5054eae3dce2659eda04
+      internalID: 1150447080
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire_3
+      name: nha_3
       rect:
         serializedVersion: 2
-        x: 54
-        y: 79
-        width: 154
-        height: 55
+        x: 5
+        y: 128
+        width: 118
+        height: 94
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afafaffbcf7d47d48b71710a4a63c05e
-      internalID: -679366830
+      spriteID: 8dde3105cca3f5a4d93a22c05f8f0829
+      internalID: 459174544
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire_4
+      name: nha_4
       rect:
         serializedVersion: 2
-        x: 54
-        y: 132
-        width: 157
-        height: 47
-      alignment: 9
-      pivot: {x: 0.49698448, y: 0.610808}
+        x: 124
+        y: 134
+        width: 107
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb2d6f4e0bf5a7947b5c4258a6ca9f08
-      internalID: -163093554
+      spriteID: 7a379173829cb01419ec782c27f82d80
+      internalID: 1906936092
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire_5
+      name: nha_5
       rect:
         serializedVersion: 2
-        x: 54
-        y: 39
+        x: 266
+        y: 193
+        width: 55
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 432d5874fe64a9c4d8011f00dcad7120
+      internalID: 1787897367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nha_6
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 202
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15047a1f5a3b39741b65ccde2482fd6e
+      internalID: 645667991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nha_7
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 144
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e583bffe06987449a6fcaf88a1d87da
+      internalID: -1103322597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nha_8
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 134
+        width: 15
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a599dd5b967de5b4386a23bbf12151b1
+      internalID: 247931795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nha_9
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 129
+        width: 96
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da7eb949990feee4482166ab460132bb
+      internalID: 657728096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nha_10
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 50
         width: 5
-        height: 8
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 552e0fff6d38b9a47b64b33023c9ea10
-      internalID: 635042126
+      spriteID: 3c5c26fe2f864ce4a8fb6eefd7107a94
+      internalID: -812021726
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire_6
+      name: nha_11
       rect:
         serializedVersion: 2
-        x: 55
-        y: 23
-        width: 155
-        height: 54
+        x: 13
+        y: 28
+        width: 110
+        height: 87
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46572481da53e284180f9a4daa521da2
-      internalID: 1967249342
+      spriteID: b8c930ad7e8e3f046a211a14a376d16b
+      internalID: -897143764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nha_12
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 27
+        width: 230
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e914d1fad46bd244db39f52bde18f064
+      internalID: 1116719015
       vertices: []
       indices: 
       edges: []
@@ -267,13 +393,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Fire_0: -1787600592
-      Fire_1: -99750850
-      Fire_2: -1547793138
-      Fire_3: -679366830
-      Fire_4: -163093554
-      Fire_5: 635042126
-      Fire_6: 1967249342
+      nha_0: 118228745
+      nha_1: 1292757851
+      nha_10: -812021726
+      nha_11: -897143764
+      nha_12: 1116719015
+      nha_2: 1150447080
+      nha_3: 459174544
+      nha_4: 1906936092
+      nha_5: 1787897367
+      nha_6: 645667991
+      nha_7: -1103322597
+      nha_8: 247931795
+      nha_9: 657728096
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
