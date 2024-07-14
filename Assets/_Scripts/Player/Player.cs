@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     private float dirX = 0f;
     [SerializeField] private float moveSpeed = 4f;
     [SerializeField] private float jumpForce = 4f;
-    private enum MovementState { NhanVatDungYen, NhanVatChay, NhanVatNhay, NhanVatTiepDat }
+    private enum MovementState { NhanVatDungYen, NhanVatChay, NhanVatDiChuyen, NhanVatDap }
 
 
     // Start is called before the first frame update
@@ -69,11 +69,11 @@ public class Player : MonoBehaviour
         }
         if (rb.velocity.y > .1f)
         {
-            state = MovementState.NhanVatNhay;
+            state = MovementState.NhanVatDiChuyen;
         }
         else if (rb.velocity.y < -.1f)
         {
-            state = MovementState.NhanVatTiepDat;
+            state = MovementState.NhanVatDap;
         }
         anim.SetInteger("state", (int)state);
 
