@@ -39,7 +39,12 @@ public class Player : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
+            anim.SetBool("isJump",true);
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        }
+        else
+        {
+            anim.SetBool("isJump",false);
         }
 
         UpdateAnimationState();
@@ -75,12 +80,29 @@ public class Player : MonoBehaviour
         }
         anim.SetInteger("state", (int)state);
 
+
     }
     private bool IsGrounded()
     {
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            anim.SetBool("isCham", true);
+            Invoke("ResetCham", 0.2f);
+            moveSpeed = 0.5f;
+            jumpForce = 0f;
+        }
+    }
 
+    private void ResetCham()
+    {
+        moveSpeed = 4f;
+        jumpForce = 4f;
+        anim.SetBool("isCham", false);
+    }
 }
 
 
