@@ -250,7 +250,7 @@ Transform:
   m_GameObject: {fileID: 4707752846914427567}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.331, y: 0.051, z: 0}
+  m_LocalPosition: {x: 0.322, y: 0.045, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -393,6 +393,7 @@ MonoBehaviour:
   timeStopAtk: 1.5
   curLife: 0
   enemyCollider: {fileID: 1698273135143852860}
+  damage: 5
 --- !u!95 &6574127938525508509
 Animator:
   serializedVersion: 5
@@ -452,8 +453,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1816542193
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
