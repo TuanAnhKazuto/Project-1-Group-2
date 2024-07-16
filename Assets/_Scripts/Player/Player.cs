@@ -100,7 +100,7 @@ public class Player : MonoBehaviour
     private void ResetCham()
     {
         moveSpeed = 4f;
-        jumpForce = 4f;
+        jumpForce = 7f;
         anim.SetBool("isCham", false);
     }
 }
