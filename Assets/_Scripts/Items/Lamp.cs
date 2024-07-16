@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Lamp : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class Lamp : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+
+         
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -19,5 +22,20 @@ public class Lamp : MonoBehaviour
             PlayerPrefs.SetFloat("PlayerPosY", transform.position.y);
             Debug.Log("Saved checkpoint: " + transform.position);
         }
+
+        if (other.CompareTag("Player"))
+        {
+            LoadLevel();
+        }
     }
+
+    public string Level;
+
+    public void LoadLevel()
+    {
+        SceneManager.LoadScene(Level);
+    }
+
+    
+
 }
