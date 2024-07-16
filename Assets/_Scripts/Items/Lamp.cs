@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Lamp : MonoBehaviour
 {
+
     Animator animator;
     void Start()
     {
@@ -35,6 +37,8 @@ public class Lamp : MonoBehaviour
     {
         SceneManager.LoadScene(Level);
     }
+
+
 
     
 
