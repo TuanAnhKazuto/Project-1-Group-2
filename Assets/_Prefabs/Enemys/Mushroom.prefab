@@ -259,7 +259,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5155453015066722268}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.34, y: -3.21, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -337,6 +337,7 @@ MonoBehaviour:
   timeStopAtk: 1
   curLife: 0
   enemyCollider: {fileID: 187619890017393913}
+  damage: 5
 --- !u!212 &561269493424598174
 SpriteRenderer:
   m_ObjectHideFlags: 0
