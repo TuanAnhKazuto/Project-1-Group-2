@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GhostSamurai_0
+      name: Indle_0
       rect:
         serializedVersion: 2
         x: 62
@@ -118,7 +118,7 @@ TextureImporter:
         width: 28
         height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -131,7 +131,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_1
+      name: Indle_1
       rect:
         serializedVersion: 2
         x: 212
@@ -139,7 +139,7 @@ TextureImporter:
         width: 28
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -152,7 +152,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_2
+      name: Indle_2
       rect:
         serializedVersion: 2
         x: 362
@@ -160,7 +160,7 @@ TextureImporter:
         width: 28
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -173,7 +173,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_3
+      name: Indle_3
       rect:
         serializedVersion: 2
         x: 512
@@ -181,7 +181,7 @@ TextureImporter:
         width: 28
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -194,7 +194,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_4
+      name: Indle_4
       rect:
         serializedVersion: 2
         x: 662
@@ -202,7 +202,7 @@ TextureImporter:
         width: 28
         height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -215,7 +215,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_5
+      name: Indle_5
       rect:
         serializedVersion: 2
         x: 812
@@ -223,7 +223,7 @@ TextureImporter:
         width: 28
         height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -236,7 +236,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_6
+      name: Run_0
       rect:
         serializedVersion: 2
         x: 956
@@ -244,7 +244,7 @@ TextureImporter:
         width: 30
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -257,7 +257,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_7
+      name: Run_1
       rect:
         serializedVersion: 2
         x: 1106
@@ -265,7 +265,7 @@ TextureImporter:
         width: 30
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -278,15 +278,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_8
+      name: Run_2
       rect:
         serializedVersion: 2
-        x: 56
+        x: 58
         y: 538
         width: 30
         height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -299,7 +299,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_9
+      name: Run_3
       rect:
         serializedVersion: 2
         x: 206
@@ -307,7 +307,7 @@ TextureImporter:
         width: 30
         height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -320,7 +320,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_10
+      name: Run_4
       rect:
         serializedVersion: 2
         x: 358
@@ -328,7 +328,7 @@ TextureImporter:
         width: 28
         height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -341,7 +341,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_11
+      name: Run_5
       rect:
         serializedVersion: 2
         x: 508
@@ -349,7 +349,7 @@ TextureImporter:
         width: 28
         height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -362,7 +362,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_12
+      name: Run_
       rect:
         serializedVersion: 2
         x: 658
@@ -370,7 +370,7 @@ TextureImporter:
         width: 28
         height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -383,7 +383,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_13
+      name: Run_6
       rect:
         serializedVersion: 2
         x: 808
@@ -391,7 +391,7 @@ TextureImporter:
         width: 28
         height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -404,15 +404,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_14
+      name: Run_7
       rect:
         serializedVersion: 2
-        x: 956
+        x: 957
         y: 534
         width: 30
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -425,15 +425,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_15
+      name: Attack_0
       rect:
         serializedVersion: 2
-        x: 1112
+        x: 1111
         y: 535
         width: 28
         height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -446,7 +446,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_16
+      name: Attack_1
       rect:
         serializedVersion: 2
         x: 62
@@ -454,7 +454,7 @@ TextureImporter:
         width: 28
         height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -467,7 +467,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_17
+      name: Attack_2
       rect:
         serializedVersion: 2
         x: 210
@@ -475,7 +475,7 @@ TextureImporter:
         width: 30
         height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -488,7 +488,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_18
+      name: Attack_3
       rect:
         serializedVersion: 2
         x: 359
@@ -496,7 +496,7 @@ TextureImporter:
         width: 31
         height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -509,7 +509,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_19
+      name: Attack_4
       rect:
         serializedVersion: 2
         x: 509
@@ -517,7 +517,7 @@ TextureImporter:
         width: 31
         height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -530,15 +530,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_20
+      name: Attack_5
       rect:
         serializedVersion: 2
         x: 638
         y: 435
         width: 78
         height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.43346855, y: 0.6146626}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -551,15 +551,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_21
+      name: Attack_6
       rect:
         serializedVersion: 2
         x: 788
         y: 435
-        width: 74
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 78
+        height: 20
+      alignment: 9
+      pivot: {x: 0.43306243, y: 0.5528067}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -572,49 +572,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_24
-      rect:
-        serializedVersion: 2
-        x: 939
-        y: 435
-        width: 77
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c919b489a87bd044a81c0e562b1f8fcb
-      internalID: 176384486
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GhostSamurai_26
-      rect:
-        serializedVersion: 2
-        x: 1090
-        y: 435
-        width: 83
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: df1e858c3c4fe9542ab62021635de084
-      internalID: -140040058
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GhostSamurai_27
+      name: Attack_10
       rect:
         serializedVersion: 2
         x: 190
@@ -622,7 +580,7 @@ TextureImporter:
         width: 86
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -635,7 +593,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_31
+      name: Attack_13
       rect:
         serializedVersion: 2
         x: 667
@@ -643,7 +601,7 @@ TextureImporter:
         width: 59
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -656,7 +614,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_32
+      name: Attack_14
       rect:
         serializedVersion: 2
         x: 817
@@ -664,7 +622,7 @@ TextureImporter:
         width: 60
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -677,7 +635,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_33
+      name: Attack_15
       rect:
         serializedVersion: 2
         x: 967
@@ -685,7 +643,7 @@ TextureImporter:
         width: 61
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -698,7 +656,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_34
+      name: Attack_9
       rect:
         serializedVersion: 2
         x: 40
@@ -706,7 +664,7 @@ TextureImporter:
         width: 81
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -719,7 +677,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_35
+      name: Attack_12
       rect:
         serializedVersion: 2
         x: 517
@@ -727,7 +685,7 @@ TextureImporter:
         width: 59
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -740,7 +698,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_37
+      name: Attack_16
       rect:
         serializedVersion: 2
         x: 1117
@@ -748,7 +706,7 @@ TextureImporter:
         width: 62
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -761,7 +719,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_38
+      name: Attack_11
       rect:
         serializedVersion: 2
         x: 367
@@ -769,7 +727,7 @@ TextureImporter:
         width: 57
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -790,7 +748,7 @@ TextureImporter:
         width: 34
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -803,7 +761,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_40
+      name: Attack_18
       rect:
         serializedVersion: 2
         x: 218
@@ -811,7 +769,7 @@ TextureImporter:
         width: 31
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -824,7 +782,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_41
+      name: Attack_19
       rect:
         serializedVersion: 2
         x: 368
@@ -832,7 +790,7 @@ TextureImporter:
         width: 26
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -845,7 +803,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_42
+      name: Attack_20
       rect:
         serializedVersion: 2
         x: 517
@@ -853,7 +811,7 @@ TextureImporter:
         width: 23
         height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -866,7 +824,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_43
+      name: Attack_21
       rect:
         serializedVersion: 2
         x: 663
@@ -874,7 +832,7 @@ TextureImporter:
         width: 28
         height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -887,7 +845,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_44
+      name: Dead_0
       rect:
         serializedVersion: 2
         x: 814
@@ -895,7 +853,7 @@ TextureImporter:
         width: 27
         height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -908,7 +866,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_45
+      name: Dead_1
       rect:
         serializedVersion: 2
         x: 968
@@ -916,7 +874,7 @@ TextureImporter:
         width: 24
         height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -929,7 +887,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_46
+      name: Dead_2
       rect:
         serializedVersion: 2
         x: 1117
@@ -937,7 +895,7 @@ TextureImporter:
         width: 26
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -950,7 +908,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_47
+      name: Dead_3
       rect:
         serializedVersion: 2
         x: 67
@@ -958,7 +916,7 @@ TextureImporter:
         width: 26
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -971,7 +929,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_48
+      name: Dead_4
       rect:
         serializedVersion: 2
         x: 217
@@ -979,7 +937,7 @@ TextureImporter:
         width: 26
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -992,7 +950,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_49
+      name: Dead_5
       rect:
         serializedVersion: 2
         x: 367
@@ -1000,7 +958,7 @@ TextureImporter:
         width: 26
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1013,7 +971,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_50
+      name: Dead_6
       rect:
         serializedVersion: 2
         x: 517
@@ -1021,7 +979,7 @@ TextureImporter:
         width: 26
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1034,7 +992,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_51
+      name: Dead_7
       rect:
         serializedVersion: 2
         x: 667
@@ -1042,7 +1000,7 @@ TextureImporter:
         width: 26
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1055,7 +1013,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_52
+      name: Dead_8
       rect:
         serializedVersion: 2
         x: 817
@@ -1063,7 +1021,7 @@ TextureImporter:
         width: 26
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1076,7 +1034,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_53
+      name: Dead_9
       rect:
         serializedVersion: 2
         x: 966
@@ -1084,7 +1042,7 @@ TextureImporter:
         width: 31
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1097,7 +1055,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_54
+      name: Dead_10
       rect:
         serializedVersion: 2
         x: 1116
@@ -1105,7 +1063,7 @@ TextureImporter:
         width: 27
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1118,7 +1076,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_55
+      name: Dead_11
       rect:
         serializedVersion: 2
         x: 66
@@ -1126,7 +1084,7 @@ TextureImporter:
         width: 27
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1139,7 +1097,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_56
+      name: Dead_12
       rect:
         serializedVersion: 2
         x: 215
@@ -1147,7 +1105,7 @@ TextureImporter:
         width: 28
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1160,7 +1118,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_57
+      name: Dead_13
       rect:
         serializedVersion: 2
         x: 367
@@ -1168,7 +1126,7 @@ TextureImporter:
         width: 26
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1181,7 +1139,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_58
+      name: Dead_14
       rect:
         serializedVersion: 2
         x: 517
@@ -1189,7 +1147,7 @@ TextureImporter:
         width: 26
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1202,7 +1160,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_59
+      name: Dead_15
       rect:
         serializedVersion: 2
         x: 667
@@ -1210,7 +1168,7 @@ TextureImporter:
         width: 26
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1223,7 +1181,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_60
+      name: Dead_16
       rect:
         serializedVersion: 2
         x: 817
@@ -1231,7 +1189,7 @@ TextureImporter:
         width: 26
         height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1244,7 +1202,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_61
+      name: Dead_17
       rect:
         serializedVersion: 2
         x: 967
@@ -1252,7 +1210,7 @@ TextureImporter:
         width: 26
         height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1265,7 +1223,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_62
+      name: Dead_18
       rect:
         serializedVersion: 2
         x: 1117
@@ -1273,7 +1231,7 @@ TextureImporter:
         width: 26
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1281,6 +1239,48 @@ TextureImporter:
       bones: []
       spriteID: f608907f6b117bd449e3729f47f80505
       internalID: 2114779957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_7
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 435
+        width: 78
+        height: 20
+      alignment: 9
+      pivot: {x: 0.41714478, y: 0.55655974}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f83e2478b602c9f4c9b22a6bfb5f0c6b
+      internalID: 180919579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_8
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 435
+        width: 87
+        height: 25
+      alignment: 9
+      pivot: {x: 0.38305944, y: 0.5055627}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0bb1eda4ffa18c44a52c451839e3976
+      internalID: 2133230662
       vertices: []
       indices: 
       edges: []
@@ -1296,69 +1296,69 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      GhostSamurai_0: 2056618752
-      GhostSamurai_1: 1766142564
-      GhostSamurai_10: 588816996
-      GhostSamurai_11: 361489471
-      GhostSamurai_12: -1580378547
-      GhostSamurai_13: 1319404738
-      GhostSamurai_14: -960126512
-      GhostSamurai_15: 1622027987
-      GhostSamurai_16: 1164958767
-      GhostSamurai_17: 441416650
-      GhostSamurai_18: 2060734118
-      GhostSamurai_19: -122701023
-      GhostSamurai_2: -72790488
-      GhostSamurai_20: -924363100
-      GhostSamurai_21: 2043679812
-      GhostSamurai_22: 180919579
-      GhostSamurai_23: 2133230662
+      Attack_0: 1622027987
+      Attack_1: 1164958767
+      Attack_10: 1613204483
+      Attack_11: 2095789726
+      Attack_12: -828826238
+      Attack_13: -1397168311
+      Attack_14: 346583363
+      Attack_15: 2015745905
+      Attack_16: 405545829
+      Attack_18: -873720832
+      Attack_19: 45441649
+      Attack_2: 441416650
+      Attack_20: -1294883925
+      Attack_21: -1821151935
+      Attack_3: 2060734118
+      Attack_4: -122701023
+      Attack_5: -924363100
+      Attack_6: 2043679812
+      Attack_7: 180919579
+      Attack_8: 2133230662
+      Attack_9: -1212427995
+      Dead_0: 458998736
+      Dead_1: -2127405795
+      Dead_10: -1740531733
+      Dead_11: 1803022877
+      Dead_12: -508949467
+      Dead_13: 1513308198
+      Dead_14: -892184713
+      Dead_15: -990906331
+      Dead_16: 808807974
+      Dead_17: 312069580
+      Dead_18: 2114779957
+      Dead_2: -1692027554
+      Dead_3: -1801145354
+      Dead_4: 633594454
+      Dead_5: 810251231
+      Dead_6: -1674882112
+      Dead_7: -1283729542
+      Dead_8: 277892750
+      Dead_9: 1835981786
       GhostSamurai_24: 176384486
       GhostSamurai_25: 784680915
       GhostSamurai_26: -140040058
-      GhostSamurai_27: 1613204483
       GhostSamurai_28: -1308781675
       GhostSamurai_29: 1076953804
-      GhostSamurai_3: 1972240133
       GhostSamurai_30: -1174546984
-      GhostSamurai_31: -1397168311
-      GhostSamurai_32: 346583363
-      GhostSamurai_33: 2015745905
-      GhostSamurai_34: -1212427995
-      GhostSamurai_35: -828826238
       GhostSamurai_36: -90638223
-      GhostSamurai_37: 405545829
-      GhostSamurai_38: 2095789726
       GhostSamurai_39: 938309135
-      GhostSamurai_4: -269897328
-      GhostSamurai_40: -873720832
-      GhostSamurai_41: 45441649
-      GhostSamurai_42: -1294883925
-      GhostSamurai_43: -1821151935
-      GhostSamurai_44: 458998736
-      GhostSamurai_45: -2127405795
-      GhostSamurai_46: -1692027554
-      GhostSamurai_47: -1801145354
-      GhostSamurai_48: 633594454
-      GhostSamurai_49: 810251231
-      GhostSamurai_5: 1321503148
-      GhostSamurai_50: -1674882112
-      GhostSamurai_51: -1283729542
-      GhostSamurai_52: 277892750
-      GhostSamurai_53: 1835981786
-      GhostSamurai_54: -1740531733
-      GhostSamurai_55: 1803022877
-      GhostSamurai_56: -508949467
-      GhostSamurai_57: 1513308198
-      GhostSamurai_58: -892184713
-      GhostSamurai_59: -990906331
-      GhostSamurai_6: 1119341393
-      GhostSamurai_60: 808807974
-      GhostSamurai_61: 312069580
-      GhostSamurai_62: 2114779957
-      GhostSamurai_7: -616220868
-      GhostSamurai_8: -1263739609
-      GhostSamurai_9: -1482350098
+      Indle_0: 2056618752
+      Indle_1: 1766142564
+      Indle_2: -72790488
+      Indle_3: 1972240133
+      Indle_4: -269897328
+      Indle_5: 1321503148
+      Run_: -1580378547
+      Run_0: 1119341393
+      Run_1: -616220868
+      Run_2: -1263739609
+      Run_3: -1482350098
+      Run_4: 588816996
+      Run_5: 361489471
+      Run_6: 1319404738
+      Run_7: -960126512
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
