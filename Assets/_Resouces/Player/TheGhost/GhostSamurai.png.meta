@@ -117,8 +117,8 @@ TextureImporter:
         y: 635
         width: 28
         height: 27
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.50000054, y: 0.51482475}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -201,8 +201,8 @@ TextureImporter:
         y: 635
         width: 28
         height: 27
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5000022, y: 0.51480895}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -222,8 +222,8 @@ TextureImporter:
         y: 635
         width: 28
         height: 27
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.50311935, y: 0.51293266}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -260,7 +260,7 @@ TextureImporter:
       name: Run_1
       rect:
         serializedVersion: 2
-        x: 1106
+        x: 1107
         y: 635
         width: 30
         height: 28
@@ -285,8 +285,8 @@ TextureImporter:
         y: 538
         width: 30
         height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.50432587, y: 0.5199632}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -327,8 +327,8 @@ TextureImporter:
         y: 535
         width: 28
         height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.49717277, y: 0.51522356}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -432,8 +432,8 @@ TextureImporter:
         y: 535
         width: 28
         height: 27
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5049918, y: 0.5042499}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -453,8 +453,8 @@ TextureImporter:
         y: 435
         width: 28
         height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.50019485, y: 0.52537304}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -474,8 +474,8 @@ TextureImporter:
         y: 435
         width: 30
         height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5244548, y: 0.5515491}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -495,8 +495,8 @@ TextureImporter:
         y: 435
         width: 31
         height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.49999312, y: 0.55056274}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -516,8 +516,8 @@ TextureImporter:
         y: 435
         width: 31
         height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5076353, y: 0.5567688}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -538,7 +538,7 @@ TextureImporter:
         width: 78
         height: 19
       alignment: 9
-      pivot: {x: 0.43346855, y: 0.6146626}
+      pivot: {x: 0.4399993, y: 0.69538}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -559,7 +559,7 @@ TextureImporter:
         width: 78
         height: 20
       alignment: 9
-      pivot: {x: 0.43306243, y: 0.5528067}
+      pivot: {x: 0.43806028, y: 0.66312253}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -579,8 +579,8 @@ TextureImporter:
         y: 335
         width: 86
         height: 44
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.4909379, y: 0.31842387}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -600,8 +600,8 @@ TextureImporter:
         y: 335
         width: 59
         height: 44
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.2567387, y: 0.31734884}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -621,8 +621,8 @@ TextureImporter:
         y: 335
         width: 60
         height: 44
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.25472513, y: 0.3231548}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -642,8 +642,8 @@ TextureImporter:
         y: 335
         width: 61
         height: 44
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.24787377, y: 0.31878594}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -663,8 +663,8 @@ TextureImporter:
         y: 335
         width: 81
         height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.4255698, y: 0.6579619}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -684,8 +684,8 @@ TextureImporter:
         y: 335
         width: 59
         height: 45
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.25572076, y: 0.30991754}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -705,8 +705,8 @@ TextureImporter:
         y: 335
         width: 62
         height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.24512309, y: 0.67363197}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -726,8 +726,8 @@ TextureImporter:
         y: 335
         width: 57
         height: 44
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.2749714, y: 0.31852722}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -740,15 +740,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GhostSamurai_39
+      name: Attack_17
       rect:
         serializedVersion: 2
         x: 67
         y: 235
         width: 34
         height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.4479487, y: 0.6626485}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -768,8 +768,8 @@ TextureImporter:
         y: 235
         width: 31
         height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.38856852, y: 0.6297108}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -789,8 +789,8 @@ TextureImporter:
         y: 235
         width: 26
         height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.40763268, y: 0.60354346}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -810,8 +810,8 @@ TextureImporter:
         y: 235
         width: 23
         height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.49657407, y: 0.5302981}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1252,7 +1252,7 @@ TextureImporter:
         width: 78
         height: 20
       alignment: 9
-      pivot: {x: 0.41714478, y: 0.55655974}
+      pivot: {x: 0.4196887, y: 0.6764542}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1269,11 +1269,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1090
-        y: 435
+        y: 436
         width: 87
         height: 25
       alignment: 9
-      pivot: {x: 0.38305944, y: 0.5055627}
+      pivot: {x: 0.3897144, y: 0.5355786}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1305,6 +1305,7 @@ TextureImporter:
       Attack_14: 346583363
       Attack_15: 2015745905
       Attack_16: 405545829
+      Attack_17: 938309135
       Attack_18: -873720832
       Attack_19: 45441649
       Attack_2: 441416650
@@ -1343,7 +1344,6 @@ TextureImporter:
       GhostSamurai_29: 1076953804
       GhostSamurai_30: -1174546984
       GhostSamurai_36: -90638223
-      GhostSamurai_39: 938309135
       Indle_0: 2056618752
       Indle_1: 1766142564
       Indle_2: -72790488
