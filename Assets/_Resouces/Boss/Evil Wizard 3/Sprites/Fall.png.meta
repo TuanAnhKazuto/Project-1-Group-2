@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d1f60abddafaaf24db43fb4be51adf57
+guid: 862a51da390209a4faea1934a3c2c8d2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 35
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Get hit_0
+      name: Fall_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e47bcb3e5dca3c54c9dbecaf0405dc85
-      internalID: -231589921
+      spriteID: 0dcbefb993f32ff419d47cba200dcc31
+      internalID: 1935594166
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Get hit_1
+      name: Fall_1
       rect:
         serializedVersion: 2
         x: 140
@@ -158,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ecdb8ed54262be1449580da8c179d975
-      internalID: -1421372998
+      spriteID: 2f4ceffe9affc794d89374003888c7f1
+      internalID: 1337788289
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Get hit_2
+      name: Fall_2
       rect:
         serializedVersion: 2
         x: 280
@@ -179,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c881b5aa735a3943833c340ac3880d8
-      internalID: 288562299
+      spriteID: 7b7becf063d4b484ea13315e662862e6
+      internalID: 496750445
       vertices: []
       indices: 
       edges: []
@@ -196,9 +196,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Get hit_0: -231589921
-      Get hit_1: -1421372998
-      Get hit_2: 288562299
+      Fall_0: 1935594166
+      Fall_1: 1337788289
+      Fall_2: 496750445
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
