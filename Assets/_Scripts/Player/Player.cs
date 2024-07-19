@@ -12,7 +12,6 @@ public class Player : MonoBehaviour
 
 
     [SerializeField] public GameObject bulletprefabs;
-    [SerializeField] private bool _isMovingRight = true;
     [SerializeField] private GameObject _gameOverPanel;
     [SerializeField] private LayerMask jumpableGround;
   
@@ -58,13 +57,11 @@ public class Player : MonoBehaviour
 
             state = MovementState.NhanVatChay;
             sprite.flipX = false;
-            _isMovingRight = true;
         }
         else if (dirX < 0f)
         {
             state = MovementState.NhanVatChay;
             sprite.flipX = true;
-            _isMovingRight = false;
         }
         else
         {
