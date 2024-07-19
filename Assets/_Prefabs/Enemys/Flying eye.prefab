@@ -320,6 +320,7 @@ GameObject:
   - component: {fileID: 1538723545399651479}
   - component: {fileID: 8539211540619990956}
   - component: {fileID: 914106736908447213}
+  - component: {fileID: 6642493644888413972}
   m_Layer: 0
   m_Name: Flying eye
   m_TagString: Enemy
@@ -414,3 +415,15 @@ MonoBehaviour:
   curLife: 0
   enemyCollider: {fileID: 325987032790343040}
   damage: 5
+--- !u!114 &6642493644888413972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6411507013511691688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2b77302eeb0764b9bb3a9c7c347224, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
