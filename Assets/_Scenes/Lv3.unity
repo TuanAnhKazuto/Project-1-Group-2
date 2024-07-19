@@ -40643,16 +40643,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 84, y: 2, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 79
-      m_TileSpriteIndex: 79
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: 99, y: 2, z: 0}
     second:
       serializedVersion: 2
@@ -126253,7 +126243,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 938
+  - m_RefCount: 937
     m_Data: {fileID: 11400000, guid: aa03136c99e57b64dbad2ea424755c99, type: 2}
   - m_RefCount: 25
     m_Data: {fileID: 11400000, guid: 69ee2afb54978c740861c352414ad4dc, type: 2}
@@ -126418,14 +126408,14 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 938
+  - m_RefCount: 937
     m_Data: {fileID: -7493662373440314518, guid: 7b8e06a767f7a8f499d107130ef518a4, type: 3}
   - m_RefCount: 25
     m_Data: {fileID: -4606175067800870258, guid: 7b8e06a767f7a8f499d107130ef518a4, type: 3}
   - m_RefCount: 11607
     m_Data: {fileID: 6875877566193945470, guid: 7b8e06a767f7a8f499d107130ef518a4, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 12570
+  - m_RefCount: 12569
     m_Data:
       e00: 1
       e01: 0
@@ -126444,7 +126434,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 12570
+  - m_RefCount: 12569
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -127547,9 +127537,9 @@ CompositeCollider2D:
         Y: 130000000
       - X: 990000000
         Y: 20000000
-      - X: 850000000
+      - X: 840000000
         Y: 20000000
-      - X: 850000000
+      - X: 840000000
         Y: 30000000
       - X: 830000000
         Y: 30000000
@@ -128731,8 +128721,8 @@ CompositeCollider2D:
       - {x: 63.000034, y: 13}
       - {x: 99, y: 12.99997}
       - {x: 98.99997, y: 2}
-      - {x: 85, y: 2.0000293}
-      - {x: 84.99997, y: 3}
+      - {x: 84, y: 2.0000293}
+      - {x: 83.99997, y: 3}
       - {x: 83, y: 3.0000293}
       - {x: 82.99997, y: 4}
       - {x: 81, y: 3.999971}
