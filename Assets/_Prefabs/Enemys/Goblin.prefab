@@ -319,6 +319,7 @@ GameObject:
   - component: {fileID: 1479834645282042021}
   - component: {fileID: 7875342009628888560}
   - component: {fileID: 5124151265724754739}
+  - component: {fileID: 4498715742771215440}
   - component: {fileID: 6574127938525508509}
   - component: {fileID: 2827115078997471932}
   m_Layer: 0
@@ -394,6 +395,18 @@ MonoBehaviour:
   curLife: 0
   enemyCollider: {fileID: 1698273135143852860}
   damage: 5
+--- !u!114 &4498715742771215440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8272312943420202690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2b77302eeb0764b9bb3a9c7c347224, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &6574127938525508509
 Animator:
   serializedVersion: 5

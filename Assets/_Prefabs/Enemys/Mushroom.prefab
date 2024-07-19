@@ -243,6 +243,7 @@ GameObject:
   - component: {fileID: 1006577687993839918}
   - component: {fileID: 7270965453012276306}
   - component: {fileID: 2698444359012148441}
+  - component: {fileID: 285426456509215330}
   - component: {fileID: 561269493424598174}
   m_Layer: 0
   m_Name: Mushroom
@@ -338,6 +339,18 @@ MonoBehaviour:
   curLife: 0
   enemyCollider: {fileID: 187619890017393913}
   damage: 5
+--- !u!114 &285426456509215330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5155453015066722268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2b77302eeb0764b9bb3a9c7c347224, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &561269493424598174
 SpriteRenderer:
   m_ObjectHideFlags: 0

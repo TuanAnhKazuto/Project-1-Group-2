@@ -34,7 +34,7 @@ public class EnemyBehaviour : MonoBehaviour
     private void Update()
     {
         Move();
-        BeAttack();
+        TakeAttack();
     }
 
     private void Move()
@@ -59,10 +59,12 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Attack();
+                Attack();
+            
         }
     }
 
+    //Attack
     private void Attack()
     {
         moveSpeed = 0;
@@ -76,7 +78,8 @@ public class EnemyBehaviour : MonoBehaviour
         animator.SetBool("attack", false);
     }
 
-    private void BeAttack()
+    //TakeAttack
+    private void TakeAttack()
     {
         if (curLife <= 0)
         {

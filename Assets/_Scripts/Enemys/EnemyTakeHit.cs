@@ -19,6 +19,7 @@ public class EnemyTakeHit : MonoBehaviour
             enemyBhv.moveSpeed = 0.1f;
             Invoke("SetBoolFalse", 0.4f);
             enemyBhv.curLife -= 1;
+            Debug.Log(enemyBhv.curLife);
         }
     }
 
