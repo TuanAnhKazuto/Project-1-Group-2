@@ -151,106 +151,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BridgeBlock
+      name: Bridge_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 24
-        width: 8
-        height: 8
+        x: 9
+        y: 7
+        width: 30
+        height: 11
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 814d48406fa55d460800000000000000
-      internalID: 7265813586516431896
+      spriteID: 6c32207b81a9653498e548d39c80991b
+      internalID: 1291394786
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BridgeDecoration1
+      name: Bridge_1
       rect:
         serializedVersion: 2
-        x: 8
-        y: 8
-        width: 8
-        height: 8
+        x: 7
+        y: 27
+        width: 10
+        height: 6
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16c46fc804af4cd40800000000000000
-      internalID: 5603878991505542241
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BridgeDecoration2
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 8
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 536caaf8b8b513fc0800000000000000
-      internalID: -3516929179030731211
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BridgeDecoration3
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 8
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1882253f0bec2ab10800000000000000
-      internalID: 1991381244642994305
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BridgeDecoration4
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 8
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ffa9c468d550d9a70800000000000000
-      internalID: 8835223943214045951
+      spriteID: e71c4d69bcf205d4a8325566331f05d7
+      internalID: 1729030996
       vertices: []
       indices: 
       edges: []
@@ -271,6 +208,8 @@ TextureImporter:
       BridgeDecoration2: -3516929179030731211
       BridgeDecoration3: 1991381244642994305
       BridgeDecoration4: 8835223943214045951
+      Bridge_0: 1291394786
+      Bridge_1: 1729030996
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
