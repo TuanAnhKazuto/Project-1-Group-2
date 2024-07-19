@@ -11,8 +11,6 @@ public class Player : MonoBehaviour
     private Animator anim;
 
 
-    [SerializeField] public GameObject bulletprefabs;
-    [SerializeField] private GameObject _gameOverPanel;
     [SerializeField] private LayerMask jumpableGround;
   
     private float dirX = 0f;

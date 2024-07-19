@@ -11,6 +11,8 @@ public class TheGhost : MonoBehaviour
     // Move
     public float moveSpeed;
     public float jumpSpeed;
+    private int maxJump = 1;
+    private int jumpCount = 0;
     // Check chạm đất
     public float groundCheckDistance = 0.6f;
     public LayerMask groundLayer;
@@ -20,6 +22,7 @@ public class TheGhost : MonoBehaviour
     private bool isHolding = false;
     private float holdTime = 0f;
     private bool isAttacking = false;
+
 
     private void Start()
     {
@@ -42,9 +45,15 @@ public class TheGhost : MonoBehaviour
     //Move
     private void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
+        if (Input.GetKeyDown(KeyCode.Space) && (IsGrounded() || jumpCount < maxJump))
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
+            jumpCount++;
+        }
+
+        if(IsGrounded())
+        {
+            jumpCount = 0;
         }
     }
 
