@@ -99,6 +99,8 @@ public class TheGhost : MonoBehaviour
     //Attack
     private void AttackManager()
     {
+        if (isAttacking) return;
+
         if (Input.GetKeyDown(KeyCode.J))
         {
             isHolding = true;
