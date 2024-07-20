@@ -79,7 +79,7 @@ GameObject:
   - component: {fileID: 7629999309702336546}
   - component: {fileID: 3128171517653351859}
   - component: {fileID: 1924232918786536785}
-  - component: {fileID: 7282532467270511813}
+  - component: {fileID: 3053806966000854846}
   m_Layer: 0
   m_Name: Samurai
   m_TagString: Player
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1672a71b1b311e744aef297f3cdb00a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7282532467270511813
+--- !u!114 &3053806966000854846
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -174,17 +174,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 7661009421641973579}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d71f4fa63d051d45a2d772235504eb3, type: 3}
+  m_Script: {fileID: 11500000, guid: ef3338a4aaaf76c49ae232ec342711f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletprefabs: {fileID: 0}
-  _isMovingRight: 1
-  _gameOverPanel: {fileID: 0}
   jumpableGround:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 0
   moveSpeed: 4
-  jumpForce: 7
+  jumpForce: 4
 --- !u!1 &8293989399730065573
 GameObject:
   m_ObjectHideFlags: 0

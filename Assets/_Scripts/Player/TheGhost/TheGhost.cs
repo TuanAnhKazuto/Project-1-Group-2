@@ -7,6 +7,8 @@ public class TheGhost : MonoBehaviour
 {
     Animator animator;
     Rigidbody2D rb;
+    private PlayerPhysicalBar physicalBar;
+
 
     // Move
     public float moveSpeed;
@@ -22,11 +24,12 @@ public class TheGhost : MonoBehaviour
     private bool isHolding = false;
     private float holdTime = 0f;
     private bool isAttacking = false;
-
+    private bool vipAttackTriggered = false;
     private void Start()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        physicalBar = GetComponent<PlayerPhysicalBar>();
     }
 
     private void Update()
@@ -74,7 +77,7 @@ public class TheGhost : MonoBehaviour
         animator.SetBool("isJumping", !IsGrounded());
         animator.SetFloat("VerticalSpeed", rb.velocity.y);
 
-        isAttacking = animator.GetCurrentAnimatorStateInfo(0).IsName("Attack") ||
+        isAttacking = animator.GetCurrentAnimatorStateInfo(0).IsName("Attac") ||
                      animator.GetCurrentAnimatorStateInfo(0).IsName("AttackVIP");
     }
 
@@ -85,12 +88,12 @@ public class TheGhost : MonoBehaviour
         return hit.collider != null;
     }
 
-/*    private void OnDrawGizmos()
-    {
-        // Vẽ raycast để kiểm tra trong Unity
-        Gizmos.color = Color.red;
-        Gizmos.DrawLine(transform.position, transform.position + Vector3.down * groundCheckDistance);
-    }*/
+    /*    private void OnDrawGizmos()
+        {
+            // Vẽ raycast để kiểm tra trong Unity
+            Gizmos.color = Color.red;
+            Gizmos.DrawLine(transform.position, transform.position + Vector3.down * groundCheckDistance);
+        }*/
 
 
     //Attack
@@ -100,15 +103,16 @@ public class TheGhost : MonoBehaviour
         {
             isHolding = true;
             holdTime = 0f;
+            vipAttackTriggered = false; // Đặt lại cờ khi phím J được nhấn xuống
         }
 
         if (Input.GetKey(KeyCode.J))
         {
             holdTime += Time.deltaTime;
-            if (isHolding && holdTime >= holdThreshold)
+            if (isHolding && holdTime >= holdThreshold && !vipAttackTriggered)
             {
                 AttackVIP();
-
+                vipAttackTriggered = true; // Đặt cờ để chỉ chạy AttackVIP một lần
             }
         }
 
@@ -117,21 +121,23 @@ public class TheGhost : MonoBehaviour
             if (isHolding && holdTime < holdThreshold)
             {
                 Attack();
-
             }
         }
     }
+
 
     private void Attack()
     {
         animator.SetBool("isAttack", true);
         Invoke("ResetAttack", 0.2f);
+        physicalBar.UpdatePhysical(2);
     }
 
     private void AttackVIP()
     {
         animator.SetBool("isAttackVIP", true);
         Invoke("ResetAttack", 0.5f);
+        physicalBar.UpdatePhysical(4);
     }
 
     private void ResetAttack()
