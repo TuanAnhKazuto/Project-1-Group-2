@@ -17,7 +17,7 @@ public class Lamp : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.tag == "Player")
+        if(other.gameObject.tag == "Samurai")
         {
             animator.SetBool("isCheckPoint", true);
             PlayerPrefs.SetFloat("PlayerPosX", transform.position.x);
@@ -25,7 +25,7 @@ public class Lamp : MonoBehaviour
             Debug.Log("Saved checkpoint: " + transform.position);
         }
 
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Samurai"))
         {
             LoadLevel();
         }
