@@ -3,16 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Player : MonoBehaviour
+public class Samurai : MonoBehaviour
 {
     private Rigidbody2D rb;
     private CapsuleCollider2D coll;
     private SpriteRenderer sprite;
     private Animator anim;
 
-
-    [SerializeField] public GameObject bulletprefabs;
-    [SerializeField] private GameObject _gameOverPanel;
     [SerializeField] private LayerMask jumpableGround;
   
     private float dirX = 0f;
