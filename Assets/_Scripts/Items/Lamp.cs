@@ -25,18 +25,10 @@ public class Lamp : MonoBehaviour
             Debug.Log("Saved checkpoint: " + transform.position);
         }
 
-        if (other.CompareTag("Player"))
-        {
-            LoadLevel();
-        }
+        
     }
 
-    public string Level;
-
-    public void LoadLevel()
-    {
-        SceneManager.LoadScene(Level);
-    }
+    
 
 
 
