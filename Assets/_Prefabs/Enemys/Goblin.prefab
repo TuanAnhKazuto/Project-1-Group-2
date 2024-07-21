@@ -147,7 +147,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0.62192976, y: 0.070154354}
   m_Size: {x: 0.36405328, y: 0.0890614}
   m_Direction: 1
---- !u!1 &4019948598804528945
+--- !u!1 &4504750730782700798
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -155,8 +155,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 978772062878938058}
-  - component: {fileID: 1803014797131536193}
+  - component: {fileID: 2733172920216948046}
+  - component: {fileID: 2707454695306462203}
   m_Layer: 0
   m_Name: triggerArea
   m_TagString: Untagged
@@ -164,28 +164,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &978772062878938058
+--- !u!4 &2733172920216948046
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4019948598804528945}
+  m_GameObject: {fileID: 4504750730782700798}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.92652, y: 0, z: 0}
   m_LocalScale: {x: 1.7765235, y: 0.6875, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1479834645282042021}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1803014797131536193
+--- !u!61 &2707454695306462203
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4019948598804528945}
+  m_GameObject: {fileID: 4504750730782700798}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -345,7 +345,7 @@ Transform:
   - {fileID: 495400061250964641}
   - {fileID: 2233018642669576216}
   - {fileID: 5311088131393735664}
-  - {fileID: 978772062878938058}
+  - {fileID: 2733172920216948046}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &7875342009628888560
