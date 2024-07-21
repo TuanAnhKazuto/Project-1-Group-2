@@ -20,7 +20,7 @@ public class TheGhost : MonoBehaviour
     public LayerMask groundLayer;
 
     //Attack
-    private float holdThreshold = 0.2f;
+    private float holdThreshold = 0.3f;
     private bool isHolding = false;
     private float holdTime = 0f;
     private bool isAttacking = false;
@@ -131,20 +131,20 @@ public class TheGhost : MonoBehaviour
 
     private void Attack()
     {
-        if(physicalBar.curPhysical < 2) return;
+        if(physicalBar.curPhysical < 1) return;
 
         animator.SetBool("isAttack", true);
         Invoke("ResetAttack", 0.2f);
-        physicalBar.UpdatePhysical(2);
+        physicalBar.UpdatePhysical(1);
     }
 
     private void AttackVIP()
     {
-        if (physicalBar.curPhysical < 4) return;
+        if (physicalBar.curPhysical < 2) return;
 
         animator.SetBool("isAttackVIP", true);
         Invoke("ResetAttack", 0.5f);
-        physicalBar.UpdatePhysical(4);
+        physicalBar.UpdatePhysical(2);
     }
 
     private void ResetAttack()
