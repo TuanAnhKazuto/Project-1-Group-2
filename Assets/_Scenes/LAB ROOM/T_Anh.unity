@@ -1229,6 +1229,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5328008460558022850, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 4.999998
+      objectReference: {fileID: 0}
     - target: {fileID: 7110457714994756638, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
       propertyPath: m_Value
       value: 100
@@ -1517,13 +1521,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1803014797131536193, guid: 20cd082783cc8ee4eac512c992b31ab0, type: 3}
+      propertyPath: m_Size.x
+      value: 0.46358132
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803014797131536193, guid: 20cd082783cc8ee4eac512c992b31ab0, type: 3}
+      propertyPath: m_Size.y
+      value: 0.5919737
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803014797131536193, guid: 20cd082783cc8ee4eac512c992b31ab0, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.085581124
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803014797131536193, guid: 20cd082783cc8ee4eac512c992b31ab0, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.3752611
+      objectReference: {fileID: 0}
     - target: {fileID: 8272312943420202690, guid: 20cd082783cc8ee4eac512c992b31ab0, type: 3}
       propertyPath: m_Name
       value: Goblin
       objectReference: {fileID: 0}
     - target: {fileID: 8272312943420202690, guid: 20cd082783cc8ee4eac512c992b31ab0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
