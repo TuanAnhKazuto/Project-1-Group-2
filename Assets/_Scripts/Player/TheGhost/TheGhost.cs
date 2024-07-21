@@ -51,6 +51,7 @@ public class TheGhost : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
             jumpCount++;
+            Debug.Log(jumpCount);
         }
 
         if (IsGrounded())
@@ -77,7 +78,7 @@ public class TheGhost : MonoBehaviour
         animator.SetBool("isJumping", !IsGrounded());
         animator.SetFloat("VerticalSpeed", rb.velocity.y);
 
-        isAttacking = animator.GetCurrentAnimatorStateInfo(0).IsName("Attac") ||
+        isAttacking = animator.GetCurrentAnimatorStateInfo(0).IsName("Attack") ||
                      animator.GetCurrentAnimatorStateInfo(0).IsName("AttackVIP");
     }
 
@@ -105,7 +106,7 @@ public class TheGhost : MonoBehaviour
         {
             isHolding = true;
             holdTime = 0f;
-            vipAttackTriggered = false; // Đặt lại cờ khi phím J được nhấn xuống
+            vipAttackTriggered = false;
         }
 
         if (Input.GetKey(KeyCode.J))
@@ -114,7 +115,7 @@ public class TheGhost : MonoBehaviour
             if (isHolding && holdTime >= holdThreshold && !vipAttackTriggered)
             {
                 AttackVIP();
-                vipAttackTriggered = true; // Đặt cờ để chỉ chạy AttackVIP một lần
+                vipAttackTriggered = true; 
             }
         }
 
@@ -130,6 +131,8 @@ public class TheGhost : MonoBehaviour
 
     private void Attack()
     {
+        if(physicalBar.curPhysical < 2) return;
+
         animator.SetBool("isAttack", true);
         Invoke("ResetAttack", 0.2f);
         physicalBar.UpdatePhysical(2);
@@ -137,6 +140,8 @@ public class TheGhost : MonoBehaviour
 
     private void AttackVIP()
     {
+        if (physicalBar.curPhysical < 4) return;
+
         animator.SetBool("isAttackVIP", true);
         Invoke("ResetAttack", 0.5f);
         physicalBar.UpdatePhysical(4);

@@ -60,7 +60,6 @@ public class EnemyBehaviour : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
                 Attack();
-            
         }
     }
 
@@ -81,7 +80,7 @@ public class EnemyBehaviour : MonoBehaviour
     //TakeAttack
     private void TakeAttack()
     {
-        if (curLife <= 0)
+        if (curLife <= -1)
         {
             enemyCollider.SetActive(false);
             rg.gravityScale = 0;
