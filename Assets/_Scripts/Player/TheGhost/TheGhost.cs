@@ -29,6 +29,15 @@ public class TheGhost : MonoBehaviour
     private bool isAttacking = false;
     private bool vipAttackTriggered = false;
 
+    //
+
+    //Sub physical count when do somethink
+    private float whenAttack = 2f;
+    private float whenAttackVIP = 5f;
+    private float whenJump = 1f;
+    private float whenDash = 5f;
+
+
     //Take Coin
     private int coinCount = 0; 
     public Text coinText;
@@ -58,9 +67,14 @@ public class TheGhost : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && (IsGrounded() || jumpCount < maxJump))
         {
+            if (physicalBar.curPhysical < whenJump) return;
             rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
             jumpCount++;
             Debug.Log(jumpCount);
+            if(jumpCount == maxJump)
+            {
+                physicalBar.UpdatePhysical(whenJump);
+            }
         }
 
         if (IsGrounded())
@@ -140,20 +154,20 @@ public class TheGhost : MonoBehaviour
 
     private void Attack()
     {
-        if(physicalBar.curPhysical < 1) return;
+        if(physicalBar.curPhysical < whenAttack) return;
 
         animator.SetBool("isAttack", true);
         Invoke("ResetAttack", 0.2f);
-        physicalBar.UpdatePhysical(1);
+        physicalBar.UpdatePhysical(whenAttack);
     }
 
     private void AttackVIP()
     {
-        if (physicalBar.curPhysical < 2) return;
+        if (physicalBar.curPhysical < whenAttackVIP) return;
 
         animator.SetBool("isAttackVIP", true);
         Invoke("ResetAttack", 0.5f);
-        physicalBar.UpdatePhysical(2);
+        physicalBar.UpdatePhysical(whenAttackVIP);
     }
 
     private void ResetAttack()
