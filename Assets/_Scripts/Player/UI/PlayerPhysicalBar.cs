@@ -14,7 +14,14 @@ public class PlayerPhysicalBar : MonoBehaviour
         curPhysical = maxPhysical;
     }
 
-
+    private void Update()
+    {
+        if(curPhysical < maxPhysical)
+        {
+            curPhysical += 0.5f * Time.deltaTime;
+            physicalBar.value = curPhysical;
+        }
+    }
 
     public void UpdatePhysical(float sub)
     {
