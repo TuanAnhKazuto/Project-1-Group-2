@@ -2,6 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Timeline.TimelinePlaybackControls;
+using UnityEngine.UI;
+
 
 public class TheGhost : MonoBehaviour
 {
@@ -25,6 +28,12 @@ public class TheGhost : MonoBehaviour
     private float holdTime = 0f;
     private bool isAttacking = false;
     private bool vipAttackTriggered = false;
+
+    //Coin
+    private int coinCount = 0; 
+    public Text coinText;
+
+   
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -152,4 +161,20 @@ public class TheGhost : MonoBehaviour
         animator.SetBool("isAttack", false);
         animator.SetBool("isAttackVIP", false);
     }
+
+    //Coin
+    public void AddCoins(int amount)
+    {
+        coinCount += amount;
+        UpdateCoinText();
+    }
+
+    private void UpdateCoinText()
+    {
+        if (coinText != null)
+        {
+            coinText.text = "Coins: " + coinCount;
+        }
+    }
+
 }
