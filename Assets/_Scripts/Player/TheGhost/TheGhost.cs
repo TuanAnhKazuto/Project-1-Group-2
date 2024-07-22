@@ -29,7 +29,7 @@ public class TheGhost : MonoBehaviour
     private bool isAttacking = false;
     private bool vipAttackTriggered = false;
 
-    //Coin
+    //Take Coin
     private int coinCount = 0; 
     public Text coinText;
 
