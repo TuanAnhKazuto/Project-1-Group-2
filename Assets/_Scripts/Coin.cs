@@ -2,14 +2,19 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    public int points = 1; 
+    public int coinValue = 1; 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        TheGhost player = collision.GetComponent<TheGhost>();
-        if (player != null)
+        if (collision.gameObject.CompareTag("Player")) 
         {
             
+            TheGhost player = collision.GetComponent<TheGhost>();
+            if (player != null)
+            {
+                player.AddCoins(coinValue);
+            }
+           
             Destroy(gameObject);
         }
     }
