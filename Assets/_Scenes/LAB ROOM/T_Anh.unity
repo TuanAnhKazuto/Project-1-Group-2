@@ -1124,6 +1124,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5652264241565298241, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
+      propertyPath: dashTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5652264241565298241, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
+      propertyPath: dashBoost
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5652264241565298241, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
+      propertyPath: ghostEffect
+      value: 
+      objectReference: {fileID: 6531999878802715694, guid: 841d3613bc478304ca33ffa7b4c7fa62, type: 3}
     - target: {fileID: 5772735567670939841, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
       propertyPath: healhtBar
       value: 
@@ -1332,7 +1344,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6411507013511691688, guid: a48e93e72221b564f8b0ea48aef9fee8, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1433,20 +1445,8 @@ PrefabInstance:
       value: PlayerCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 2020869838297610448, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.83779097
-      objectReference: {fileID: 0}
-    - target: {fileID: 2020869838297610448, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.83779097
-      objectReference: {fileID: 0}
-    - target: {fileID: 2020869838297610448, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.83779097
-      objectReference: {fileID: 0}
-    - target: {fileID: 2020869838297610448, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 9.100006
+      value: 9.100037
       objectReference: {fileID: 0}
     - target: {fileID: 2020869838297610448, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1456,6 +1456,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1702499559}
+    - target: {fileID: 4205944911229513951, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
+      propertyPath: m_VertexColorAlwaysGammaSpace
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4391973127293113346, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1543,14 +1547,6 @@ PrefabInstance:
     - target: {fileID: 7479434073798593612, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7497125849693669999, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -311.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7497125849693669999, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 179.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

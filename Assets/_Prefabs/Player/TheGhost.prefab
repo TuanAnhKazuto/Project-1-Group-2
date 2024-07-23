@@ -53,10 +53,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   jumpSpeed: 5
+  isRuning: 0
   groundCheckDistance: 0.6
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  isAttacking: 0
+  dashBoost: 15
+  dashTime: 0.2
+  isDashing: 0
+  ghostEffect: {fileID: 6531999878802715694, guid: 841d3613bc478304ca33ffa7b4c7fa62, type: 3}
+  coinText: {fileID: 0}
 --- !u!114 &5772735567670939841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82,8 +89,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9387931ea72a3f6499f18b79d6942127, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  physicalBar: {fileID: 0}
-  curPhysical: 0
+  staminaBar: {fileID: 0}
+  curStamina: 0
 --- !u!50 &549153424232620150
 Rigidbody2D:
   serializedVersion: 4
