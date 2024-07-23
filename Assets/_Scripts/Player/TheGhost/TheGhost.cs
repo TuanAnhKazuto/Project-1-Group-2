@@ -5,6 +5,8 @@ using UnityEngine;
 using static UnityEditor.Timeline.TimelinePlaybackControls;
 using UnityEngine.UI;
 using Unity.Mathematics;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 
 public class TheGhost : MonoBehaviour
@@ -12,6 +14,7 @@ public class TheGhost : MonoBehaviour
     Animator animator;
     Rigidbody2D rb;
     private PlayerPhysicalBar physicalBar;
+   
 
 
     // Move
@@ -48,8 +51,8 @@ public class TheGhost : MonoBehaviour
 
 
     //Take Coin
-    private int coinCount = 0; 
-    public Text coinText;
+    public int coin = 0;
+    public TextMeshProUGUI TextCoin;
 
    
     private void Start()
@@ -235,18 +238,21 @@ public class TheGhost : MonoBehaviour
     }
 
     //Coin
-    public void AddCoins(int amount)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        coinCount += amount;
-        UpdateCoinText();
+        if (collision.CompareTag("Coin"))
+        {
+            coin++;
+            TextCoin.SetText(coin.ToString());
+            Destroy(collision.gameObject);
+        }
+        
     }
 
-    private void UpdateCoinText()
-    {
-        if (coinText != null)
-        {
-            coinText.text = "Coins: " + coinCount;
-        }
-    }
+    
 
 }
+
+
+    
+
