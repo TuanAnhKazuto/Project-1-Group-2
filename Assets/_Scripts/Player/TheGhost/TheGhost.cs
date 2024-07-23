@@ -135,12 +135,12 @@ public class TheGhost : MonoBehaviour
         return hit.collider != null;
     }
 
-    /*    private void OnDrawGizmos()
-        {
-            // Vẽ raycast để kiểm tra trong Unity
-            Gizmos.color = Color.red;
-            Gizmos.DrawLine(transform.position, transform.position + Vector3.down * groundCheckDistance);
-        }*/
+    /*private void OnDrawGizmos()
+    {
+        // Vẽ raycast để kiểm tra trong Unity
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(transform.position, transform.position + Vector3.down * groundCheckDistance);
+    }*/
 
 
     //Attack
@@ -202,7 +202,6 @@ public class TheGhost : MonoBehaviour
     //Dash
     private void Dash()
     {
-        
         if (Input.GetKeyDown(KeyCode.L) && _dashTime <= 0 && isDashing == false && staminaBar.curStamina > whenDash)
         {
             moveSpeed += dashBoost;
@@ -232,6 +231,7 @@ public class TheGhost : MonoBehaviour
             animator.SetBool("isDashing", false);
         }
     }
+
 
     private void StartDashEffect()
     {
