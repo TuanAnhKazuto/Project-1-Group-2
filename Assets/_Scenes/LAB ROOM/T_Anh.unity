@@ -1021,7 +1021,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5155453015066722268, guid: 37d3c1a79ff8a134e9324f54445fc955, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7826810146132268276, guid: 37d3c1a79ff8a134e9324f54445fc955, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1443,6 +1443,10 @@ PrefabInstance:
     - target: {fileID: 824806861603817463, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
       propertyPath: m_Name
       value: PlayerCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020869838297610448, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 9.100037
       objectReference: {fileID: 0}
     - target: {fileID: 2020869838297610448, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
       propertyPath: m_AnchoredPosition.y

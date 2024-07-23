@@ -23,6 +23,7 @@ public class EnemyTakeHit : MonoBehaviour
         }
     }
 
+
     private void SetBoolFalse()
     {
         enemyBhv.moveSpeed = 2;
