@@ -108,7 +108,7 @@ AnimatorStateMachine:
     m_Position: {x: 780, y: -90, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5497140034742322543}
-    m_Position: {x: -300, y: 20, z: 0}
+    m_Position: {x: -300, y: -190, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2802662913130358320}
     m_Position: {x: 0, y: 110, z: 0}
@@ -120,7 +120,7 @@ AnimatorStateMachine:
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: -280, y: -90, z: 0}
   m_EntryPosition: {x: 350, y: -190, z: 0}
-  m_ExitPosition: {x: 840, y: -180, z: 0}
+  m_ExitPosition: {x: 820, y: -180, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: -6827688318275291660}
 --- !u!1102 &-5497140034742322543
@@ -131,9 +131,10 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Dead
-  m_Speed: 1
+  m_Speed: 2
   m_CycleOffset: 0
-  m_Transitions: []
+  m_Transitions:
+  - {fileID: 2325016001686461824}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -336,6 +337,28 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1101 &2325016001686461824
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions: []
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -6827688318275291660}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0
+  m_ExitTime: 1
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1101 &2338151378018801217
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -391,7 +414,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: AttackVIP
-  m_Speed: 1.6
+  m_Speed: 1.75
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 3494973605533166856}

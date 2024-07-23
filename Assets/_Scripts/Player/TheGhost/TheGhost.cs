@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEditor.Timeline.TimelinePlaybackControls;
 using UnityEngine.UI;
+using Unity.Mathematics;
 
 
 public class TheGhost : MonoBehaviour
@@ -26,10 +27,27 @@ public class TheGhost : MonoBehaviour
     private float holdThreshold = 0.3f;
     private bool isHolding = false;
     private float holdTime = 0f;
-    private bool isAttacking = false;
+    [HideInInspector] public bool isAttacking = false;
     private bool vipAttackTriggered = false;
 
-    //Coin
+    //Dash
+    [SerializeField] private float dashBoost;
+    [SerializeField] private float dashTime;
+    private float _dashTime;
+    private bool isDashing = false;
+    public GameObject ghostEffect;
+    private float ghostDelaySeconds = 0.04f;
+    private Coroutine dashEffectCoroutine;
+
+
+    //Sub physical count when do somethink
+    private float whenAttack = 2f;
+    private float whenAttackVIP = 5f;
+    private float whenJump = 1f;
+    private float whenDash = 6f;
+
+
+    //Take Coin
     private int coinCount = 0; 
     public Text coinText;
 
@@ -45,9 +63,10 @@ public class TheGhost : MonoBehaviour
     {
         if (!isAttacking)
         {
-            Move();
+            Run();
             Jump();
         }
+        Dash();
         UpdateAnimator();
         AttackManager();
     }
@@ -58,9 +77,14 @@ public class TheGhost : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && (IsGrounded() || jumpCount < maxJump))
         {
+            if (physicalBar.curPhysical < whenJump) return;
             rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
             jumpCount++;
             Debug.Log(jumpCount);
+            if(jumpCount == maxJump)
+            {
+                physicalBar.UpdatePhysical(whenJump);
+            }
         }
 
         if (IsGrounded())
@@ -69,12 +93,14 @@ public class TheGhost : MonoBehaviour
         }
     }
 
-    private void Move()
+    public void Run()
     {
         Vector2 scale = transform.localScale;
         float horizontal = Input.GetAxis("Horizontal");
         if (horizontal != 0)
         {
+
+            //rb.velocity = new Vector2(horizontal * moveSpeed, rb.velocity.y);
             transform.Translate(Vector2.right * horizontal * moveSpeed * Time.deltaTime);
             scale.x = horizontal > 0 ? 1 : -1;
         }
@@ -140,26 +166,72 @@ public class TheGhost : MonoBehaviour
 
     private void Attack()
     {
-        if(physicalBar.curPhysical < 1) return;
+        if(physicalBar.curPhysical < whenAttack) return;
 
         animator.SetBool("isAttack", true);
         Invoke("ResetAttack", 0.2f);
-        physicalBar.UpdatePhysical(1);
+        physicalBar.UpdatePhysical(whenAttack);
     }
 
     private void AttackVIP()
     {
-        if (physicalBar.curPhysical < 2) return;
+        if (physicalBar.curPhysical < whenAttackVIP) return;
 
         animator.SetBool("isAttackVIP", true);
         Invoke("ResetAttack", 0.5f);
-        physicalBar.UpdatePhysical(2);
+        physicalBar.UpdatePhysical(whenAttackVIP);
     }
 
     private void ResetAttack()
     {
         animator.SetBool("isAttack", false);
         animator.SetBool("isAttackVIP", false);
+    }
+
+    //Dash
+    private void Dash()
+    {
+        
+        if (Input.GetKeyDown(KeyCode.L) && _dashTime <= 0 && isDashing == false && physicalBar.curPhysical > whenDash)
+        {
+            moveSpeed += dashBoost;
+            _dashTime = dashTime;
+            isDashing = true;
+            physicalBar.UpdatePhysical(whenDash);
+            StartDashEffect();
+        }
+
+        if (_dashTime <= 0 && isDashing == true)
+        {
+            moveSpeed -= dashBoost;
+            isDashing = false;
+        }
+        else
+        {
+            _dashTime -= Time.deltaTime;
+            StopDashEffect();
+        }
+    }
+
+    private void StartDashEffect()
+    {
+        if(dashEffectCoroutine != null) StopCoroutine(dashEffectCoroutine);
+        dashEffectCoroutine = StartCoroutine(DashEffectCoroutine());
+    }
+
+    private void StopDashEffect()
+    {
+        if (dashEffectCoroutine != null) StopCoroutine(dashEffectCoroutine);
+    }
+
+    IEnumerator DashEffectCoroutine()
+    {
+        while (true)
+        {
+            GameObject ghost = Instantiate(ghostEffect, transform.position, Quaternion.identity);
+
+            yield return new WaitForSeconds(ghostDelaySeconds);
+        }
     }
 
     //Coin
