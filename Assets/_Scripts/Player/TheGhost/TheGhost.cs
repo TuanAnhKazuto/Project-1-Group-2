@@ -7,21 +7,23 @@ using UnityEngine.UI;
 using Unity.Mathematics;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEditor.SearchService;
+
 
 
 public class TheGhost : MonoBehaviour
 {
     Animator animator;
     Rigidbody2D rb;
-    private PlayerPhysicalBar physicalBar;
-   
 
+    private PlayerStaminaBar staminaBar;
 
     // Move
     public float moveSpeed;
     public float jumpSpeed;
     private int maxJump = 1;
     private int jumpCount = 0;
+    [HideInInspector] public bool isRuning = false;
     // Check chạm đất
     public float groundCheckDistance = 0.6f;
     public LayerMask groundLayer;
@@ -37,10 +39,11 @@ public class TheGhost : MonoBehaviour
     [SerializeField] private float dashBoost;
     [SerializeField] private float dashTime;
     private float _dashTime;
-    private bool isDashing = false;
+    [HideInInspector] public bool isDashing = false;
     public GameObject ghostEffect;
     private float ghostDelaySeconds = 0.04f;
     private Coroutine dashEffectCoroutine;
+    private Transform playerTransform;
 
 
     //Sub physical count when do somethink
@@ -59,7 +62,8 @@ public class TheGhost : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        physicalBar = GetComponent<PlayerPhysicalBar>();
+        staminaBar = GetComponent<PlayerStaminaBar>();
+        playerTransform = transform;
     }
 
     private void Update()
@@ -80,13 +84,12 @@ public class TheGhost : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && (IsGrounded() || jumpCount < maxJump))
         {
-            if (physicalBar.curPhysical < whenJump) return;
+            if (staminaBar.curStamina < whenJump) return;
             rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
             jumpCount++;
-            Debug.Log(jumpCount);
             if(jumpCount == maxJump)
             {
-                physicalBar.UpdatePhysical(whenJump);
+                staminaBar.UpdateStaminaBar(whenJump);
             }
         }
 
@@ -102,11 +105,16 @@ public class TheGhost : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         if (horizontal != 0)
         {
-
             //rb.velocity = new Vector2(horizontal * moveSpeed, rb.velocity.y);
             transform.Translate(Vector2.right * horizontal * moveSpeed * Time.deltaTime);
             scale.x = horizontal > 0 ? 1 : -1;
+            isRuning = true;
         }
+        else
+        {
+            isRuning = false;
+        }
+
         transform.localScale = scale;
     }
 
@@ -169,20 +177,20 @@ public class TheGhost : MonoBehaviour
 
     private void Attack()
     {
-        if(physicalBar.curPhysical < whenAttack) return;
+        if(staminaBar.curStamina < whenAttack) return;
 
         animator.SetBool("isAttack", true);
         Invoke("ResetAttack", 0.2f);
-        physicalBar.UpdatePhysical(whenAttack);
+        staminaBar.UpdateStaminaBar(whenAttack);
     }
 
     private void AttackVIP()
     {
-        if (physicalBar.curPhysical < whenAttackVIP) return;
+        if (staminaBar.curStamina < whenAttackVIP) return;
 
         animator.SetBool("isAttackVIP", true);
         Invoke("ResetAttack", 0.5f);
-        physicalBar.UpdatePhysical(whenAttackVIP);
+        staminaBar.UpdateStaminaBar(whenAttackVIP);
     }
 
     private void ResetAttack()
@@ -195,12 +203,12 @@ public class TheGhost : MonoBehaviour
     private void Dash()
     {
         
-        if (Input.GetKeyDown(KeyCode.L) && _dashTime <= 0 && isDashing == false && physicalBar.curPhysical > whenDash)
+        if (Input.GetKeyDown(KeyCode.L) && _dashTime <= 0 && isDashing == false && staminaBar.curStamina > whenDash)
         {
             moveSpeed += dashBoost;
             _dashTime = dashTime;
             isDashing = true;
-            physicalBar.UpdatePhysical(whenDash);
+            staminaBar.UpdateStaminaBar(whenDash);
             StartDashEffect();
         }
 
@@ -214,6 +222,15 @@ public class TheGhost : MonoBehaviour
             _dashTime -= Time.deltaTime;
             StopDashEffect();
         }
+
+        if(isDashing)
+        {
+            animator.SetBool("isDashing", true);
+        }
+        else
+        {
+            animator.SetBool("isDashing", false);
+        }
     }
 
     private void StartDashEffect()
@@ -224,7 +241,7 @@ public class TheGhost : MonoBehaviour
 
     private void StopDashEffect()
     {
-        if (dashEffectCoroutine != null) StopCoroutine(dashEffectCoroutine);
+        if(dashEffectCoroutine != null) StopCoroutine(dashEffectCoroutine);
     }
 
     IEnumerator DashEffectCoroutine()
@@ -232,7 +249,9 @@ public class TheGhost : MonoBehaviour
         while (true)
         {
             GameObject ghost = Instantiate(ghostEffect, transform.position, Quaternion.identity);
-
+            ghost.transform.localScale = playerTransform.localScale;
+            
+            Destroy(ghost, 2f);
             yield return new WaitForSeconds(ghostDelaySeconds);
         }
     }
