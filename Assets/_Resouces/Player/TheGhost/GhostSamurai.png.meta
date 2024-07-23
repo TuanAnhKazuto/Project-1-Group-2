@@ -362,7 +362,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run_
+      name: Run_6
       rect:
         serializedVersion: 2
         x: 658
@@ -383,7 +383,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run_6
+      name: Run_7
       rect:
         serializedVersion: 2
         x: 808
@@ -404,7 +404,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run_7
+      name: Run_8
       rect:
         serializedVersion: 2
         x: 957
@@ -1337,6 +1337,7 @@ TextureImporter:
       Dead_7: -1283729542
       Dead_8: 277892750
       Dead_9: 1835981786
+      GhostSamurai_0: -21556701
       GhostSamurai_24: 176384486
       GhostSamurai_25: 784680915
       GhostSamurai_26: -140040058
@@ -1350,15 +1351,15 @@ TextureImporter:
       Indle_3: 1972240133
       Indle_4: -269897328
       Indle_5: 1321503148
-      Run_: -1580378547
       Run_0: 1119341393
       Run_1: -616220868
       Run_2: -1263739609
       Run_3: -1482350098
       Run_4: 588816996
       Run_5: 361489471
-      Run_6: 1319404738
-      Run_7: -960126512
+      Run_6: -1580378547
+      Run_7: 1319404738
+      Run_8: -960126512
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

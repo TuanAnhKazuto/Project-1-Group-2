@@ -13,12 +13,14 @@ public class PlayerHealth : MonoBehaviour
     private float _safeTimeCoolDown;
 
     public HealthBar healhtBar;
+    TheGhost player;
 
     private void Start()
     {
         curLife = maxLife;
         curHP = maxHP;
         healhtBar.UpdateBar(maxHP, curHP);
+        player = GetComponentInParent<TheGhost>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -44,6 +46,8 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDame(int damage)
     {
+        if (player.isDashing) return;
+
         if(_safeTimeCoolDown <= 0)
         {
             curHP -= damage;
@@ -59,6 +63,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void SubLife()
     {
+        
         curLife -= 1;
         if (curLife > 0)
         {
