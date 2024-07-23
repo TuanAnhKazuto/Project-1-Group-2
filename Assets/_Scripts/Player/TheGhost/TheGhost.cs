@@ -248,9 +248,6 @@ public class TheGhost : MonoBehaviour
         }
         
     }
-
-    
-
 }
 
 
