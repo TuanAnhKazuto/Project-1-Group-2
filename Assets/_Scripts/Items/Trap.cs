@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Unity.VisualScripting;
+using UnityEngine;
 
 public class MovingTrap : MonoBehaviour
 {
@@ -7,6 +8,8 @@ public class MovingTrap : MonoBehaviour
     public float maxHeight = 5f; // Vị trí cao nhất mà bẫy sẽ đạt được
 
     private bool movingUp = true; // Biến kiểm soát hướng di chuyển
+
+    
 
     void Update()
     {
@@ -27,5 +30,4 @@ public class MovingTrap : MonoBehaviour
             }
         }
     }
-    
 }

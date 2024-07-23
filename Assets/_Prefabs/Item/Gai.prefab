@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9218474801645778488}
   - component: {fileID: 4682043085183050705}
   - component: {fileID: 2937111327442622886}
+  - component: {fileID: 6414847215866818068}
   m_Layer: 0
   m_Name: Gai
   m_TagString: Trap
@@ -28,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.51, y: -21.97, z: 0}
-  m_LocalScale: {x: 21.450766, y: 24.686014, z: 1}
+  m_LocalScale: {x: 3.4387722, y: 3.9574149, z: 0.16031}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -97,6 +98,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a26f119d7f6b984c916d5b49b3bba21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
-  minHeight: 0
-  maxHeight: 1
+  speed: 1
+  minHeight: -4.03
+  maxHeight: -3.687
+--- !u!61 &6414847215866818068
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6656820253312738515}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.15, y: 0.1}
+    newSize: {x: 1.3594965, y: 0.0978186}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 2
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.359496, y: 0.0978186}
+  m_EdgeRadius: 0
