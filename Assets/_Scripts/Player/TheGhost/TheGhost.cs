@@ -100,8 +100,8 @@ public class TheGhost : MonoBehaviour
         if (horizontal != 0)
         {
 
-            rb.velocity = new Vector2(horizontal * moveSpeed, rb.velocity.y);
-            //transform.Translate(Vector2.right * horizontal * moveSpeed * Time.deltaTime);
+            //rb.velocity = new Vector2(horizontal * moveSpeed, rb.velocity.y);
+            transform.Translate(Vector2.right * horizontal * moveSpeed * Time.deltaTime);
             scale.x = horizontal > 0 ? 1 : -1;
         }
         transform.localScale = scale;
