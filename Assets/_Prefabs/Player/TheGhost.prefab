@@ -59,7 +59,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   isAttacking: 0
-  dashBoost: 15
+  dashBoost: 20
   dashTime: 0.2
   isDashing: 0
   ghostEffect: {fileID: 6531999878802715694, guid: 841d3613bc478304ca33ffa7b4c7fa62, type: 3}
