@@ -28,12 +28,21 @@ public class PlayerHealth : MonoBehaviour
             EnemyBehaviour enemyBhv = other.GetComponentInParent<EnemyBehaviour>();
             if (enemyBhv != null)
             {
-                TakeDameEnemy(enemyBhv.damage);
+                TakeDame(enemyBhv.damage);
+            }
+        }
+
+        if(other.gameObject.tag == "Trap")
+        {
+            MovingTrap trap = other.GetComponent<MovingTrap>();
+            if(trap != null)
+            {
+                TakeDame(15);
             }
         }
     }
 
-    private void TakeDameEnemy(int damage)
+    public void TakeDame(int damage)
     {
         if(_safeTimeCoolDown <= 0)
         {
