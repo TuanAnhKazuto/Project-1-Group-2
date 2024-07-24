@@ -16,6 +16,9 @@ public class TheGhost : MonoBehaviour
     Animator animator;
     Rigidbody2D rb;
 
+    //Audio
+    
+
     private PlayerStaminaBar staminaBar;
 
     // Move
