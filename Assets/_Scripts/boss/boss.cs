@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 
 public class boss : MonoBehaviour
 {
@@ -11,8 +10,6 @@ public class boss : MonoBehaviour
     public float jumpForce = 10f; // Lực nhảy của boss
     public float slideSpeed = 10f; // Tốc độ lướt của boss
     public float attackRange = 2f; // Phạm vi tấn công của boss
-    public float jumpRange = 5f; // Phạm vi nhảy của boss
-    public float slideRange = 7f; // Phạm vi lướt của boss
 
     private Rigidbody2D rb; // Thành phần Rigidbody2D của boss
     private Animator anim; // Thành phần Animator của boss
@@ -32,21 +29,40 @@ public class boss : MonoBehaviour
             float distance = Vector2.Distance(transform.position, player.position); // Tính khoảng cách tới người chơi
             if (distance < attackRange)
             {
-                StartCoroutine(NormalAttack()); // Chiêu đánh thường
-            }
-            else if (distance < jumpRange)
-            {
-                StartCoroutine(JumpStomp()); // Chiêu nhảy dậm
-            }
-            else if (distance < slideRange)
-            {
-                StartCoroutine(SlideAttack()); // Chiêu lướt
-            }
-            else
-            {
-                StartCoroutine(ShootEnergyBall()); // Chiêu bắn quả cầu năng lượng
+                FacePlayer(); // Quay mặt về phía người chơi
+                int attackType = Random.Range(0, 4); // Chọn ngẫu nhiên chiêu thức tấn công
+                switch (attackType)
+                {
+                    case 0:
+                        StartCoroutine(NormalAttack()); // Chiêu đánh thường
+                        break;
+                    case 1:
+                        StartCoroutine(JumpStomp()); // Chiêu nhảy dậm
+                        break;
+                    case 2:
+                        StartCoroutine(ShootEnergyBall()); // Chiêu bắn quả cầu năng lượng
+                        break;
+                    case 3:
+                        StartCoroutine(SlideAttack()); // Chiêu lướt
+                        break;
+                }
             }
         }
+    }
+
+    private void FacePlayer()
+    {
+        // Quay mặt về phía người chơi
+        Vector3 scale = transform.localScale;
+        if (player.position.x > transform.position.x)
+        {
+            scale.x = Mathf.Abs(scale.x); // Quay mặt về bên phải
+        }
+        else
+        {
+            scale.x = -Mathf.Abs(scale.x); // Quay mặt về bên trái
+        }
+        transform.localScale = scale;
     }
 
     private IEnumerator NormalAttack()
@@ -80,8 +96,6 @@ public class boss : MonoBehaviour
     {
         isAttacking = true; // Bắt đầu tấn công
         anim.SetTrigger("SlideAttack"); // Kích hoạt animation lướt
-        float slideDirection = player.position.x > transform.position.x ? 1f : -1f; // Xác định hướng lướt
-        rb.velocity = new Vector2(slideSpeed * slideDirection, rb.velocity.y); // Lướt theo hướng tới người chơi
         yield return new WaitForSeconds(1f); // Thời gian chờ cho animation lướt
         rb.velocity = Vector2.zero; // Dừng lướt
         isAttacking = false; // Kết thúc tấn công
@@ -101,21 +115,5 @@ public class boss : MonoBehaviour
         {
             isGrounded = false; // Kiểm tra xem boss có rời khỏi mặt đất không
         }
-    }
-
-    // Phương thức vẽ các vùng phạm vi trong Scene View
-    void OnDrawGizmosSelected()
-    {
-        // Vẽ phạm vi tấn công
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, attackRange);
-
-        // Vẽ phạm vi nhảy
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, jumpRange);
-
-        // Vẽ phạm vi lướt
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, slideRange);
     }
 }
