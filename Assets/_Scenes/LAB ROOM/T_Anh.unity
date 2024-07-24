@@ -1444,22 +1444,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 2020869838297610448, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 9.100037
-      objectReference: {fileID: 0}
-    - target: {fileID: 2020869838297610448, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -2.2000122
+    - target: {fileID: 3575315183647455895, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
+      propertyPath: m_Name
+      value: StaminaBar
       objectReference: {fileID: 0}
     - target: {fileID: 4205944911229513951, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1702499559}
-    - target: {fileID: 4205944911229513951, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
-      propertyPath: m_VertexColorAlwaysGammaSpace
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4391973127293113346, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
       propertyPath: m_Pivot.x
       value: 0
