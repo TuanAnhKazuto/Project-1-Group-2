@@ -11,8 +11,6 @@ public class Lamp : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-
-         
     }
 
     private void OnTriggerEnter2D(Collider2D other)
