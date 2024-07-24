@@ -1,54 +1,35 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class enegyball : MonoBehaviour
 {
     public float speed = 5f; // Tốc độ di chuyển của quả cầu năng lượng
-    public float damage = 10f; // Sát thương của quả cầu năng lượng
-    public GameObject explosionEffect; // Hiệu ứng nổ
-    public float explosionRadius = 2f; // Bán kính vùng nổ
-    public LayerMask damageableLayers; // Các lớp có thể gây sát thương
+    public float damage = 1f; // Sát thương của quả cầu năng lượng
 
     private Rigidbody2D rb;
+    private Transform player; // Nhân vật người chơi
+    private bool hasHitPlayer = false; // Kiểm tra xem quả cầu đã va chạm với người chơi chưa
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.velocity = transform.right * speed; // Quả cầu năng lượng di chuyển theo hướng phải
-    }
+        player = GameObject.FindGameObjectWithTag("Player").transform; // Lấy đối tượng người chơi
 
-    void OnTriggerEnter2D(Collider2D hitInfo)
-    {
-        if (hitInfo.CompareTag("Player") || hitInfo.CompareTag("Ground"))
+        if (player != null)
         {
-            Explode(); // Gọi hàm nổ
+            // Tính toán hướng tới người chơi
+            Vector2 direction = (player.position - transform.position).normalized;
+            rb.velocity = direction * speed; // Đặt vận tốc của quả cầu năng lượng
         }
     }
 
-    void Explode()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Tạo hiệu ứng nổ
-        Instantiate(explosionEffect, transform.position, transform.rotation);
-
-        // Tìm tất cả các đối tượng trong bán kính vụ nổ
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius, damageableLayers);
-        foreach (Collider2D collider in colliders)
+        if (collision.gameObject.CompareTag("Player"))
         {
-            PlayerHealth playerHealth = collider.GetComponent<PlayerHealth>();
-            if (playerHealth != null)
-            {
-                //playerHealth.TakeDamage(damage); // Gây sát thương cho các đối tượng trong vùng nổ
-            }
+            hasHitPlayer = true; // Đánh dấu là đã va chạm với người chơi
+            // Bạn có thể thêm logic gây sát thương cho người chơi tại đây
+            Destroy(gameObject); // Hủy quả cầu năng lượng
         }
-
-        Destroy(gameObject); // Hủy đối tượng quả cầu năng lượng
-    }
-
-    void OnDrawGizmosSelected()
-    {
-        // Vẽ bán kính vùng nổ trong chế độ Scene để dễ chỉnh sửa
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, explosionRadius);
     }
 }

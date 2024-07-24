@@ -43,7 +43,7 @@ public class BossController : MonoBehaviour
             animator.SetBool("isJumping", false);
         }
 
-        // Các điều kiện khác tương tự
+        
     }
 
     public void Attack()

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -19,20 +18,22 @@ public class Loading : MonoBehaviour
         progressSlider.value = 0;
         LoaderUI.SetActive(true);
 
-        AsyncOperation asyncOperasion = SceneManager.LoadSceneAsync(index);
-        asyncOperasion.allowSceneActivation = false;
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(index);
+        asyncOperation.allowSceneActivation = false;
 
-        float progress = 0;
-
-        while (!asyncOperasion.isDone)
+        while (!asyncOperation.isDone)
         {
-            progress = Mathf.MoveTowards(progress, asyncOperasion.progress, Time.deltaTime);
+            
+            float progress = Mathf.Clamp01(asyncOperation.progress / 0.9f);
             progressSlider.value = progress;
-            if (progress >= 0.9f)
+
+           
+            if (asyncOperation.progress >= 0.9f && !asyncOperation.allowSceneActivation)
             {
-                progressSlider.value = 1;
-                asyncOperasion.allowSceneActivation = true;
+                progressSlider.value = 1f;
+                asyncOperation.allowSceneActivation = true;
             }
+
             yield return null;
         }
     }
