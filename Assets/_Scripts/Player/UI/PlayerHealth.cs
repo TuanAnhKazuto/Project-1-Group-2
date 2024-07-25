@@ -14,13 +14,14 @@ public class PlayerHealth : MonoBehaviour
 
     public HealthBar healhtBar;
     TheGhost player;
-
+    PlayerCheckpoint checkpoint;
     private void Start()
     {
         curLife = maxLife;
         curHP = maxHP;
         healhtBar.UpdateBar(maxHP, curHP);
         player = GetComponentInParent<TheGhost>();
+        checkpoint = GetComponent<PlayerCheckpoint>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -71,6 +72,7 @@ public class PlayerHealth : MonoBehaviour
             curHP = maxHP;
             healhtBar.UpdateBar(maxHP, curHP);
             healhtBar.UpdateLife(maxLife, curLife);
+            checkpoint.isDie();
         }
         else
         {
