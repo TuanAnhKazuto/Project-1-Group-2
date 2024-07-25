@@ -16,6 +16,9 @@ public class TheGhost : MonoBehaviour
     Animator animator;
     Rigidbody2D rb;
 
+    //Audio
+    
+
     private PlayerStaminaBar staminaBar;
 
     // Move
@@ -47,8 +50,8 @@ public class TheGhost : MonoBehaviour
 
 
     //Sub physical count when do somethink
-    private float whenAttack = 2f;
-    private float whenAttackVIP = 5f;
+    private float staminaAttack = 2f;
+    private float staminaAttackVIP = 5f;
     private float whenJump = 1f;
     private float whenDash = 6f;
 
@@ -105,8 +108,9 @@ public class TheGhost : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         if (horizontal != 0)
         {
-            //rb.velocity = new Vector2(horizontal * moveSpeed, rb.velocity.y);
-            transform.Translate(Vector2.right * horizontal * moveSpeed * Time.deltaTime);
+            rb.velocity = new Vector2(horizontal * moveSpeed, rb.velocity.y);
+            
+            //transform.Translate(Vector2.right * horizontal * moveSpeed * Time.deltaTime);
             scale.x = horizontal > 0 ? 1 : -1;
             isRuning = true;
         }
@@ -177,20 +181,20 @@ public class TheGhost : MonoBehaviour
 
     private void Attack()
     {
-        if(staminaBar.curStamina < whenAttack) return;
+        if(staminaBar.curStamina < staminaAttack) return;
 
         animator.SetBool("isAttack", true);
         Invoke("ResetAttack", 0.2f);
-        staminaBar.UpdateStaminaBar(whenAttack);
+        staminaBar.UpdateStaminaBar(staminaAttack);
     }
 
     private void AttackVIP()
     {
-        if (staminaBar.curStamina < whenAttackVIP) return;
+        if (staminaBar.curStamina < staminaAttackVIP) return;
 
         animator.SetBool("isAttackVIP", true);
         Invoke("ResetAttack", 0.5f);
-        staminaBar.UpdateStaminaBar(whenAttackVIP);
+        staminaBar.UpdateStaminaBar(staminaAttackVIP);
     }
 
     private void ResetAttack()
