@@ -96084,6 +96084,18 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 4.222111
       objectReference: {fileID: 0}
+    - target: {fileID: 6414847215866818068, guid: 8b352b8a663fd794db57af29d484df55, type: 3}
+      propertyPath: m_Size.x
+      value: 4.244425
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414847215866818068, guid: 8b352b8a663fd794db57af29d484df55, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.003417015
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414847215866818068, guid: 8b352b8a663fd794db57af29d484df55, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 4.222111
+      objectReference: {fileID: 0}
     - target: {fileID: 6656820253312738515, guid: 8b352b8a663fd794db57af29d484df55, type: 3}
       propertyPath: m_Name
       value: Gai
@@ -97623,6 +97635,18 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 2.2374141
       objectReference: {fileID: 0}
+    - target: {fileID: 6414847215866818068, guid: 8b352b8a663fd794db57af29d484df55, type: 3}
+      propertyPath: m_Size.x
+      value: 2.1878133
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414847215866818068, guid: 8b352b8a663fd794db57af29d484df55, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.032652855
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414847215866818068, guid: 8b352b8a663fd794db57af29d484df55, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 2.2374141
+      objectReference: {fileID: 0}
     - target: {fileID: 6656820253312738515, guid: 8b352b8a663fd794db57af29d484df55, type: 3}
       propertyPath: m_Name
       value: Gai (1)
@@ -97747,7 +97771,7 @@ Transform:
   m_GameObject: {fileID: 836944001}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 275.4, y: 1.88, z: -10}
+  m_LocalPosition: {x: -3.7, y: -2.78, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -97985,7 +98009,7 @@ Transform:
   m_GameObject: {fileID: 866459038}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 275.4, y: 1.88, z: -10}
+  m_LocalPosition: {x: -3.7, y: -2.78, z: -10}
   m_LocalScale: {x: 0.54399914, y: 0.54399914, z: 0.54399914}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -100163,7 +100187,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -104906,11 +104930,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3636734017242840280, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 275.4
+      value: -3.7
       objectReference: {fileID: 0}
     - target: {fileID: 3636734017242840280, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1
+      value: -3.56
       objectReference: {fileID: 0}
     - target: {fileID: 3636734017242840280, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
       propertyPath: m_LocalPosition.z
@@ -106494,9 +106518,21 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 1.9289218
       objectReference: {fileID: 0}
+    - target: {fileID: 4682043085183050705, guid: 8b352b8a663fd794db57af29d484df55, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414847215866818068, guid: 8b352b8a663fd794db57af29d484df55, type: 3}
+      propertyPath: m_Size.x
+      value: 1.9332821
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414847215866818068, guid: 8b352b8a663fd794db57af29d484df55, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.004183382
+      objectReference: {fileID: 0}
     - target: {fileID: 6414847215866818068, guid: 8b352b8a663fd794db57af29d484df55, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
-      value: 2.2374141
+      value: 1.9289218
       objectReference: {fileID: 0}
     - target: {fileID: 6656820253312738515, guid: 8b352b8a663fd794db57af29d484df55, type: 3}
       propertyPath: m_Name
@@ -106508,7 +106544,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9218474801645778488, guid: 8b352b8a663fd794db57af29d484df55, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.54
+      value: -5.49
       objectReference: {fileID: 0}
     - target: {fileID: 9218474801645778488, guid: 8b352b8a663fd794db57af29d484df55, type: 3}
       propertyPath: m_LocalPosition.z
