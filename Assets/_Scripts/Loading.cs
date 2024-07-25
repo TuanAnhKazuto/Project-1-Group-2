@@ -7,7 +7,8 @@ public class Loading : MonoBehaviour
 {
     public GameObject LoaderUI;
     public Slider progressSlider;
-
+    
+   
     public void LoadScene(int index)
     {
         StartCoroutine(LoadScene_Coroutine(index));
@@ -20,16 +21,18 @@ public class Loading : MonoBehaviour
 
         AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(index);
         asyncOperation.allowSceneActivation = false;
+        float progress = 0;
 
         while (!asyncOperation.isDone)
         {
             
-            float progress = Mathf.Clamp01(asyncOperation.progress / 0.9f);
+            progress = Mathf.MoveTowards(progress, asyncOperation.progress, Time.deltaTime);
             progressSlider.value = progress;
 
            
-            if (asyncOperation.progress >= 0.9f && !asyncOperation.allowSceneActivation)
+            if (progress >= 0.9f)
             {
+                
                 progressSlider.value = 1f;
                 asyncOperation.allowSceneActivation = true;
             }
