@@ -60,7 +60,7 @@ public class TheGhost : MonoBehaviour
     public int coin = 0;
     public TextMeshProUGUI TextCoin;
 
-
+   
     private void Start()
     {
         animator = GetComponent<Animator>();
