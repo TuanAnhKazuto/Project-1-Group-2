@@ -14,6 +14,7 @@ public class PlayerHealth : MonoBehaviour
 
     public HealthBar healhtBar;
     TheGhost player;
+    PlayerCheckpoint respawn;
 
     private void Start()
     {
@@ -21,6 +22,7 @@ public class PlayerHealth : MonoBehaviour
         curHP = maxHP;
         healhtBar.UpdateBar(maxHP, curHP);
         player = GetComponentInParent<TheGhost>();
+        respawn = GetComponentInParent<PlayerCheckpoint>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -71,6 +73,7 @@ public class PlayerHealth : MonoBehaviour
             curHP = maxHP;
             healhtBar.UpdateBar(maxHP, curHP);
             healhtBar.UpdateLife(maxLife, curLife);
+            respawn.Respawn();
         }
         else
         {
