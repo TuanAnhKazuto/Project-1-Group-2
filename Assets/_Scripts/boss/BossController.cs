@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class BossController : MonoBehaviour
@@ -11,23 +12,30 @@ public class BossController : MonoBehaviour
     public GameObject ballPrefab; // Prefab của bóng
     public GameObject energyBallPrefab; // Prefab của cầu năng lượng
     public Transform firePoint; // Điểm bắn đạn
-    public int maxHealth = 100; // Máu tối đa của boss
+    public int maxHealth = 400; // Máu tối đa của boss
+    public GameObject healthBarPrefab; // Prefab của thanh máu
 
     private Animator animator;
     private Rigidbody2D rb;
     private bool facingRight = true;
     private int currentHealth;
     private int attackSequence = 0;
-    private bool isCooldown = false; // Biến kiểm tra thời gian hồi chiêu
-
-    Transform bossTrans;
+    private bool isCooldown = false;
+    private GameObject healthBarInstance;
+    private Image healthBarForeground;
 
     void Start()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        bossTrans = GetComponent<Transform>();
         currentHealth = maxHealth;
+
+        // Instantiate health bar if the prefab is assigned
+        if (healthBarPrefab != null)
+        {
+            healthBarInstance = Instantiate(healthBarPrefab, transform);
+            healthBarForeground = healthBarInstance.transform.Find("HealthBarForeground").GetComponent<Image>();
+        }
     }
 
     void Update()
@@ -38,72 +46,77 @@ public class BossController : MonoBehaviour
 
         if (distanceToPlayer > attackRange)
         {
-            MoveTowardsPlayer(); // Di chuyển về phía người chơi
+            MoveTowardsPlayer();
         }
         else if (distanceToPlayer <= attackRange && distanceToPlayer > jumpRange && !isCooldown)
         {
-            PerformAttackSequence(); // Thực hiện chuỗi tấn công
+            PerformAttackSequence();
         }
         else if (distanceToPlayer <= jumpRange)
         {
-            Jump(); // Nhảy khi người chơi gần
+            Jump();
         }
 
         if (distanceToPlayer > attackRange * 2)
         {
-            animator.SetBool("isIdle", true); // Đứng im nếu người chơi quá xa
+            animator.SetBool("isIdle", true);
+        }
+
+        // Update health bar
+        if (healthBarForeground != null)
+        {
+            float healthPercent = (float)currentHealth / maxHealth;
+            healthBarForeground.fillAmount = healthPercent;
         }
     }
 
     void MoveTowardsPlayer()
     {
-        
         animator.SetBool("isWalking", true);
 
         if (player.position.x > transform.position.x && !facingRight)
         {
-            Flip(); // Đổi hướng khi cần
+            Flip();
         }
         else if (player.position.x < transform.position.x && facingRight)
         {
-            Flip(); // Đổi hướng khi cần
+            Flip();
         }
 
         Vector2 target = new Vector2(player.position.x, rb.position.y);
         Vector2 newPos = Vector2.MoveTowards(rb.position, target, moveSpeed * Time.fixedDeltaTime);
-        rb.MovePosition(newPos); // Di chuyển boss về phía người chơi
+        rb.MovePosition(newPos);
     }
 
     void PerformAttackSequence()
     {
-
         switch (attackSequence)
         {
             case 0:
-                StartCoroutine(FireBullet()); // Bắn thường
+                StartCoroutine(FireBullet());
                 attackSequence++;
                 break;
             case 1:
-                StartCoroutine(FireBall()); // Bắn bóng
+                StartCoroutine(FireBall());
                 attackSequence++;
                 break;
             case 2:
-                StartCoroutine(FireBullet()); // Bắn thường
+                StartCoroutine(FireBullet());
                 attackSequence++;
                 break;
             case 3:
-                StartCoroutine(FireBullet()); // Bắn thường
+                StartCoroutine(FireBullet());
                 attackSequence++;
                 break;
             case 4:
-                StartCoroutine(FireEnergyBall()); // Bắn cầu năng lượng 3 lần
+                StartCoroutine(FireEnergyBall());
                 StartCoroutine(FireEnergyBall());
                 StartCoroutine(FireEnergyBall());
                 attackSequence++;
                 break;
             case 5:
-                StartCoroutine(FireBall()); // Bắn bóng
-                attackSequence = 0; // Reset chuỗi tấn công
+                StartCoroutine(FireBall());
+                attackSequence = 0;
                 break;
         }
     }
@@ -111,35 +124,28 @@ public class BossController : MonoBehaviour
     IEnumerator FireBullet()
     {
         animator.SetTrigger("attack_boss");
-        InstantiateBullet(bulletPrefab); // Bắn đạn thường
+        InstantiateBullet(bulletPrefab);
         isCooldown = true;
-        yield return new WaitForSeconds(2f); // Thời gian hồi chiêu 2 giây
+        yield return new WaitForSeconds(2f);
         isCooldown = false;
     }
 
-    IEnumerator FireBall(bool isAttacking = false)
+    IEnumerator FireBall()
     {
-        if (!isAttacking)
-        {
-            animator.SetBool("isUsingSkill", true);
-            InstantiateBullet(ballPrefab); // Bắn bóng
-            isCooldown = true;
-            isAttacking = true;
-        }
-        else
-        {
-            animator.SetBool("isUsingSkill", false);
-        }
-        yield return new WaitForSeconds(2f); // Thời gian hồi chiêu 2 giây
+        animator.SetBool("isUsingSkill", true);
+        InstantiateBullet(ballPrefab);
+        isCooldown = true;
+        yield return new WaitForSeconds(2f);
         isCooldown = false;
+        animator.SetBool("isUsingSkill", false);
     }
 
     IEnumerator FireEnergyBall()
     {
         animator.SetTrigger("skill_energyball");
-        InstantiateBullet(energyBallPrefab); // Bắn cầu năng lượng
+        InstantiateBullet(energyBallPrefab);
         isCooldown = true;
-        yield return new WaitForSeconds(2f); // Thời gian hồi chiêu 2 giây
+        yield return new WaitForSeconds(2f);
         isCooldown = false;
     }
 
@@ -147,7 +153,7 @@ public class BossController : MonoBehaviour
     {
         Vector2 attackDirection = facingRight ? Vector2.right : Vector2.left;
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        bullet.transform.localScale = bossTrans.localScale;
+        bullet.transform.localScale = transform.localScale;
         Bullet bulletScript = bullet.GetComponent<Bullet>();
         if (bulletScript != null)
         {
@@ -158,7 +164,7 @@ public class BossController : MonoBehaviour
     void Jump()
     {
         animator.SetTrigger("jump");
-        rb.AddForce(new Vector2(0, 5), ForceMode2D.Impulse); // Nhảy
+        rb.AddForce(new Vector2(0, 5), ForceMode2D.Impulse);
     }
 
     void Flip()
@@ -166,25 +172,26 @@ public class BossController : MonoBehaviour
         facingRight = !facingRight;
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
-        transform.localScale = theScale; // Đổi hướng
+        transform.localScale = theScale;
     }
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        animator.SetTrigger("injured"); // Animation bị thương
+        animator.SetTrigger("injured");
 
         if (currentHealth <= 0)
         {
-            Die(); // Chết nếu hết máu
+            Die();
         }
     }
 
     void Die()
     {
-        animator.SetTrigger("die"); // Animation chết
-        GetComponent<Collider2D>().enabled = false; // Vô hiệu hóa collider để không bị tương tác nữa
-        this.enabled = false; // Vô hiệu hóa script
-        Destroy(gameObject, 2f); // Hủy đối tượng sau 2 giây
+        animator.SetTrigger("die");
+        GetComponent<Collider2D>().enabled = false;
+        this.enabled = false;
+        Destroy(gameObject, 2f);
     }
+    
 }
