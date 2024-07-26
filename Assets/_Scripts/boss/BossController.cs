@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class BossController : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class BossController : MonoBehaviour
     private bool facingRight = true;
     private int currentHealth;
     private int attackSequence = 0;
+    private bool isCooldown = false; // Biến kiểm tra thời gian hồi chiêu
 
     void Start()
     {
@@ -35,7 +37,7 @@ public class BossController : MonoBehaviour
         {
             MoveTowardsPlayer(); // Di chuyển về phía người chơi
         }
-        else if (distanceToPlayer <= attackRange && distanceToPlayer > jumpRange)
+        else if (distanceToPlayer <= attackRange && distanceToPlayer > jumpRange && !isCooldown)
         {
             PerformAttackSequence(); // Thực hiện chuỗi tấn công
         }
@@ -77,50 +79,70 @@ public class BossController : MonoBehaviour
         switch (attackSequence)
         {
             case 0:
-                FireBullet(); // Bắn thường
+                StartCoroutine(FireBullet()); // Bắn thường
                 attackSequence++;
                 break;
             case 1:
-                FireBall(); // Bắn bóng
+                StartCoroutine(FireBall()); // Bắn bóng
                 attackSequence++;
                 break;
             case 2:
-                FireBullet(); // Bắn thường
+                StartCoroutine(FireBullet()); // Bắn thường
                 attackSequence++;
                 break;
             case 3:
-                FireBullet(); // Bắn thường
+                StartCoroutine(FireBullet()); // Bắn thường
                 attackSequence++;
                 break;
             case 4:
-                FireEnergyBall(); // Bắn cầu năng lượng 3 lần
-                FireEnergyBall();
-                FireEnergyBall();
+                StartCoroutine(FireEnergyBall()); // Bắn cầu năng lượng 3 lần
+                StartCoroutine(FireEnergyBall());
+                StartCoroutine(FireEnergyBall());
                 attackSequence++;
                 break;
             case 5:
-                FireBall(); // Bắn bóng
+                StartCoroutine(FireBall()); // Bắn bóng
                 attackSequence = 0; // Reset chuỗi tấn công
                 break;
         }
     }
 
-    void FireBullet()
+    IEnumerator FireBullet()
     {
         animator.SetTrigger("attack");
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation); // Bắn đạn thường
+        InstantiateBullet(bulletPrefab); // Bắn đạn thường
+        isCooldown = true;
+        yield return new WaitForSeconds(2f); // Thời gian hồi chiêu 2 giây
+        isCooldown = false;
     }
 
-    void FireBall()
+    IEnumerator FireBall()
     {
         animator.SetTrigger("skill_ball");
-        Instantiate(ballPrefab, firePoint.position, firePoint.rotation); // Bắn bóng
+        InstantiateBullet(ballPrefab); // Bắn bóng
+        isCooldown = true;
+        yield return new WaitForSeconds(2f); // Thời gian hồi chiêu 2 giây
+        isCooldown = false;
     }
 
-    void FireEnergyBall()
+    IEnumerator FireEnergyBall()
     {
         animator.SetTrigger("skill_energyball");
-        Instantiate(energyBallPrefab, firePoint.position, firePoint.rotation); // Bắn cầu năng lượng
+        InstantiateBullet(energyBallPrefab); // Bắn cầu năng lượng
+        isCooldown = true;
+        yield return new WaitForSeconds(2f); // Thời gian hồi chiêu 2 giây
+        isCooldown = false;
+    }
+
+    void InstantiateBullet(GameObject bulletPrefab)
+    {
+        Vector2 attackDirection = facingRight ? Vector2.right : Vector2.left;
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Bullet bulletScript = bullet.GetComponent<Bullet>();
+        if (bulletScript != null)
+        {
+            bulletScript.attackDirection = attackDirection;
+        }
     }
 
     void Jump()

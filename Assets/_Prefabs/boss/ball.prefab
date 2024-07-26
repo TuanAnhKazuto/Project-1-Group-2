@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6181367190548446303}
   - component: {fileID: 866985966680962686}
-  - component: {fileID: -1813963023531419105}
   - component: {fileID: 5529037653825944493}
+  - component: {fileID: 486547850518123624}
   - component: {fileID: 5757011874400283807}
   m_Layer: 0
   m_Name: ball
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 8370886767647570418}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.02, y: -1.68, z: 0}
+  m_LocalPosition: {x: 3.717648, y: -1.3089886, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -87,21 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-1813963023531419105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8370886767647570418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a53ca17245821244ab6d1e41b8d0c9e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  lifespan: 5
-  damage: 10
 --- !u!50 &5529037653825944493
 Rigidbody2D:
   serializedVersion: 4
@@ -129,6 +114,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &486547850518123624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8370886767647570418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a53ca17245821244ab6d1e41b8d0c9e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  lifespan: 5
+  damage: 10
+  attackDirection: {x: 0, y: 0}
 --- !u!58 &5757011874400283807
 CircleCollider2D:
   m_ObjectHideFlags: 0

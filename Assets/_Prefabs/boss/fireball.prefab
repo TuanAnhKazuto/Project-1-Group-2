@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3605737045780749025}
   - component: {fileID: 1798880329555608921}
   - component: {fileID: 2253325635081328610}
-  - component: {fileID: 6185016118568448973}
+  - component: {fileID: 3603416395072356806}
   - component: {fileID: 5871238698726390647}
   m_Layer: 0
   m_Name: fireball
@@ -132,7 +132,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.43, y: 0.98}
   m_EdgeRadius: 0
---- !u!114 &6185016118568448973
+--- !u!114 &3603416395072356806
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,6 +147,7 @@ MonoBehaviour:
   speed: 10
   lifespan: 5
   damage: 10
+  attackDirection: {x: 0, y: 0}
 --- !u!50 &5871238698726390647
 Rigidbody2D:
   serializedVersion: 4
