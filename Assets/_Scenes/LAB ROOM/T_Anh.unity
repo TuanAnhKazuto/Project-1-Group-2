@@ -1377,6 +1377,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2843666670764649272, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3575315183647455895, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
       propertyPath: m_Name
       value: StaminaBar
@@ -1471,6 +1475,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7479434073798593612, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8378608387202891647, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
