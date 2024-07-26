@@ -106,7 +106,7 @@ public class PlayerHealth : MonoBehaviour
         float animationLength = GetAnimationLength(animationName);
         yield return new WaitForSeconds(animationLength);
 
-        Time.timeScale = 0f;// Hoặc set active cho một GameObject
+        Time.timeScale = 0f;// Hoặc set active cho một GameOverPanel
         
     }
 
