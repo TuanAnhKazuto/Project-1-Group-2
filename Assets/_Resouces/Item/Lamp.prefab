@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7701983163776600406}
   - component: {fileID: 3671820984047237273}
+  - component: {fileID: 3885293611879651405}
   - component: {fileID: 7308610599203960924}
   - component: {fileID: 1312891874326759386}
-  - component: {fileID: 3128185781793814348}
   m_Layer: 0
   m_Name: Lamp
   m_TagString: Untagged
@@ -87,6 +87,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3885293611879651405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520290344223709252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d49b90e0a348e8d46b41600d51ab2e2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &7308610599203960924
 Animator:
   serializedVersion: 5
@@ -143,15 +155,3 @@ CapsuleCollider2D:
   m_Offset: {x: -0.004864931, y: 0}
   m_Size: {x: 0.5364256, y: 1.225}
   m_Direction: 0
---- !u!114 &3128185781793814348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1520290344223709252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d901522b7efe97f49b710cfe041deef3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

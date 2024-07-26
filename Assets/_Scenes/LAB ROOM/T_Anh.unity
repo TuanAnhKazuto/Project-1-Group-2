@@ -357,29 +357,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &960387140 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2597536360977779204, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
-  m_PrefabInstance: {fileID: 5031662659181051949}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1144788175 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3636734017242840280, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
   m_PrefabInstance: {fileID: 5031662659181051949}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1144788181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 960387140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90d086aaf2e256843bf62a27ec2fce7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  checkpointPos: {x: 0, y: 0}
 --- !u!1 &1377495554
 GameObject:
   m_ObjectHideFlags: 0
@@ -1002,10 +984,6 @@ PrefabInstance:
       propertyPath: staminaBar
       value: 
       objectReference: {fileID: 1767299096}
-    - target: {fileID: 1703228340400248163, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
-      propertyPath: physicalBar
-      value: 
-      objectReference: {fileID: 1767299096}
     - target: {fileID: 2597536360977779204, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
       propertyPath: m_Name
       value: TheGhost
@@ -1054,18 +1032,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5652264241565298241, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
-      propertyPath: dashTime
-      value: 0.2
+    - target: {fileID: 5089058100120041872, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5089058100120041872, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1278148725
       objectReference: {fileID: 0}
     - target: {fileID: 5652264241565298241, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
       propertyPath: dashBoost
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 5652264241565298241, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
-      propertyPath: ghostEffect
-      value: 
-      objectReference: {fileID: 6531999878802715694, guid: 841d3613bc478304ca33ffa7b4c7fa62, type: 3}
     - target: {fileID: 5772735567670939841, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
       propertyPath: healhtBar
       value: 
@@ -1073,10 +1051,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2597536360977779204, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
-      insertIndex: 4
-      addedObject: {fileID: 1144788181}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
 --- !u!114 &5904982516061169773 stripped
 MonoBehaviour:
@@ -1376,6 +1351,10 @@ PrefabInstance:
     - target: {fileID: 824806861603817463, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
       propertyPath: m_Name
       value: PlayerCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020869838297610448, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 9.100098
       objectReference: {fileID: 0}
     - target: {fileID: 2843666670764649272, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
       propertyPath: m_LocalPosition.z
