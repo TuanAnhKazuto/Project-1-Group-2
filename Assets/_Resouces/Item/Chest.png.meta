@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c2fa69c311e8ddd40805d213dfb292f8
+guid: 56e09fb948724a5499869a64fd3efe1c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 30
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,19 +69,6 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -111,20 +98,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -136,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Jump_0
+      name: Chest_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 140
-        height: 140
+        x: 70
+        y: 97
+        width: 273
+        height: 307
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f49c7bb6d004cc45a3cf1daaf079f4a
-      internalID: 1124959474
+      spriteID: aa00d1170d0582e409849d8abfee9117
+      internalID: 1326853225
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_1
+      name: Chest_1
       rect:
         serializedVersion: 2
-        x: 140
-        y: 0
-        width: 140
-        height: 140
+        x: 363
+        y: 96
+        width: 274
+        height: 220
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b599ccaff22d44469c900afa5d6e9c1
-      internalID: 389888454
+      spriteID: da26b4b4122f77f41af5f1e2321c7efb
+      internalID: -1290913162
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_2
+      name: Chest_2
       rect:
         serializedVersion: 2
-        x: 280
-        y: 0
-        width: 140
-        height: 140
+        x: 657
+        y: 96
+        width: 273
+        height: 308
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc34daf7c62a46844899f31d3e22dd8b
-      internalID: 1146671751
+      spriteID: 170476727e225a94d8a759a60815a63e
+      internalID: 1744736787
       vertices: []
       indices: 
       edges: []
@@ -209,9 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Jump_0: 1124959474
-      Jump_1: 389888454
-      Jump_2: 1146671751
+      Chest_0: 1326853225
+      Chest_1: -1290913162
+      Chest_2: 1744736787
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
