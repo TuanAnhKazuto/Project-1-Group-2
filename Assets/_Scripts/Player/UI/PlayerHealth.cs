@@ -1,5 +1,6 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
@@ -11,10 +12,13 @@ public class PlayerHealth : MonoBehaviour
     int curHP;
     private float safeTime = 0.7f;
     private float _safeTimeCoolDown;
+    private bool isDeading = false;
 
     public HealthBar healhtBar;
     TheGhost player;
     PlayerCheckpoint respawn;
+    Animator animator;
+    Rigidbody2D rb;
 
     private void Start()
     {
@@ -23,6 +27,9 @@ public class PlayerHealth : MonoBehaviour
         healhtBar.UpdateBar(maxHP, curHP);
         player = GetComponentInParent<TheGhost>();
         respawn = GetComponentInParent<PlayerCheckpoint>();
+        animator = GetComponentInParent<Animator>();
+        rb = GetComponentInParent<Rigidbody2D>();
+        rb.simulated = true;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -48,6 +55,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDame(int damage)
     {
+        if(isDeading) return;
         if (player.isDashing) return;
 
         if(_safeTimeCoolDown <= 0)
@@ -83,12 +91,43 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnDead()
     {
-        Time.timeScale = 0;
-        Destroy(gameObject);
+        isDeading = true;
+        rb.simulated = false;
+        animator.SetBool("isDead", true);
+        StartCoroutine(WaitForAnimationAndStopGame("Dead"));
+    }
+
+    private IEnumerator WaitForAnimationAndStopGame(string animationName)
+    {
+        yield return new WaitForSeconds(0.01f);
+        animator.SetBool("isDead", false);
+
+        // Lấy thời lượng của animation
+        float animationLength = GetAnimationLength(animationName);
+        yield return new WaitForSeconds(animationLength);
+
+        Time.timeScale = 0f;// Hoặc set active cho một GameObject
+        
+    }
+
+    private float GetAnimationLength(string animationName)
+    {
+        // Lấy thông tin về trạng thái hiện tại của animation
+        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        if (stateInfo.IsName(animationName))
+        {
+            return stateInfo.length;
+        }
+        return 0f;
     }
 
     private void Update()
     {
         _safeTimeCoolDown -= Time.deltaTime;
+
+        if(Input.GetKeyDown(KeyCode.X))
+        {
+            OnDead();
+        }
     }
 }
