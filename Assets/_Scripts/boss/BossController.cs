@@ -20,10 +20,13 @@ public class BossController : MonoBehaviour
     private int attackSequence = 0;
     private bool isCooldown = false; // Biến kiểm tra thời gian hồi chiêu
 
+    Transform bossTrans;
+
     void Start()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        bossTrans = GetComponent<Transform>();
         currentHealth = maxHealth;
     }
 
@@ -54,7 +57,7 @@ public class BossController : MonoBehaviour
 
     void MoveTowardsPlayer()
     {
-        animator.SetBool("isIdle", false);
+        
         animator.SetBool("isWalking", true);
 
         if (player.position.x > transform.position.x && !facingRight)
@@ -73,8 +76,6 @@ public class BossController : MonoBehaviour
 
     void PerformAttackSequence()
     {
-        animator.SetBool("isIdle", false);
-        animator.SetBool("isWalking", false);
 
         switch (attackSequence)
         {
@@ -109,18 +110,26 @@ public class BossController : MonoBehaviour
 
     IEnumerator FireBullet()
     {
-        animator.SetTrigger("attack");
+        animator.SetTrigger("attack_boss");
         InstantiateBullet(bulletPrefab); // Bắn đạn thường
         isCooldown = true;
         yield return new WaitForSeconds(2f); // Thời gian hồi chiêu 2 giây
         isCooldown = false;
     }
 
-    IEnumerator FireBall()
+    IEnumerator FireBall(bool isAttacking = false)
     {
-        animator.SetTrigger("skill_ball");
-        InstantiateBullet(ballPrefab); // Bắn bóng
-        isCooldown = true;
+        if (!isAttacking)
+        {
+            animator.SetBool("isUsingSkill", true);
+            InstantiateBullet(ballPrefab); // Bắn bóng
+            isCooldown = true;
+            isAttacking = true;
+        }
+        else
+        {
+            animator.SetBool("isUsingSkill", false);
+        }
         yield return new WaitForSeconds(2f); // Thời gian hồi chiêu 2 giây
         isCooldown = false;
     }
@@ -138,6 +147,7 @@ public class BossController : MonoBehaviour
     {
         Vector2 attackDirection = facingRight ? Vector2.right : Vector2.left;
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        bullet.transform.localScale = bossTrans.localScale;
         Bullet bulletScript = bullet.GetComponent<Bullet>();
         if (bulletScript != null)
         {
