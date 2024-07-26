@@ -108,9 +108,9 @@ public class TheGhost : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         if (horizontal != 0)
         {
-            rb.velocity = new Vector2(horizontal * moveSpeed, rb.velocity.y);
+            //rb.velocity = new Vector2(horizontal * moveSpeed, rb.velocity.y);
             
-            //transform.Translate(Vector2.right * horizontal * moveSpeed * Time.deltaTime);
+            transform.Translate(Vector2.right * horizontal * moveSpeed * Time.deltaTime);
             scale.x = horizontal > 0 ? 1 : -1;
             isRuning = true;
         }
