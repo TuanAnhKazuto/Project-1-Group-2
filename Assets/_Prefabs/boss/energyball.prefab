@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5710217841297016536}
   - component: {fileID: 5384680016838377952}
-  - component: {fileID: 678604395612068201}
+  - component: {fileID: 4771922827380016568}
   - component: {fileID: 3213041110133576558}
   - component: {fileID: 2058507872401779306}
   m_Layer: 0
@@ -87,7 +87,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &678604395612068201
+--- !u!114 &4771922827380016568
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -102,6 +102,7 @@ MonoBehaviour:
   speed: 10
   lifespan: 5
   damage: 10
+  attackDirection: {x: 0, y: 0}
 --- !u!61 &3213041110133576558
 BoxCollider2D:
   m_ObjectHideFlags: 0

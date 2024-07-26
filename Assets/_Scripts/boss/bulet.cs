@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class bullet : MonoBehaviour
+public class Bullet : MonoBehaviour
 {
     public float speed = 10f; // Tốc độ di chuyển của đạn
     public float lifespan = 5f; // Thời gian sống của đạn trước khi tự hủy
@@ -8,16 +8,15 @@ public class bullet : MonoBehaviour
 
     private Rigidbody2D rb;
 
+    public Vector2 attackDirection; // Hướng tấn công của boss
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         Destroy(gameObject, lifespan); // Hủy đạn sau một khoảng thời gian
-    }
 
-    void Update()
-    {
-        // Di chuyển đạn về phía trước
-        rb.velocity = transform.right * speed;
+        // Đặt vận tốc dựa trên hướng tấn công
+        rb.velocity = attackDirection.normalized * speed;
     }
 
     void OnTriggerEnter2D(Collider2D other)
