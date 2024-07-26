@@ -94566,6 +94566,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2446205753891083905, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 6531cd77c4b1fb343bb480f78f8332b8, type: 2}
+    - target: {fileID: 2446205753891083905, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3750192347193498286, guid: 6531cd77c4b1fb343bb480f78f8332b8, type: 2}
+    - target: {fileID: 2446205753891083905, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2446205753891083905, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2843666670764649272, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 226
+      objectReference: {fileID: 0}
+    - target: {fileID: 2843666670764649272, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -198
+      objectReference: {fileID: 0}
     - target: {fileID: 4205944911229513951, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
       propertyPath: m_Camera
       value: 
