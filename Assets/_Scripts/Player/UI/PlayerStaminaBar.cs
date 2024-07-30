@@ -44,9 +44,15 @@ public class PlayerStaminaBar : MonoBehaviour
         }   
     }
 
-    public void UpdateStaminaBar(float sub)
+    public void SubStaminaBar(float sub)
     {
         curStamina -= sub;
+        staminaBar.value = curStamina;
+    }
+
+    public void RecoveryInBar(int recovery)
+    {
+        curStamina += recovery;
         staminaBar.value = curStamina;
     }
 

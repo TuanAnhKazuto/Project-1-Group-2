@@ -36,7 +36,7 @@ public class bullet_fire : MonoBehaviour
             PlayerHealth player = other.GetComponentInParent<PlayerHealth>();
             if (player != null)
             {
-                player.TakeDame(damage); // Gọi phương thức TakeDamage() của người chơi
+                player.TakeDamage(damage); // Gọi phương thức TakeDamage() của người chơi
             }
 
             Destroy(gameObject); // Hủy đạn sau khi va chạm

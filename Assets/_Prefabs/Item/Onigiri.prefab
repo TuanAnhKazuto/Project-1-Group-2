@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5643949015070151167}
   - component: {fileID: 5022469741849841850}
   m_Layer: 0
-  m_Name: onigini
+  m_Name: Onigiri
   m_TagString: Onigiri
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

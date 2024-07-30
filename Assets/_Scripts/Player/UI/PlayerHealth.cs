@@ -9,7 +9,7 @@ public class PlayerHealth : MonoBehaviour
     int maxLife = 3;
     int curLife;
     int maxHP = 100;
-    int curHP;
+    [HideInInspector] public int curHP;
     private float safeTime = 0.7f;
     private float _safeTimeCoolDown;
     private bool isDeading = false;
@@ -39,7 +39,7 @@ public class PlayerHealth : MonoBehaviour
             EnemyBehaviour enemyBhv = other.GetComponentInParent<EnemyBehaviour>();
             if (enemyBhv != null)
             {
-                TakeDame(enemyBhv.damage);
+                TakeDamage(enemyBhv.damage);
             }
         }
 
@@ -48,12 +48,12 @@ public class PlayerHealth : MonoBehaviour
             MovingTrap trap = other.GetComponent<MovingTrap>();
             if(trap != null)
             {
-                TakeDame(15);
+                TakeDamage(15);
             }
         }
     }
 
-    public void TakeDame(int damage)
+    public void TakeDamage(int damage)
     {
         if(isDeading) return;
         if (player.isDashing) return;
@@ -70,6 +70,13 @@ public class PlayerHealth : MonoBehaviour
             SubLife();
         }
     }
+
+    public void HealingInBar(int healing)
+    {
+        curHP += healing;
+        healhtBar.UpdateBar(maxHP, curHP);
+    }
+
 
     private void SubLife()
     {
@@ -120,6 +127,8 @@ public class PlayerHealth : MonoBehaviour
         }
         return 0f;
     }
+
+    
 
     private void Update()
     {
