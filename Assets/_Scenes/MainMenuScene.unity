@@ -1567,9 +1567,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
-    _objectReferences:
-    - {fileID: 11400000, guid: f68f952d239abfd40b552374e7e517a4, type: 2}
+    _json: '{"nest":{"source":"Macro","macro":null,"embed":null}}'
+    _objectReferences: []
 --- !u!114 &1731188076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1760,7 +1759,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 514, y: 198}
+  m_AnchoredPosition: {x: 400, y: 198}
   m_SizeDelta: {x: 1001.38, y: 428.19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1898356582
