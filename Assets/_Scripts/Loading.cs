@@ -8,9 +8,9 @@ public class Loading : MonoBehaviour
 {
     public GameObject LoaderUI;
     public Slider progressSlider;
-   
 
-    
+
+
     public void LoadScene(int index)
     {
         StartCoroutine(LoadScene_Coroutine(index));
@@ -43,5 +43,5 @@ public class Loading : MonoBehaviour
         }
     }
 
-    
+
 }
