@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class Key : MonoBehaviour
 {
-
-    public GameObject door; 
-    private BoxCollider2D boxColliderDoor; 
-    private Animator animatorkey; 
-    private Animator animatordoor; 
+    public GameObject door;
+    private BoxCollider2D boxColliderDoor;
+    private Animator animatorkey;
+    private Animator animatordoor;
 
     void Start()
     {
-        // Lấy Animator
         animatorkey = GetComponent<Animator>();
 
         if (door != null)
@@ -26,37 +24,36 @@ public class Key : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            //// Chạy animation
-            //if (animatorkey != null)
-            //{
-            //    animatorkey.SetTrigger("Rotate");
-            //}
+            if (animatorkey != null)
+            {
+                animatorkey.SetTrigger("Key");
+            }
 
-            //// Ẩn đối tượng sau khi chạy animation
-            //StartCoroutine(HideObjectA());
-
-            //if (animatordoor != null)
-            //{
-            //    animatordoor.SetTrigger("MoveUp");
-            //}
-
-            // Vô hiệu hóa BoxCollider2D 
+            StartCoroutine(HideKeyAndUpdateDoor());
             if (boxColliderDoor != null)
             {
-                StartCoroutine(DisableBoxCollider());
+                boxColliderDoor.enabled = false; 
             }
         }
     }
 
-    IEnumerator HideObjectA()
+    IEnumerator HideKeyAndUpdateDoor()
     {
-        yield return new WaitForSeconds(1f);
+        // Đợi thời gian của hoạt hình khóa trước khi tắt khóa
+        yield return new WaitForSeconds(animatorkey.GetCurrentAnimatorStateInfo(0).length);
         gameObject.SetActive(false);
-    }
 
-    IEnumerator DisableBoxCollider()
-    {
+        // Đợi 2 giây sau khi khóa biến mất trước khi tắt collider của cửa và thay đổi hoạt hình
         yield return new WaitForSeconds(2f);
-        boxColliderDoor.enabled = false;
+
+        if (boxColliderDoor != null)
+        {
+            boxColliderDoor.enabled = false;
+        }
+
+        if (animatordoor != null)
+        {
+            animatordoor.SetTrigger("IdleDoor");
+        }
     }
 }
