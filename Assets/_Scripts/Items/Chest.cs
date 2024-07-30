@@ -15,6 +15,11 @@ public class Chest : MonoBehaviour
         {
             OpenChest();
         }
+        if (other.CompareTag("Player"))
+        {
+           
+            Destroy(gameObject);
+        }
     }
 
     void OpenChest()
@@ -30,7 +35,7 @@ public class Chest : MonoBehaviour
     void SpawnCoins()
     {
         
-        int coinCount = Random.Range(3, 6);  
+        int coinCount = Random.Range(3, 10);  
 
         for (int i = 0; i < coinCount; i++)
         {
@@ -48,4 +53,5 @@ public class Chest : MonoBehaviour
             }
         }
     }
+
 }
