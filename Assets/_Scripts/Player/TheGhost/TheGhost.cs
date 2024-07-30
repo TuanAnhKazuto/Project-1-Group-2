@@ -11,6 +11,7 @@ public class TheGhost : MonoBehaviour
     private PlayerStaminaBar staminaBar;
 
     // Move
+    [Header("Move")]
     public float moveSpeed;
     public float jumpSpeed;
     private int maxJump = 1;
@@ -21,6 +22,7 @@ public class TheGhost : MonoBehaviour
     public LayerMask groundLayer;
 
     //Attack
+    [Header("Attack")]
     private float holdThreshold = 0.3f;
     private bool isHolding = false;
     private float holdTime = 0f;
@@ -28,6 +30,7 @@ public class TheGhost : MonoBehaviour
     private bool vipAttackTriggered = false;
 
     //Dash
+    [Header("Dash")]
     [SerializeField] private float dashBoost;
     [SerializeField] private float dashTime;
     private float _dashTime;
@@ -46,8 +49,19 @@ public class TheGhost : MonoBehaviour
     private float whenDash = 6f;
 
     //Take Coin
+    [Header("Coin")]
     public int coin = 0;
     public TextMeshProUGUI TextCoin;
+
+    //Take item
+    [Header("Healing and Recovery")]
+    private float oniginiValue;
+    private float sakekasuValue;
+    [SerializeField] private TextMeshProUGUI onigiriText;
+    [SerializeField] private TextMeshProUGUI sakekasuText;
+    PlayerHealth playerHealth;
+
+    
 
     private void Start()
     {
@@ -55,6 +69,7 @@ public class TheGhost : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         staminaBar = GetComponent<PlayerStaminaBar>();
         playerTransform = transform;
+        playerHealth = GetComponent<PlayerHealth>();
     }
 
     private void Update()
@@ -67,6 +82,8 @@ public class TheGhost : MonoBehaviour
         Dash();
         UpdateAnimator();
         AttackManager();
+        Healing();
+        Recovery();
     }
 
     //Move
@@ -79,7 +96,7 @@ public class TheGhost : MonoBehaviour
             jumpCount++;
             if (jumpCount == maxJump)
             {
-                staminaBar.UpdateStaminaBar(whenJump);
+                staminaBar.SubStaminaBar(whenJump);
             }
         }
 
@@ -161,7 +178,7 @@ public class TheGhost : MonoBehaviour
 
         animator.SetBool("isAttack", true);
         Invoke("ResetAttack", 0.2f);
-        staminaBar.UpdateStaminaBar(staminaAttack);
+        staminaBar.SubStaminaBar(staminaAttack);
     }
 
     private void AttackVIP()
@@ -170,7 +187,7 @@ public class TheGhost : MonoBehaviour
 
         animator.SetBool("isAttackVIP", true);
         Invoke("ResetAttack", 0.5f);
-        staminaBar.UpdateStaminaBar(staminaAttackVIP);
+        staminaBar.SubStaminaBar(staminaAttackVIP);
     }
 
     private void ResetAttack()
@@ -202,7 +219,7 @@ public class TheGhost : MonoBehaviour
             moveSpeed += dashBoost;
             _dashTime = dashTime;
             isDashing = true;
-            staminaBar.UpdateStaminaBar(whenDash);
+            staminaBar.SubStaminaBar(whenDash);
             StartDashEffect();
         }
 
@@ -275,14 +292,55 @@ public class TheGhost : MonoBehaviour
         }
     }
 
-    //Coin
-    private void OnTriggerEnter2D(Collider2D collision)
+    //Take Item
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.CompareTag("Coin"))
+        if (other.CompareTag("Coin"))
         {
             coin++;
             TextCoin.SetText(coin.ToString());
-            Destroy(collision.gameObject);
+            Destroy(other.gameObject);
+        }
+
+        if(other.gameObject.tag == "Onigiri")
+        {
+            oniginiValue++;
+            onigiriText.text = oniginiValue.ToString();
+            Destroy(other.gameObject);
+        }
+
+        if(other.gameObject.tag == "Sakekasu")
+        {
+            sakekasuValue++;
+            sakekasuText.text = sakekasuValue.ToString();
+            Destroy(other.gameObject);
+        }
+    }
+
+    //Healing and Recovery
+    public void Healing()
+    {
+        if(oniginiValue > 0 && playerHealth.curHP < 100)
+        {
+            if (Input.GetKeyDown(KeyCode.C))
+            {
+                playerHealth.HealingInBar(10);
+                oniginiValue--;
+                onigiriText.text = oniginiValue.ToString();
+            }
+        }
+    }
+
+    public void Recovery()
+    {
+        if(sakekasuValue > 0 && staminaBar.curStamina < 100)
+        {
+            if(Input.GetKeyDown(KeyCode.V))
+            {
+                staminaBar.RecoveryInBar(15);
+                sakekasuValue--;
+                sakekasuText.text = sakekasuValue.ToString();
+            }
         }
     }
 }
