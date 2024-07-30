@@ -30,7 +30,7 @@ public class PlayerStaminaBar : MonoBehaviour
             staminaBar.value = curStamina;
         }
 
-        if(player.isRuning)
+        if(player.isRunning)
         {
             countReturn = 1f;
         }
@@ -38,7 +38,7 @@ public class PlayerStaminaBar : MonoBehaviour
         {
             countReturn = 0f;
         }
-        else if(!player.isAttacking || !player.isRuning)
+        else if(!player.isAttacking || !player.isRunning)
         {
             countReturn = 2f;
         }   

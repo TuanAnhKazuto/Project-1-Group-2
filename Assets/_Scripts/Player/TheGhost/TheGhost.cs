@@ -1,23 +1,12 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Timeline.TimelinePlaybackControls;
-using UnityEngine.UI;
-using Unity.Mathematics;
 using TMPro;
-using UnityEngine.SceneManagement;
-using UnityEditor.SearchService;
-
-
 
 public class TheGhost : MonoBehaviour
 {
     Animator animator;
     Rigidbody2D rb;
-
-    //Audio
-    
 
     private PlayerStaminaBar staminaBar;
 
@@ -26,7 +15,7 @@ public class TheGhost : MonoBehaviour
     public float jumpSpeed;
     private int maxJump = 1;
     private int jumpCount = 0;
-    [HideInInspector] public bool isRuning = false;
+    [HideInInspector] public bool isRunning = false;
     // Check chạm đất
     public float groundCheckDistance = 0.6f;
     public LayerMask groundLayer;
@@ -47,20 +36,19 @@ public class TheGhost : MonoBehaviour
     private float ghostDelaySeconds = 0.04f;
     private Coroutine dashEffectCoroutine;
     private Transform playerTransform;
+    [SerializeField] private float collisionOffset = 0.1f;
+    [SerializeField] private float raycastDistance = 5f; // Khoảng cách của Raycast
 
-
-    //Sub physical count when do somethink
+    //Sub stamina count when do something
     private float staminaAttack = 2f;
     private float staminaAttackVIP = 5f;
     private float whenJump = 1f;
     private float whenDash = 6f;
 
-
     //Take Coin
     public int coin = 0;
     public TextMeshProUGUI TextCoin;
 
-   
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -81,7 +69,6 @@ public class TheGhost : MonoBehaviour
         AttackManager();
     }
 
-
     //Move
     private void Jump()
     {
@@ -90,7 +77,7 @@ public class TheGhost : MonoBehaviour
             if (staminaBar.curStamina < whenJump) return;
             rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
             jumpCount++;
-            if(jumpCount == maxJump)
+            if (jumpCount == maxJump)
             {
                 staminaBar.UpdateStaminaBar(whenJump);
             }
@@ -108,15 +95,13 @@ public class TheGhost : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         if (horizontal != 0)
         {
-            //rb.velocity = new Vector2(horizontal * moveSpeed, rb.velocity.y);
-            
             transform.Translate(Vector2.right * horizontal * moveSpeed * Time.deltaTime);
             scale.x = horizontal > 0 ? 1 : -1;
-            isRuning = true;
+            isRunning = true;
         }
         else
         {
-            isRuning = false;
+            isRunning = false;
         }
 
         transform.localScale = scale;
@@ -139,14 +124,6 @@ public class TheGhost : MonoBehaviour
         return hit.collider != null;
     }
 
-    /*private void OnDrawGizmos()
-    {
-        // Vẽ raycast để kiểm tra trong Unity
-        Gizmos.color = Color.red;
-        Gizmos.DrawLine(transform.position, transform.position + Vector3.down * groundCheckDistance);
-    }*/
-
-
     //Attack
     private void AttackManager()
     {
@@ -165,7 +142,7 @@ public class TheGhost : MonoBehaviour
             if (isHolding && holdTime >= holdThreshold && !vipAttackTriggered)
             {
                 AttackVIP();
-                vipAttackTriggered = true; 
+                vipAttackTriggered = true;
             }
         }
 
@@ -178,10 +155,9 @@ public class TheGhost : MonoBehaviour
         }
     }
 
-
     private void Attack()
     {
-        if(staminaBar.curStamina < staminaAttack) return;
+        if (staminaBar.curStamina < staminaAttack) return;
 
         animator.SetBool("isAttack", true);
         Invoke("ResetAttack", 0.2f);
@@ -208,6 +184,21 @@ public class TheGhost : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.L) && _dashTime <= 0 && isDashing == false && staminaBar.curStamina > whenDash)
         {
+            Vector2 dashDirection = new Vector2(transform.localScale.x, 0).normalized;
+
+            // Sử dụng Raycast để kiểm tra va chạm với groundLayer
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, dashDirection, raycastDistance, groundLayer);
+
+            float dashDistance = dashBoost * dashTime;
+
+            if (hit.collider != null)
+            {
+                // Nếu va chạm xảy ra, chỉ di chuyển đến điểm va chạm trừ đi một khoảng cách an toàn
+                dashDistance = hit.distance - collisionOffset;
+            }
+
+            // Di chuyển nhân vật với khoảng cách dash đã tính toán
+            StartCoroutine(DashMovement(dashDirection, dashDistance));
             moveSpeed += dashBoost;
             _dashTime = dashTime;
             isDashing = true;
@@ -215,47 +206,71 @@ public class TheGhost : MonoBehaviour
             StartDashEffect();
         }
 
-        if (_dashTime <= 0 && isDashing == true)
+        if (_dashTime > 0)
+        {
+            _dashTime -= Time.deltaTime;
+        }
+        else if (isDashing)
         {
             moveSpeed -= dashBoost;
             isDashing = false;
-        }
-        else
-        {
-            _dashTime -= Time.deltaTime;
             StopDashEffect();
         }
 
-        if(isDashing)
+        animator.SetBool("isDashing", isDashing);
+    }
+
+    private IEnumerator DashMovement(Vector2 direction, float distance)
+    {
+        float moved = 0f;
+        while (moved < distance && isDashing)
         {
-            animator.SetBool("isDashing", true);
-        }
-        else
-        {
-            animator.SetBool("isDashing", false);
+            float moveStep = moveSpeed * Time.deltaTime;
+            transform.Translate(direction * moveStep);
+            moved += moveStep;
+            yield return null;
         }
     }
 
+    private void OnDrawGizmos()
+    {
+        if (isDashing)
+        {
+            Gizmos.color = Color.red;
+            Vector2 dashDirection = new Vector2(transform.localScale.x, 0).normalized;
+
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, dashDirection, raycastDistance, groundLayer);
+
+            float dashDistance = dashBoost * dashTime;
+
+            if (hit.collider != null)
+            {
+                dashDistance = hit.distance - collisionOffset;
+            }
+
+            Gizmos.DrawLine(transform.position, (Vector2)transform.position + dashDirection * dashDistance);
+        }
+    }
 
     private void StartDashEffect()
     {
-        if(dashEffectCoroutine != null) StopCoroutine(dashEffectCoroutine);
+        if (dashEffectCoroutine != null) StopCoroutine(dashEffectCoroutine);
         dashEffectCoroutine = StartCoroutine(DashEffectCoroutine());
     }
 
     private void StopDashEffect()
     {
-        if(dashEffectCoroutine != null) StopCoroutine(dashEffectCoroutine);
+        if (dashEffectCoroutine != null) StopCoroutine(dashEffectCoroutine);
     }
 
-    IEnumerator DashEffectCoroutine()
+    private IEnumerator DashEffectCoroutine()
     {
         while (true)
         {
             GameObject ghost = Instantiate(ghostEffect, transform.position, Quaternion.identity);
             ghost.transform.localScale = playerTransform.localScale;
-            
-            Destroy(ghost, 2f);
+
+            Destroy(ghost, 0.5f);
             yield return new WaitForSeconds(ghostDelaySeconds);
         }
     }
@@ -269,11 +284,5 @@ public class TheGhost : MonoBehaviour
             TextCoin.SetText(coin.ToString());
             Destroy(collision.gameObject);
         }
-        
     }
-
 }
-
-
-    
-
