@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.015598124, g: 0.008619804, b: 0.017348383, a: 1}
+  m_IndirectSpecularColor: {r: 0.015690558, g: 0.008666629, b: 0.017383197, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -96625,6 +96625,10 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 4.222111
       objectReference: {fileID: 0}
+    - target: {fileID: 4682043085183050705, guid: 8b352b8a663fd794db57af29d484df55, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 6414847215866818068, guid: 8b352b8a663fd794db57af29d484df55, type: 3}
       propertyPath: m_Size.x
       value: 4.244425
@@ -98480,6 +98484,10 @@ PrefabInstance:
     - target: {fileID: 4682043085183050705, guid: 8b352b8a663fd794db57af29d484df55, type: 3}
       propertyPath: m_Size.x
       value: 2.2374141
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682043085183050705, guid: 8b352b8a663fd794db57af29d484df55, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6414847215866818068, guid: 8b352b8a663fd794db57af29d484df55, type: 3}
       propertyPath: m_Size.x
@@ -108984,7 +108992,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4682043085183050705, guid: 8b352b8a663fd794db57af29d484df55, type: 3}
       propertyPath: m_SortingOrder
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6414847215866818068, guid: 8b352b8a663fd794db57af29d484df55, type: 3}
       propertyPath: m_Size.x
@@ -111194,6 +111202,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1776859265481047855, guid: 57071b925bd49c34caa3d33f443c5abc, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 866459040}
+    - target: {fileID: 1776859265481047855, guid: 57071b925bd49c34caa3d33f443c5abc, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2336804391998836196, guid: 57071b925bd49c34caa3d33f443c5abc, type: 3}
       propertyPath: progressBar
       value: 
@@ -111205,6 +111221,14 @@ PrefabInstance:
     - target: {fileID: 4188891054603139225, guid: 57071b925bd49c34caa3d33f443c5abc, type: 3}
       propertyPath: m_Name
       value: Loading
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563862251542930759, guid: 57071b925bd49c34caa3d33f443c5abc, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 866459040}
+    - target: {fileID: 6563862251542930759, guid: 57071b925bd49c34caa3d33f443c5abc, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8226386450479093506, guid: 57071b925bd49c34caa3d33f443c5abc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -111326,7 +111350,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4479401065618535487, guid: 1a6f17910837f284b9fa6009693b82bf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4
+      value: -3.963
       objectReference: {fileID: 0}
     - target: {fileID: 4479401065618535487, guid: 1a6f17910837f284b9fa6009693b82bf, type: 3}
       propertyPath: m_LocalPosition.z
