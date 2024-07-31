@@ -5,8 +5,8 @@ using UnityEngine;
 public class Chest : MonoBehaviour
 {
     public Animator chestAnimator;
-    public GameObject coinPrefab;  
-    public Transform coinSpawnPoint;  
+    public GameObject coinPrefab;
+    public Transform coinSpawnPoint;
     private bool isOpen = false;
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -17,7 +17,7 @@ public class Chest : MonoBehaviour
         }
         if (other.CompareTag("Player"))
         {
-           
+
             Destroy(gameObject, 1);
         }
     }
@@ -28,22 +28,23 @@ public class Chest : MonoBehaviour
         {
             chestAnimator.SetBool("isOpen", true);
             isOpen = true;
-            SpawnCoins();  
+            SpawnCoins();
+            
         }
     }
 
     void SpawnCoins()
     {
-        
-        int coinCount = Random.Range(3, 10);  
+
+        int coinCount = Random.Range(3, 10);
 
         for (int i = 0; i < coinCount; i++)
         {
-            
+
             Vector3 spawnPosition = coinSpawnPoint.position + new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), 0);
             GameObject coin = Instantiate(coinPrefab, spawnPosition, Quaternion.identity);
 
-           
+
             Rigidbody2D rb = coin.GetComponent<Rigidbody2D>();
             if (rb != null)
             {
@@ -53,5 +54,5 @@ public class Chest : MonoBehaviour
             }
         }
     }
-
+    
 }
