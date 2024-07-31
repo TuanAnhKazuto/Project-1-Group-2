@@ -1443,10 +1443,10 @@ GameObject:
   - component: {fileID: 1731188073}
   - component: {fileID: 1731188072}
   - component: {fileID: 1731188076}
-  - component: {fileID: 1731188075}
+  - component: {fileID: 1731188077}
   m_Layer: 5
-  m_Name: Button (1)
-  m_TagString: Untagged
+  m_Name: Play
+  m_TagString: PLAY
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1554,22 +1554,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1731188070}
   m_CullTransparentMesh: 1
---- !u!114 &1731188075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1731188070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2fe5546f775c47d2820aa5e8a715f53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _data:
-    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
-    _objectReferences:
-    - {fileID: 11400000, guid: f68f952d239abfd40b552374e7e517a4, type: 2}
 --- !u!114 &1731188076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1585,6 +1569,18 @@ MonoBehaviour:
   _data:
     _json: '{"declarations":{"Kind":"Object","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
     _objectReferences: []
+--- !u!114 &1731188077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731188070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ddcf6248c18161459be1ca0386ff630, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1817050195
 GameObject:
   m_ObjectHideFlags: 0
@@ -1760,7 +1756,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 514, y: 198}
+  m_AnchoredPosition: {x: 400, y: 198}
   m_SizeDelta: {x: 1001.38, y: 428.19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1898356582

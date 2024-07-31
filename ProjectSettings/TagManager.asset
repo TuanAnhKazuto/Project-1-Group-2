@@ -17,6 +17,7 @@ TagManager:
   - PlayerATK
   - Undefined
   - Potal
+  - PLAY
   layers:
   - Default
   - TransparentFX

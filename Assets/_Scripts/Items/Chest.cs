@@ -18,7 +18,7 @@ public class Chest : MonoBehaviour
         if (other.CompareTag("Player"))
         {
            
-            Destroy(gameObject);
+            Destroy(gameObject, 1);
         }
     }
 
@@ -26,7 +26,7 @@ public class Chest : MonoBehaviour
     {
         if (chestAnimator != null)
         {
-            chestAnimator.SetTrigger("Open");
+            chestAnimator.SetBool("isOpen", true);
             isOpen = true;
             SpawnCoins();  
         }
