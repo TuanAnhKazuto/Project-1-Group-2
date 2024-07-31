@@ -29216,6 +29216,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1776859265481047855, guid: 57071b925bd49c34caa3d33f443c5abc, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 866459040}
+    - target: {fileID: 1776859265481047855, guid: 57071b925bd49c34caa3d33f443c5abc, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2336804391998836196, guid: 57071b925bd49c34caa3d33f443c5abc, type: 3}
       propertyPath: progressBar
       value: 
@@ -29227,6 +29235,14 @@ PrefabInstance:
     - target: {fileID: 4188891054603139225, guid: 57071b925bd49c34caa3d33f443c5abc, type: 3}
       propertyPath: m_Name
       value: Loading
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563862251542930759, guid: 57071b925bd49c34caa3d33f443c5abc, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 866459040}
+    - target: {fileID: 6563862251542930759, guid: 57071b925bd49c34caa3d33f443c5abc, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8226386450479093506, guid: 57071b925bd49c34caa3d33f443c5abc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
