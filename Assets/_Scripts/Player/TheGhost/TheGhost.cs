@@ -89,6 +89,8 @@ public class TheGhost : MonoBehaviour
     //Move
     private void Jump()
     {
+        if (playerHealth.isDeading) return;
+
         if (Input.GetKeyDown(KeyCode.Space) && (IsGrounded() || jumpCount < maxJump))
         {
             if (staminaBar.curStamina < whenJump) return;
@@ -108,6 +110,8 @@ public class TheGhost : MonoBehaviour
 
     public void Run()
     {
+        if(playerHealth.isDeading) return;
+
         Vector2 scale = transform.localScale;
         float horizontal = Input.GetAxis("Horizontal");
         if (horizontal != 0)
@@ -324,7 +328,7 @@ public class TheGhost : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.C))
             {
-                playerHealth.HealingInBar(10);
+                playerHealth.HealingInBar(20);
                 oniginiValue--;
                 onigiriText.text = oniginiValue.ToString();
             }
