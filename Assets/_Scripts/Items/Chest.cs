@@ -7,36 +7,33 @@ public class Chest : MonoBehaviour
     public Animator chestAnimator;
     public GameObject coinPrefab;
     public Transform coinSpawnPoint;
-    private bool isOpen = false;
 
+    private void Start()
+    {
+        chestAnimator = GetComponent<Animator>();
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && !isOpen)
-        {
-            OpenChest();
-        }
         if (other.CompareTag("Player"))
         {
-
-            Destroy(gameObject, 1);
+            OpenChest();
+            Destroy(gameObject, 1.5f);
         }
+        
     }
 
     void OpenChest()
-    {
-        if (chestAnimator != null)
-        {
-            chestAnimator.SetBool("isOpen", true);
-            isOpen = true;
-            SpawnCoins();
-            
-        }
+    {      
+
+        chestAnimator.SetBool("isOpen", true);
+
+        SpawnCoins();
     }
 
     void SpawnCoins()
     {
 
-        int coinCount = Random.Range(1, 1);
+        int coinCount = 1;
 
         for (int i = 0; i < coinCount; i++)
         {
