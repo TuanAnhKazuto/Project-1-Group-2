@@ -36,7 +36,7 @@ public class Chest : MonoBehaviour
     void SpawnCoins()
     {
 
-        int coinCount = Random.Range(3, 10);
+        int coinCount = Random.Range(1, 2);
 
         for (int i = 0; i < coinCount; i++)
         {

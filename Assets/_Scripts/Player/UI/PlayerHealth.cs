@@ -53,7 +53,7 @@ public class PlayerHealth : MonoBehaviour
             MovingTrap trap = other.GetComponent<MovingTrap>();
             if(trap != null)
             {
-                TakeDamage(15);
+                TakeDamage(100);
             }
         }
     }
