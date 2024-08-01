@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 17e40378488540e4c81fdfad6bc64217
+guid: 4fdeb88480a05174a9d6b8d9404386b9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -106,186 +106,131 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: png-transparent-portal-video-game-film-column-sprite-game-video-game-news_preview_rev_1_0
+      name: Chest (1)_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 76
-        width: 148
-        height: 309
+        x: 5
+        y: 109
+        width: 26
+        height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4950c4e393345734e882f40361cd790c
-      internalID: 955669565
+      spriteID: aa06fe9cb06740544a4ab5e43d2f22e8
+      internalID: -1399857234
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: png-transparent-portal-video-game-film-column-sprite-game-video-game-news_preview_rev_1_1
+      name: Chest (1)_1
       rect:
         serializedVersion: 2
-        x: 170
-        y: 67
-        width: 148
-        height: 311
+        x: 40
+        y: 109
+        width: 28
+        height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d98009e3181ccc46bf4cbfb957c8936
-      internalID: 972327556
+      spriteID: f8de318cf0ce6414299a404c5078f4e6
+      internalID: 1243934067
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: png-transparent-portal-video-game-film-column-sprite-game-video-game-news_preview_rev_1_2
+      name: Chest (1)_2
       rect:
         serializedVersion: 2
-        x: 332
-        y: 59
-        width: 148
-        height: 310
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 77
+        y: 109
+        width: 26
+        height: 25
+      alignment: 9
+      pivot: {x: 0.4999997, y: 0.47670105}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c552a07b7abe1ec48acf1c0280cc8f7d
-      internalID: 1474046963
+      spriteID: 64529b007880ed144a3e2a1726016a9a
+      internalID: 667326207
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: png-transparent-portal-video-game-film-column-sprite-game-video-game-news_preview_rev_1_3
+      name: Chest (1)_3
       rect:
         serializedVersion: 2
-        x: 495
-        y: 67
-        width: 148
-        height: 311
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 113
+        y: 106
+        width: 28
+        height: 30
+      alignment: 9
+      pivot: {x: 0.46626717, y: 0.47670162}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 722e158f3ba12c04886fc00b800fd810
-      internalID: -1696670680
+      spriteID: bab392d6dee9a0f4d9d11ff158b5ec9b
+      internalID: 1857028766
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: png-transparent-portal-video-game-film-column-sprite-game-video-game-news_preview_rev_1_4
+      name: Chest (1)_4
       rect:
         serializedVersion: 2
-        x: 54
-        y: 7
-        width: 54
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 143
+        y: 106
+        width: 32
+        height: 31
+      alignment: 9
+      pivot: {x: 0.59223413, y: 0.4767016}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 271e099506397e84abe8fc46514bae16
-      internalID: -1760524243
+      spriteID: 0224a08902d042e46b41716cec2d5a7f
+      internalID: -1210056336
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: png-transparent-portal-video-game-film-column-sprite-game-video-game-news_preview_rev_1_5
+      name: Chest (1)_5
       rect:
         serializedVersion: 2
-        x: 199
-        y: 0
-        width: 89
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 184
+        y: 106
+        width: 29
+        height: 34
+      alignment: 9
+      pivot: {x: 0.4908116, y: 0.4767016}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cbdec1577b7398946b71d93d2edcf5ee
-      internalID: 15093079
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: png-transparent-portal-video-game-film-column-sprite-game-video-game-news_preview_rev_1_6
-      rect:
-        serializedVersion: 2
-        x: 354
-        y: 0
-        width: 105
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bc246ecbd9f95914390cc9005c21424d
-      internalID: -2037971424
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: png-transparent-portal-video-game-film-column-sprite-game-video-game-news_preview_rev_1_7
-      rect:
-        serializedVersion: 2
-        x: 524
-        y: 0
-        width: 89
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0e52f995770ccae43ad68507143f00fb
-      internalID: 846517545
+      spriteID: 150faf62a18993c49a8d2a5f89a3f0b7
+      internalID: 877179858
       vertices: []
       indices: 
       edges: []
@@ -301,14 +246,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      png-transparent-portal-video-game-film-column-sprite-game-video-game-news_preview_rev_1_0: 955669565
-      png-transparent-portal-video-game-film-column-sprite-game-video-game-news_preview_rev_1_1: 972327556
-      png-transparent-portal-video-game-film-column-sprite-game-video-game-news_preview_rev_1_2: 1474046963
-      png-transparent-portal-video-game-film-column-sprite-game-video-game-news_preview_rev_1_3: -1696670680
-      png-transparent-portal-video-game-film-column-sprite-game-video-game-news_preview_rev_1_4: -1760524243
-      png-transparent-portal-video-game-film-column-sprite-game-video-game-news_preview_rev_1_5: 15093079
-      png-transparent-portal-video-game-film-column-sprite-game-video-game-news_preview_rev_1_6: -2037971424
-      png-transparent-portal-video-game-film-column-sprite-game-video-game-news_preview_rev_1_7: 846517545
+      Chest (1)_0: -1399857234
+      Chest (1)_1: 1243934067
+      Chest (1)_2: 667326207
+      Chest (1)_3: 1857028766
+      Chest (1)_4: -1210056336
+      Chest (1)_5: 877179858
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
