@@ -54,18 +54,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   jumpSpeed: 5
-  isRuning: 0
+  isRunning: 0
   groundCheckDistance: 0.6
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
   isAttacking: 0
-  dashBoost: 15
-  dashTime: 0.2
+  dashBoost: 20
+  dashTime: 0.1
   isDashing: 0
   ghostEffect: {fileID: 6531999878802715694, guid: 841d3613bc478304ca33ffa7b4c7fa62, type: 3}
+  collisionOffset: 0.1
+  raycastDistance: 5
   coin: 0
   TextCoin: {fileID: 0}
+  onigiriText: {fileID: 0}
+  sakekasuText: {fileID: 0}
+  attackSource: {fileID: 0}
+  attackVIPSource: {fileID: 0}
+  dashSound: {fileID: 0}
+  jumpSound: {fileID: 0}
 --- !u!114 &5772735567670939841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,7 +86,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48bcffa489ccd7e40b524e67324f4489, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  curHP: 0
+  isDeading: 0
   healhtBar: {fileID: 0}
+  gameOverPanel: {fileID: 0}
 --- !u!114 &1703228340400248163
 MonoBehaviour:
   m_ObjectHideFlags: 0
