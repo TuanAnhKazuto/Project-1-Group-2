@@ -409,7 +409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   moveSpeed: 2
-  leftPosition: -5
+  leftPosition: -3.48
   rightPosition: 0
   timeStopAtk: 0.9
   curLife: 0
