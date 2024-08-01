@@ -333,12 +333,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   moveSpeed: 2
-  leftPosition: -5
-  rightPosition: 0
+  leftPosition: -3.356
+  rightPosition: 1.032
   timeStopAtk: 1
   curLife: 0
   enemyCollider: {fileID: 187619890017393913}
-  damage: 5
+  damage: 20
 --- !u!114 &285426456509215330
 MonoBehaviour:
   m_ObjectHideFlags: 0
