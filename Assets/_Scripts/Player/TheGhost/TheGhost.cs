@@ -46,21 +46,25 @@ public class TheGhost : MonoBehaviour
     private float staminaAttack = 2f;
     private float staminaAttackVIP = 5f;
     private float whenJump = 1f;
-    private float whenDash = 6f;
-
-    //Take Coin
-    [Header("Coin")]
-    public int coin = 0;
-    public TextMeshProUGUI TextCoin;
+    private float whenDash = 6f; 
 
     //Take item
-    [Header("Healing and Recovery")]
+    [Header("Item")]
+    public int coin = 0;
+    public TextMeshProUGUI TextCoin;
     private float oniginiValue;
     private float sakekasuValue;
     [SerializeField] private TextMeshProUGUI onigiriText;
     [SerializeField] private TextMeshProUGUI sakekasuText;
     PlayerHealth playerHealth;
 
+    //Audio
+    [Header("Sound")]
+    [SerializeField] private AudioSource attackSource;
+    [SerializeField] private AudioSource attackVIPSource;
+    [SerializeField] private AudioSource dashSound;
+    [SerializeField] private AudioSource jumpSound;
+    
     
 
     private void Start()
@@ -95,6 +99,7 @@ public class TheGhost : MonoBehaviour
         {
             if (staminaBar.curStamina < whenJump) return;
             rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
+            jumpSound.Play();
             jumpCount++;
             if (jumpCount == maxJump)
             {
@@ -180,6 +185,7 @@ public class TheGhost : MonoBehaviour
     {
         if (staminaBar.curStamina < staminaAttack) return;
 
+        attackSource.Play();
         animator.SetBool("isAttack", true);
         Invoke("ResetAttack", 0.2f);
         staminaBar.SubStaminaBar(staminaAttack);
@@ -189,6 +195,7 @@ public class TheGhost : MonoBehaviour
     {
         if (staminaBar.curStamina < staminaAttackVIP) return;
 
+        attackVIPSource.Play();
         animator.SetBool("isAttackVIP", true);
         Invoke("ResetAttack", 0.5f);
         staminaBar.SubStaminaBar(staminaAttackVIP);
@@ -220,6 +227,7 @@ public class TheGhost : MonoBehaviour
 
             // Di chuyển nhân vật với khoảng cách dash đã tính toán
             StartCoroutine(DashMovement(dashDirection, dashDistance));
+            dashSound.Play();
             moveSpeed += dashBoost;
             _dashTime = dashTime;
             isDashing = true;
