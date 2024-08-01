@@ -102,7 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   lifespan: 5
-  damage: 19
+  damage: 15
   attackDirection: {x: 0, y: 0}
 --- !u!61 &3213041110133576558
 BoxCollider2D:
