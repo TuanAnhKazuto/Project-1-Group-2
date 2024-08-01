@@ -5,16 +5,19 @@ using UnityEngine;
 public class Checkpoint : MonoBehaviour
 {
     PlayerCheckpoint checkpoint;
+    Animator animator;
 
     private void Awake()
     {
         checkpoint = GameObject.FindGameObjectWithTag("Player").GetComponentInParent<PlayerCheckpoint>();
+        animator = GetComponent<Animator>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Player")
         {
+            animator.SetBool("isCheckPoint", true);
             checkpoint.UpDateCheckpoint(transform.position);
         }
     }
