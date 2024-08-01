@@ -7,6 +7,7 @@ public class BossController : MonoBehaviour
     public float moveSpeed = 2f; // Tốc độ di chuyển của boss
     public float attackRange = 5f; // Khoảng cách để boss bắt đầu tấn công
     public float jumpRange = 1f; // Khoảng cách để boss nhảy
+    public float retreatRange = 1f; // Khoảng cách để boss lùi lại
     public Transform player; // Vị trí của người chơi
     public GameObject bulletPrefab; // Prefab của đạn thường
     public GameObject ballPrefab; // Prefab của bóng
@@ -30,7 +31,6 @@ public class BossController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
 
-        // Instantiate health bar if the prefab is assigned
         if (healthBarPrefab != null)
         {
             healthBarInstance = Instantiate(healthBarPrefab, transform);
@@ -50,11 +50,16 @@ public class BossController : MonoBehaviour
         }
         else if (distanceToPlayer <= attackRange && distanceToPlayer > jumpRange && !isCooldown)
         {
+            FacePlayer(); // Đảm bảo boss quay mặt về phía nhân vật
             PerformAttackSequence();
         }
-        else if (distanceToPlayer <= jumpRange)
+        else if (distanceToPlayer <= jumpRange && distanceToPlayer > retreatRange)
         {
             Jump();
+        }
+        else if (distanceToPlayer <= retreatRange)
+        {
+            RetreatFromPlayer();
         }
 
         if (distanceToPlayer > attackRange * 2)
@@ -164,7 +169,39 @@ public class BossController : MonoBehaviour
     void Jump()
     {
         animator.SetTrigger("jump");
-        rb.AddForce(new Vector2(0, 5), ForceMode2D.Impulse);
+        rb.AddForce(new Vector2(0, 2), ForceMode2D.Impulse);
+        StartCoroutine(LimitJumpHeight());
+    }
+
+    IEnumerator LimitJumpHeight()
+    {
+        float startY = transform.position.y; // Lưu vị trí Y hiện tại của boss
+        float maxJumpHeight = 1f; // Giới hạn độ cao tối đa
+
+        while (transform.position.y < startY + maxJumpHeight)
+        {
+            yield return null; // Chờ đến khung hình tiếp theo
+        }
+
+        // Khi boss đạt độ cao tối đa, đặt vị trí Y về giới hạn
+        Vector2 newPos = new Vector2(transform.position.x, startY + maxJumpHeight);
+        rb.position = newPos;
+    }
+
+    void RetreatFromPlayer()
+    {
+        animator.SetBool("isWalking", true);
+
+        // Tính toán khoảng cách hiện tại và hướng lùi
+        Vector2 directionToPlayer = (player.position - transform.position).normalized;
+        Vector2 retreatDirection = -directionToPlayer;
+
+        // Tính toán vị trí mới của boss
+        Vector2 targetPosition = (Vector2)player.position + retreatDirection * retreatRange;
+
+        // Di chuyển boss về phía vị trí mục tiêu
+        Vector2 newPos = Vector2.MoveTowards(rb.position, targetPosition, moveSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(newPos);
     }
 
     void Flip()
@@ -193,5 +230,16 @@ public class BossController : MonoBehaviour
         this.enabled = false;
         Destroy(gameObject, 2f);
     }
-    
+
+    void FacePlayer()
+    {
+        if (player.position.x > transform.position.x && !facingRight)
+        {
+            Flip();
+        }
+        else if (player.position.x < transform.position.x && facingRight)
+        {
+            Flip();
+        }
+    }
 }

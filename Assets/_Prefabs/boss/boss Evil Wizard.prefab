@@ -134,14 +134,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 4
-  attackRange: 5
+  attackRange: 7.75
   jumpRange: 1
+  retreatRange: 1
   player: {fileID: 0}
   bulletPrefab: {fileID: 5592450328045020434, guid: db19423a3b317fb4b8f67647ab211513, type: 3}
   ballPrefab: {fileID: 8370886767647570418, guid: a8fc996814d58cb49a55aa79c62cca60, type: 3}
   energyBallPrefab: {fileID: 7253421882259407551, guid: 865ac88a4f8712b4789c9de5fddffca5, type: 3}
   firePoint: {fileID: 4899784802925776851}
   maxHealth: 100
+  healthBarPrefab: {fileID: 0}
 --- !u!50 &5574973044097477199
 Rigidbody2D:
   serializedVersion: 4
@@ -157,7 +159,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 2
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
