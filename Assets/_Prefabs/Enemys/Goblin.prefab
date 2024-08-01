@@ -394,7 +394,7 @@ MonoBehaviour:
   timeStopAtk: 1.5
   curLife: 0
   enemyCollider: {fileID: 1698273135143852860}
-  damage: 5
+  damage: 20
 --- !u!114 &4498715742771215440
 MonoBehaviour:
   m_ObjectHideFlags: 0
