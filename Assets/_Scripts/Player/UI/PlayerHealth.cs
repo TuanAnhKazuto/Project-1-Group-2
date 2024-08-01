@@ -12,7 +12,7 @@ public class PlayerHealth : MonoBehaviour
     [HideInInspector] public int curHP;
     private float safeTime = 0.7f;
     private float _safeTimeCoolDown;
-    private bool isDeading = false;
+    public bool isDeading = false;
 
     public HealthBar healhtBar;
     TheGhost player;
@@ -20,8 +20,11 @@ public class PlayerHealth : MonoBehaviour
     Animator animator;
     Rigidbody2D rb;
 
+    [SerializeField] private GameObject gameOverPanel;
+
     private void Start()
     {
+        gameOverPanel.SetActive(false);
         curLife = maxLife;
         curHP = maxHP;
         healhtBar.UpdateBar(maxHP, curHP);
@@ -30,6 +33,8 @@ public class PlayerHealth : MonoBehaviour
         animator = GetComponentInParent<Animator>();
         rb = GetComponentInParent<Rigidbody2D>();
         rb.simulated = true;
+        isDeading = false;
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -112,14 +117,13 @@ public class PlayerHealth : MonoBehaviour
         // Lấy thời lượng của animation
         float animationLength = GetAnimationLength(animationName);
         yield return new WaitForSeconds(animationLength);
-
-        Time.timeScale = 0f;// Hoặc set active cho một GameOverPanel
+        gameOverPanel.SetActive(true);
+        Time.timeScale = 0f;
         
     }
 
     private float GetAnimationLength(string animationName)
     {
-        // Lấy thông tin về trạng thái hiện tại của animation
         AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
         if (stateInfo.IsName(animationName))
         {

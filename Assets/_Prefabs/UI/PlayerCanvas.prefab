@@ -2175,8 +2175,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fillBar: {fileID: 7600030873665067156}
-  firstLife: {fileID: 5481414380722711471}
-  finalLife: {fileID: 2529791898536284341}
+  firstLife: {fileID: 5046575262018133098}
+  finalLife: {fileID: 3290669682806835614}
 --- !u!114 &7282389702304623894
 MonoBehaviour:
   m_ObjectHideFlags: 0
