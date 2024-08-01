@@ -132314,22 +132314,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Potal
       objectReference: {fileID: 0}
-    - target: {fileID: 3621335016567939075, guid: e1a18b4a89083a34c9c3639b01b3c608, type: 3}
-      propertyPath: m_Size.x
-      value: 0.07076422
-      objectReference: {fileID: 0}
-    - target: {fileID: 3621335016567939075, guid: e1a18b4a89083a34c9c3639b01b3c608, type: 3}
-      propertyPath: m_Size.y
-      value: 0.161059
-      objectReference: {fileID: 0}
-    - target: {fileID: 3621335016567939075, guid: e1a18b4a89083a34c9c3639b01b3c608, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.0014640875
-      objectReference: {fileID: 0}
-    - target: {fileID: 3621335016567939075, guid: e1a18b4a89083a34c9c3639b01b3c608, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.013142519
-      objectReference: {fileID: 0}
     - target: {fileID: 7149253795129319930, guid: e1a18b4a89083a34c9c3639b01b3c608, type: 3}
       propertyPath: diemDichChuyenDen
       value: 
