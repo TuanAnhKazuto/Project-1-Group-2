@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -21,6 +22,7 @@ public class BossBehaviour : MonoBehaviour
     private float distance;
     private bool attackMode;
     private bool inRange;
+    private bool cooling;
     private float intTimer;
     #endregion
 
@@ -35,8 +37,72 @@ public class BossBehaviour : MonoBehaviour
         if(inRange)
         {
             hit = Physics2D.Raycast(rayCast.position, Vector2.left, rayCastLenght, rayCastMask);
-            
+            RayCastDebugger();
         }
+
+        //when Player is detected
+        if(hit.collider != null)
+        {
+            EnemyLogic();
+        }
+        else if(hit.collider == null)
+        {
+            inRange = false;
+        }
+
+        if (!inRange)
+        {
+            animator.SetBool("isWalk", false);
+            StopAttack();
+        }
+        
+    }
+
+    private void EnemyLogic()
+    {
+        distance = Vector2.Distance(transform.position, target.transform.position);
+
+        if(distance > attackDistace)
+        {
+            Move();
+            StopAttack();
+        }
+        else if(attackDistace >= distance && !cooling)
+        {
+            Attack();
+        }
+
+        if (cooling)
+        {
+            animator.SetBool("Attack", false);
+        }
+    }
+
+    void Move()
+    {
+        animator.SetBool("isWalk", true);
+
+        if (!animator.GetCurrentAnimatorStateInfo(0).IsName("AttackNormal"))
+        {
+            Vector2  targetPosition = new Vector2(target.transform.position.x, transform.position.y);
+
+            transform.position = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+        }
+    }
+
+    void Attack()
+    {
+        timer = intTimer;
+        attackMode = true;
+
+        animator.SetBool("isWalk", false);
+        animator.SetBool("Attack", true);
+    }
+    private void StopAttack()
+    {
+        cooling = false;
+        attackMode  = false;
+        animator.SetBool("Attack", false);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
