@@ -5,6 +5,7 @@ using TMPro;
 
 public class TheGhost : MonoBehaviour
 {
+    #region Variables
     Animator animator;
     Rigidbody2D rb;
 
@@ -46,7 +47,7 @@ public class TheGhost : MonoBehaviour
     private float staminaAttack = 2f;
     private float staminaAttackVIP = 5f;
     private float whenJump = 1f;
-    private float whenDash = 6f; 
+    private float whenDash = 6f;
 
     //Take item
     [Header("Item")]
@@ -64,8 +65,8 @@ public class TheGhost : MonoBehaviour
     [SerializeField] private AudioSource attackVIPSource;
     [SerializeField] private AudioSource dashSound;
     [SerializeField] private AudioSource jumpSound;
-    
-    
+    #endregion
+
 
     private void Start()
     {
@@ -89,7 +90,17 @@ public class TheGhost : MonoBehaviour
         Healing();
         Recovery();
     }
+    private void UpdateAnimator()
+    {
+        animator.SetBool("isMoving", Input.GetAxis("Horizontal") != 0);
+        animator.SetBool("isJumping", !IsGrounded());
+        animator.SetFloat("VerticalSpeed", rb.velocity.y);
 
+        isAttacking = animator.GetCurrentAnimatorStateInfo(0).IsName("Attack") ||
+                     animator.GetCurrentAnimatorStateInfo(0).IsName("AttackVIP");
+    }
+
+    #region Move
     //Move
     private void Jump()
     {
@@ -115,7 +126,7 @@ public class TheGhost : MonoBehaviour
 
     public void Run()
     {
-        if(playerHealth.isDeading) return;
+        if (playerHealth.isDeading) return;
 
         Vector2 scale = transform.localScale;
         float horizontal = Input.GetAxis("Horizontal");
@@ -133,23 +144,15 @@ public class TheGhost : MonoBehaviour
         transform.localScale = scale;
     }
 
-    private void UpdateAnimator()
-    {
-        animator.SetBool("isMoving", Input.GetAxis("Horizontal") != 0);
-        animator.SetBool("isJumping", !IsGrounded());
-        animator.SetFloat("VerticalSpeed", rb.velocity.y);
-
-        isAttacking = animator.GetCurrentAnimatorStateInfo(0).IsName("Attack") ||
-                     animator.GetCurrentAnimatorStateInfo(0).IsName("AttackVIP");
-    }
-
     private bool IsGrounded()
     {
         // Raycast xuống dưới để kiểm tra va chạm với mặt đất
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, groundLayer);
         return hit.collider != null;
     }
+    #endregion
 
+    #region Attack
     //Attack
     private void AttackManager()
     {
@@ -206,7 +209,9 @@ public class TheGhost : MonoBehaviour
         animator.SetBool("isAttack", false);
         animator.SetBool("isAttackVIP", false);
     }
+    #endregion
 
+    #region Dash
     //Dash
     private void Dash()
     {
@@ -261,26 +266,6 @@ public class TheGhost : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmos()
-    {
-        if (isDashing)
-        {
-            Gizmos.color = Color.red;
-            Vector2 dashDirection = new Vector2(transform.localScale.x, 0).normalized;
-
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, dashDirection, raycastDistance, groundLayer);
-
-            float dashDistance = dashBoost * dashTime;
-
-            if (hit.collider != null)
-            {
-                dashDistance = hit.distance - collisionOffset;
-            }
-
-            Gizmos.DrawLine(transform.position, (Vector2)transform.position + dashDirection * dashDistance);
-        }
-    }
-
     private void StartDashEffect()
     {
         if (dashEffectCoroutine != null) StopCoroutine(dashEffectCoroutine);
@@ -303,7 +288,9 @@ public class TheGhost : MonoBehaviour
             yield return new WaitForSeconds(ghostDelaySeconds);
         }
     }
+    #endregion
 
+    #region Take Items
     //Take Item
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -314,25 +301,27 @@ public class TheGhost : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-        if(other.gameObject.tag == "Onigiri")
+        if (other.gameObject.tag == "Onigiri")
         {
             oniginiValue++;
             onigiriText.text = oniginiValue.ToString();
             Destroy(other.gameObject);
         }
 
-        if(other.gameObject.tag == "Sakekasu")
+        if (other.gameObject.tag == "Sakekasu")
         {
             sakekasuValue++;
             sakekasuText.text = sakekasuValue.ToString();
             Destroy(other.gameObject);
         }
     }
+    #endregion
 
+    #region Healing and Recovery
     //Healing and Recovery
     public void Healing()
     {
-        if(oniginiValue > 0 && playerHealth.curHP < 100)
+        if (oniginiValue > 0 && playerHealth.curHP < 100)
         {
             if (Input.GetKeyDown(KeyCode.C))
             {
@@ -345,9 +334,9 @@ public class TheGhost : MonoBehaviour
 
     public void Recovery()
     {
-        if(sakekasuValue > 0 && staminaBar.curStamina < 100)
+        if (sakekasuValue > 0 && staminaBar.curStamina < 100)
         {
-            if(Input.GetKeyDown(KeyCode.V))
+            if (Input.GetKeyDown(KeyCode.V))
             {
                 staminaBar.RecoveryInBar(15);
                 sakekasuValue--;
@@ -355,4 +344,5 @@ public class TheGhost : MonoBehaviour
             }
         }
     }
+    #endregion
 }
