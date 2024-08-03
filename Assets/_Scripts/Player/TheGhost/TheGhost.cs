@@ -325,7 +325,7 @@ public class TheGhost : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.C))
             {
-                playerHealth.HealingInBar(20);
+                playerHealth.HealingInBar(30);
                 oniginiValue--;
                 onigiriText.text = oniginiValue.ToString();
             }
@@ -338,7 +338,7 @@ public class TheGhost : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.V))
             {
-                staminaBar.RecoveryInBar(15);
+                staminaBar.RecoveryInBar(25);
                 sakekasuValue--;
                 sakekasuText.text = sakekasuValue.ToString();
             }
