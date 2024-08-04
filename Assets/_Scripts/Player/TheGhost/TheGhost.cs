@@ -9,6 +9,7 @@ public class TheGhost : MonoBehaviour
     Animator animator;
     Rigidbody2D rb;
 
+
     private PlayerStaminaBar staminaBar;
 
     // Move
@@ -65,6 +66,10 @@ public class TheGhost : MonoBehaviour
     [SerializeField] private AudioSource attackVIPSource;
     [SerializeField] private AudioSource dashSound;
     [SerializeField] private AudioSource jumpSound;
+
+    [Header("Effect")]
+    public ParticleSystem healingEffect;
+    public ParticleSystem recoveryEffect;
     #endregion
 
 
@@ -325,6 +330,7 @@ public class TheGhost : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.C))
             {
+                healingEffect.Play();
                 playerHealth.HealingInBar(30);
                 oniginiValue--;
                 onigiriText.text = oniginiValue.ToString();
@@ -338,6 +344,7 @@ public class TheGhost : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.V))
             {
+                recoveryEffect.Play();
                 staminaBar.RecoveryInBar(25);
                 sakekasuValue--;
                 sakekasuText.text = sakekasuValue.ToString();
