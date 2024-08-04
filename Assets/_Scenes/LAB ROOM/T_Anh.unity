@@ -397,11 +397,6 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 2722478298976330832, guid: 68a08daded7f1a14f9d21025d48faf1c, type: 3}
   m_PrefabInstance: {fileID: 8073000610196750505}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &585321815 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3290669682806835614, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
-  m_PrefabInstance: {fileID: 8005788117921513068}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &736176516
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,6 +428,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!198 &844311850 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 6518745362240261258, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
+  m_PrefabInstance: {fileID: 8005788117921513068}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &854810117
 GameObject:
   m_ObjectHideFlags: 0
@@ -1783,11 +1783,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1769044282 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5046575262018133098, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
-  m_PrefabInstance: {fileID: 8005788117921513068}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1790004436 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3567471899369084146, guid: 6ed70357b7b74534296f1ca42b9c37da, type: 3}
@@ -1943,6 +1938,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!198 &1970058161 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 9017125926391269803, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
+  m_PrefabInstance: {fileID: 8005788117921513068}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2031313179
 GameObject:
   m_ObjectHideFlags: 0
@@ -1996,6 +1996,10 @@ PrefabInstance:
     - target: {fileID: 81835213355173701, guid: 014abe02bf5076a4eb98cdbcf166fb3a, type: 3}
       propertyPath: m_Name
       value: Onigiri
+      objectReference: {fileID: 0}
+    - target: {fileID: 81835213355173701, guid: 014abe02bf5076a4eb98cdbcf166fb3a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5259449825527658909, guid: 014abe02bf5076a4eb98cdbcf166fb3a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2152,7 +2156,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6427578200529511993, guid: 5ae1a85fedb1b874d96be2bc95c18e8a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6427578200529511993, guid: 5ae1a85fedb1b874d96be2bc95c18e8a, type: 3}
       propertyPath: m_TagString
@@ -2552,7 +2556,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6411507013511691688, guid: a48e93e72221b564f8b0ea48aef9fee8, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6594130181062650289, guid: a48e93e72221b564f8b0ea48aef9fee8, type: 3}
       propertyPath: m_Enabled
@@ -2609,38 +2613,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1479834645282042021, guid: 20cd082783cc8ee4eac512c992b31ab0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5311088131393735664, guid: 20cd082783cc8ee4eac512c992b31ab0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5311088131393735664, guid: 20cd082783cc8ee4eac512c992b31ab0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5311088131393735664, guid: 20cd082783cc8ee4eac512c992b31ab0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5311088131393735664, guid: 20cd082783cc8ee4eac512c992b31ab0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5311088131393735664, guid: 20cd082783cc8ee4eac512c992b31ab0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5311088131393735664, guid: 20cd082783cc8ee4eac512c992b31ab0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5311088131393735664, guid: 20cd082783cc8ee4eac512c992b31ab0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6232287037369013381, guid: 20cd082783cc8ee4eac512c992b31ab0, type: 3}
-      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8272312943420202690, guid: 20cd082783cc8ee4eac512c992b31ab0, type: 3}
@@ -2708,6 +2680,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sakekasu
       objectReference: {fileID: 0}
+    - target: {fileID: 4422030664437005348, guid: febd1250a206d2f4685e396983964b16, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2726,13 +2702,13 @@ PrefabInstance:
       value: PlayerCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 3782262400694138106, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
-      propertyPath: finalLife
+      propertyPath: subLifeEffect1
       value: 
-      objectReference: {fileID: 585321815}
+      objectReference: {fileID: 1970058161}
     - target: {fileID: 3782262400694138106, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
-      propertyPath: firstLife
+      propertyPath: subLifeEffect2
       value: 
-      objectReference: {fileID: 1769044282}
+      objectReference: {fileID: 844311850}
     - target: {fileID: 4205944911229513951, guid: b1394a77c4f159c48996ce7ba8008f15, type: 3}
       propertyPath: m_Camera
       value: 
@@ -2841,14 +2817,6 @@ PrefabInstance:
     - target: {fileID: 558255269649652514, guid: 68a08daded7f1a14f9d21025d48faf1c, type: 3}
       propertyPath: m_Name
       value: AudioSound
-      objectReference: {fileID: 0}
-    - target: {fileID: 2037383660335418623, guid: 68a08daded7f1a14f9d21025d48faf1c, type: 3}
-      propertyPath: m_Volume
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3560235558198254040, guid: 68a08daded7f1a14f9d21025d48faf1c, type: 3}
-      propertyPath: m_Volume
-      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 8772518442317854685, guid: 68a08daded7f1a14f9d21025d48faf1c, type: 3}
       propertyPath: m_LocalPosition.x
