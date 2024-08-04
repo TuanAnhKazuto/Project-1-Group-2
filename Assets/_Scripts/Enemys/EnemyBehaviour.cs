@@ -16,7 +16,7 @@ public class EnemyBehaviour : MonoBehaviour
     public float timeStopAtk;
 
     //take hit
-    private float maxLife = 3;
+    private float maxLife = 5;
     [HideInInspector] public float curLife;
     [SerializeField] private GameObject enemyCollider;
     private Rigidbody2D rg;
