@@ -80,6 +80,7 @@ public class BossBehaviour : MonoBehaviour
 
     void Move()
     {
+        if(attackMode) return;
         animator.SetBool("isWalk", true);
 
         if (!animator.GetCurrentAnimatorStateInfo(0).IsName("AttackNormal"))
