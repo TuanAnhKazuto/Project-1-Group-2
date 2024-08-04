@@ -8,6 +8,9 @@ public class HealthBar : MonoBehaviour
     [SerializeField] private Image fillBar;
     [SerializeField] private GameObject firstLife;
     [SerializeField] private GameObject finalLife;
+    public ParticleSystem subLifeEffect1;
+    public ParticleSystem subLifeEffect2;
+
 
     public void UpdateBar(int maxHP, int curHP)
     {
@@ -19,10 +22,12 @@ public class HealthBar : MonoBehaviour
         if(curLife == 2)
         {
             Destroy(firstLife);
+            subLifeEffect1.Play();
         }
         if(curLife == 1)
         {
             Destroy(finalLife);
+            subLifeEffect2.Play();
         }
     }
 }
