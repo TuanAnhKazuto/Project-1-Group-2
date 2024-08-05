@@ -304,6 +304,37 @@ Transform:
   - {fileID: 1252757037}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &184447609
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 184447610}
+  m_Layer: 0
+  m_Name: Right_Limit
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &184447610
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184447609}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.8, y: -3.6, z: -13.576298}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &219488537 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 3560235558198254040, guid: 68a08daded7f1a14f9d21025d48faf1c, type: 3}
@@ -521,6 +552,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9dcbb2bc63eacd343b1fe0c78e81ef79, type: 3}
+--- !u!1 &1065540118
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1065540119}
+  m_Layer: 0
+  m_Name: Left_Limit
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1065540119
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065540118}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.93, y: -3.6, z: -13.576298}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1144788175 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3636734017242840280, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
@@ -2150,6 +2212,18 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 6101049736367421150, guid: 5ae1a85fedb1b874d96be2bc95c18e8a, type: 3}
+      propertyPath: timer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6101049736367421150, guid: 5ae1a85fedb1b874d96be2bc95c18e8a, type: 3}
+      propertyPath: leftLimit
+      value: 
+      objectReference: {fileID: 1065540119}
+    - target: {fileID: 6101049736367421150, guid: 5ae1a85fedb1b874d96be2bc95c18e8a, type: 3}
+      propertyPath: rightLimit
+      value: 
+      objectReference: {fileID: 184447610}
     - target: {fileID: 6427578200529511993, guid: 5ae1a85fedb1b874d96be2bc95c18e8a, type: 3}
       propertyPath: m_Name
       value: Bringer of Death
@@ -3003,10 +3077,12 @@ SceneRoots:
   - {fileID: 1952370298}
   - {fileID: 487820529944928370}
   - {fileID: 7940379259688657677}
-  - {fileID: 854810118}
-  - {fileID: 2365583014005912557}
   - {fileID: 1533866695}
   - {fileID: 111340210}
   - {fileID: 8073000610196750505}
   - {fileID: 1000721929}
   - {fileID: 49424725}
+  - {fileID: 854810118}
+  - {fileID: 2365583014005912557}
+  - {fileID: 1065540119}
+  - {fileID: 184447610}
