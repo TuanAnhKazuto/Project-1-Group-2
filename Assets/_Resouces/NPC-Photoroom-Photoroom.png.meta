@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,742 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: NPC-Photoroom-Photoroom_0
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 706
+        width: 87
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28ed9873ea4c4d541b0c82d33203b5f1
+      internalID: 325174194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC-Photoroom-Photoroom_1
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 706
+        width: 88
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20f7033f533b3d347a28ea3fdeb188b4
+      internalID: -433380455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC-Photoroom-Photoroom_2
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 706
+        width: 88
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f39ad11bd65bd347b2eab227a0655fd
+      internalID: -445360443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC-Photoroom-Photoroom_3
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 706
+        width: 87
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 036025abb37d60a4796d361eaa5960ff
+      internalID: -648352174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC-Photoroom-Photoroom_4
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 706
+        width: 87
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2155ada72d34436488f9fa2edd514f8d
+      internalID: 54951885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC-Photoroom-Photoroom_5
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 706
+        width: 88
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eca7c05d70682b4db2ea896abb70c47
+      internalID: 557799597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC-Photoroom-Photoroom_6
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 550
+        width: 74
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 389323c0dbfef7944ab101b031fb3596
+      internalID: -672958483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC-Photoroom-Photoroom_7
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 550
+        width: 71
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f29cfe065939e14395c83efbc284288
+      internalID: 228436585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC-Photoroom-Photoroom_8
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 550
+        width: 60
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf61d3dd2824c324dbb4036cbfcd584a
+      internalID: -1826299985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC-Photoroom-Photoroom_9
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 550
+        width: 56
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 177c83e3e7e5cda4cab123a81440b85e
+      internalID: -168878066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC-Photoroom-Photoroom_10
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 550
+        width: 68
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 505abec9e112c6e4b81d5037bf70b4ac
+      internalID: 2029214851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC-Photoroom-Photoroom_11
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 550
+        width: 81
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ffa2ab5c8e4a4f419944c0d025307d6
+      internalID: 1044650082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC-Photoroom-Photoroom_12
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 550
+        width: 70
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5763c5b76457a8c4da756cea363566b0
+      internalID: 235051981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC-Photoroom-Photoroom_13
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 550
+        width: 76
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82b438c9bed8d6044888553f427a2a10
+      internalID: 2634755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC-Photoroom-Photoroom_14
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 384
+        width: 91
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d773e6fa13d417e41adbe6f476405995
+      internalID: 2110198706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC-Photoroom-Photoroom_15
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 384
+        width: 92
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89c6c5648a47bd1499e78bf772ff4395
+      internalID: 1591398674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC-Photoroom-Photoroom_16
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 384
+        width: 92
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6aa6b663de672f42a9225403ebe55a8
+      internalID: 1578529572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC-Photoroom-Photoroom_17
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 384
+        width: 90
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bdd1e100772b814d80c5e0d12e2225b
+      internalID: 770011853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC-Photoroom-Photoroom_18
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 384
+        width: 92
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b69136a187963554e9026e6c847225ce
+      internalID: 976859897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC-Photoroom-Photoroom_19
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 384
+        width: 93
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5050965d3e75874a86ddc95e193b25e
+      internalID: 1476706744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC-Photoroom-Photoroom_20
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 387
+        width: 92
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f06035bb87470454c90918da1cc4b258
+      internalID: 1043670214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC-Photoroom-Photoroom_21
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 385
+        width: 92
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6758dfe5daa41142b4e6ae322324423
+      internalID: -1209315193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC-Photoroom-Photoroom_22
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 235
+        width: 92
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 880e5fb972913614cb499085fe9d8c57
+      internalID: -500898340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC-Photoroom-Photoroom_23
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 240
+        width: 91
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34dc8bb82b96549418e2ca5089fd9a8b
+      internalID: -976005752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC-Photoroom-Photoroom_24
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 246
+        width: 92
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d61e3e5225a4ff5428df40e69d0760bf
+      internalID: 811341728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC-Photoroom-Photoroom_25
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 240
+        width: 92
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91256f3777d433b4dbfb6c38f161595d
+      internalID: -476433452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC-Photoroom-Photoroom_26
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 237
+        width: 91
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 815b2accf4b8ae14384fe507902ba96e
+      internalID: 1658814305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC-Photoroom-Photoroom_27
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 236
+        width: 92
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20c11c3a634735c4a9da2f6d6d3051d3
+      internalID: 1419326648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC-Photoroom-Photoroom_28
+      rect:
+        serializedVersion: 2
+        x: 988
+        y: 235
+        width: 92
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76628f92d3eafc646b5a472961cedde8
+      internalID: 1885125902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC-Photoroom-Photoroom_29
+      rect:
+        serializedVersion: 2
+        x: 1128
+        y: 235
+        width: 92
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31351ec7ad0962147a3d6daf52b4fb73
+      internalID: -1927650509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC-Photoroom-Photoroom_30
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 84
+        width: 72
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de3c067a379d6a84696b6adcd8fa76e2
+      internalID: 1213941849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC-Photoroom-Photoroom_31
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 85
+        width: 85
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7162974dc98c8d47a0193342c403507
+      internalID: -2119278645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC-Photoroom-Photoroom_32
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 84
+        width: 93
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5975bb981626764ebb686284b7654e3
+      internalID: 1915892326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC-Photoroom-Photoroom_33
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 85
+        width: 120
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f46b37fa15150904a9f07d11918a8dcb
+      internalID: -1396706455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC-Photoroom-Photoroom_34
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 84
+        width: 107
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1f3c1ae81a52b847a5f94ce13e639c5
+      internalID: -961286000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +854,42 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      NPC-Photoroom-Photoroom_0: 325174194
+      NPC-Photoroom-Photoroom_1: -433380455
+      NPC-Photoroom-Photoroom_10: 2029214851
+      NPC-Photoroom-Photoroom_11: 1044650082
+      NPC-Photoroom-Photoroom_12: 235051981
+      NPC-Photoroom-Photoroom_13: 2634755
+      NPC-Photoroom-Photoroom_14: 2110198706
+      NPC-Photoroom-Photoroom_15: 1591398674
+      NPC-Photoroom-Photoroom_16: 1578529572
+      NPC-Photoroom-Photoroom_17: 770011853
+      NPC-Photoroom-Photoroom_18: 976859897
+      NPC-Photoroom-Photoroom_19: 1476706744
+      NPC-Photoroom-Photoroom_2: -445360443
+      NPC-Photoroom-Photoroom_20: 1043670214
+      NPC-Photoroom-Photoroom_21: -1209315193
+      NPC-Photoroom-Photoroom_22: -500898340
+      NPC-Photoroom-Photoroom_23: -976005752
+      NPC-Photoroom-Photoroom_24: 811341728
+      NPC-Photoroom-Photoroom_25: -476433452
+      NPC-Photoroom-Photoroom_26: 1658814305
+      NPC-Photoroom-Photoroom_27: 1419326648
+      NPC-Photoroom-Photoroom_28: 1885125902
+      NPC-Photoroom-Photoroom_29: -1927650509
+      NPC-Photoroom-Photoroom_3: -648352174
+      NPC-Photoroom-Photoroom_30: 1213941849
+      NPC-Photoroom-Photoroom_31: -2119278645
+      NPC-Photoroom-Photoroom_32: 1915892326
+      NPC-Photoroom-Photoroom_33: -1396706455
+      NPC-Photoroom-Photoroom_34: -961286000
+      NPC-Photoroom-Photoroom_4: 54951885
+      NPC-Photoroom-Photoroom_5: 557799597
+      NPC-Photoroom-Photoroom_6: -672958483
+      NPC-Photoroom-Photoroom_7: 228436585
+      NPC-Photoroom-Photoroom_8: -1826299985
+      NPC-Photoroom-Photoroom_9: -168878066
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
