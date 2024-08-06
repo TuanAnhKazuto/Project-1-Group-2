@@ -5,9 +5,11 @@ using UnityEngine.UI;
 
 public class ButtonInfor : MonoBehaviour
 {
-    public string itemName;
-    public int itemPrice;
-    public Sprite itemImage;
+    public int ItemID;
+    public Text NumberItem;
+    public Text NameItem;
+    public GameObject ShopManager;
+
 
     // Update is called once per frame
     void Update()
