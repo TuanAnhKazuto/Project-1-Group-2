@@ -56,6 +56,11 @@ public class PlayerHealth : MonoBehaviour
                 TakeDamage(100);
             }
         }
+
+        if(other.gameObject.tag == "BossATK")
+        {
+            TakeDamage(35);
+        }
     }
 
     public void TakeDamage(int damage)
