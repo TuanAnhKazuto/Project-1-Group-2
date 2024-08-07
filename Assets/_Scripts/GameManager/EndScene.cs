@@ -15,12 +15,20 @@ public class EndScene : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        QuestManager questManager = collision.GetComponentInParent<QuestManager>();
         if(collision.gameObject.tag == "Player")
         {
-            Time.timeScale = 0;
-            //victoryAudioSource.Play();
-            //mainSound.Stop();
-            victoryPanel.SetActive(true);
+            if (questManager.isQuestDone)
+            {
+                Time.timeScale = 0;
+                //victoryAudioSource.Play();
+                //mainSound.Stop();
+                victoryPanel.SetActive(true);
+            }
+            else
+            {
+                Debug.Log("chua xong nv");
+            }
         }
     }
 }
