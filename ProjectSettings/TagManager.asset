@@ -18,6 +18,7 @@ TagManager:
   - Undefined
   - Potal
   - PLAY
+  - ZoomTrigger
   layers:
   - Default
   - TransparentFX
