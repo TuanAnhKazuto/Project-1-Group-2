@@ -5,8 +5,8 @@ using UnityEngine;
 public class EndScene : MonoBehaviour
 {
     [SerializeField] private GameObject victoryPanel;
-    //[SerializeField] private AudioSource victoryAudioSource;
-    //[SerializeField] private AudioSource mainSound;
+    [SerializeField] private AudioSource victoryAudioSource;
+    [SerializeField] private AudioSource mainSound;
 
     private void Start()
     {
@@ -21,8 +21,8 @@ public class EndScene : MonoBehaviour
             if (questManager.isQuestDone)
             {
                 Time.timeScale = 0;
-                //victoryAudioSource.Play();
-                //mainSound.Stop();
+                victoryAudioSource.Play();
+                mainSound.Stop();
                 victoryPanel.SetActive(true);
             }
             else

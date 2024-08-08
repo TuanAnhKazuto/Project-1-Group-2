@@ -21,6 +21,8 @@ public class PlayerHealth : MonoBehaviour
     Rigidbody2D rb;
 
     [SerializeField] private GameObject gameOverPanel;
+    [SerializeField] private AudioSource deathSound;
+    [SerializeField] private AudioSource mainSound;
 
     private void Start()
     {
@@ -122,6 +124,8 @@ public class PlayerHealth : MonoBehaviour
         // Lấy thời lượng của animation
         float animationLength = GetAnimationLength(animationName);
         yield return new WaitForSeconds(animationLength);
+        deathSound.Play();
+        mainSound.Stop();
         gameOverPanel.SetActive(true);
         Time.timeScale = 0f;
         
