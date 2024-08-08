@@ -19,6 +19,7 @@ TagManager:
   - Potal
   - PLAY
   - ZoomTrigger
+  - Next
   layers:
   - Default
   - TransparentFX
