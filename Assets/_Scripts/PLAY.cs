@@ -23,6 +23,6 @@ public class ButtonController : MonoBehaviour
     // Phương thức để chuyển cảnh
     void OnPlayButtonClicked()
     {
-        SceneManager.LoadScene("Lv1"); // Đảm bảo rằng tên scene là chính xác
+        SceneManager.LoadScene("phim"); // Đảm bảo rằng tên scene là chính xác
     }
 }
