@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d49b90e0a348e8d46b41600d51ab2e2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  checkpointSound: {fileID: 0}
 --- !u!95 &7308610599203960924
 Animator:
   serializedVersion: 5

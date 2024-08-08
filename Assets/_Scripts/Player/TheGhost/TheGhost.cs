@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class TheGhost : MonoBehaviour
 {
@@ -66,6 +67,7 @@ public class TheGhost : MonoBehaviour
     [SerializeField] private AudioSource attackVIPSource;
     [SerializeField] private AudioSource dashSound;
     [SerializeField] private AudioSource jumpSound;
+    [SerializeField] private AudioSource deathSound;
 
     [Header("Effect")]
     public ParticleSystem healingEffect;
@@ -81,7 +83,14 @@ public class TheGhost : MonoBehaviour
         playerTransform = transform;
         playerHealth = GetComponent<PlayerHealth>();
 
-       
+        coin = PlayerPrefs.GetInt("Coin", 0); // Giá trị mặc định là 0 nếu không có dữ liệu
+        oniginiValue = PlayerPrefs.GetInt("Onigini", 0);
+        sakekasuValue = PlayerPrefs.GetInt("Sakekasu", 0);
+
+        // Cập nhật UI
+        TextCoin.SetText(coin.ToString());
+        onigiriText.text = oniginiValue.ToString();
+        sakekasuText.text = sakekasuValue.ToString();
     }
 
     private void Update()
@@ -96,6 +105,7 @@ public class TheGhost : MonoBehaviour
         AttackManager();
         Healing();
         Recovery();
+
     }
     private void UpdateAnimator()
     {
@@ -306,6 +316,8 @@ public class TheGhost : MonoBehaviour
             coin++;
             TextCoin.SetText(coin.ToString());
             Destroy(other.gameObject);
+
+            PlayerPrefs.SetInt("Coin", coin);
         }
 
         if (other.gameObject.tag == "Onigiri")
@@ -313,6 +325,8 @@ public class TheGhost : MonoBehaviour
             oniginiValue++;
             onigiriText.text = oniginiValue.ToString();
             Destroy(other.gameObject);
+
+            PlayerPrefs.SetInt("Onigini", (int)oniginiValue);
         }
 
         if (other.gameObject.tag == "Sakekasu")
@@ -320,6 +334,8 @@ public class TheGhost : MonoBehaviour
             sakekasuValue++;
             sakekasuText.text = sakekasuValue.ToString();
             Destroy(other.gameObject);
+
+            PlayerPrefs.SetInt("Sakekasu", (int)sakekasuValue);
         }
     }
     #endregion
@@ -355,5 +371,35 @@ public class TheGhost : MonoBehaviour
     }
     #endregion
 
-   
+    public void StartNewGame(int index)
+    {
+        if (index == 1) // Giả sử index 1 là màn chơi mới
+        {
+            // Xóa tất cả dữ liệu lưu trữ khi bắt đầu màn chơi mới
+            PlayerPrefs.DeleteAll();
+
+            // Đặt lại giá trị ban đầu cho các biến
+            coin = 0;
+            oniginiValue = 0;
+            sakekasuValue = 0;
+
+            // Cập nhật giao diện người dùng (UI)
+            TextCoin.SetText(coin.ToString());
+            onigiriText.text = oniginiValue.ToString();
+            sakekasuText.text = sakekasuValue.ToString();
+        }
+    }
+    public void SaveGameState()
+    {
+        PlayerPrefs.SetInt("Coin", coin);
+        PlayerPrefs.SetInt("Onigini", (int)oniginiValue);
+        PlayerPrefs.SetInt("Sakekasu", (int)sakekasuValue);
+    }
+    private void OnApplicationQuit()
+    {
+        // Xóa từng dữ liệu cụ thể khi game dừng
+        PlayerPrefs.DeleteKey("Coin");
+        PlayerPrefs.DeleteKey("Onigini");
+        PlayerPrefs.DeleteKey("Sakekasu");
+    }
 }

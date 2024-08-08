@@ -25,6 +25,6 @@ public class NextButtonController : MonoBehaviour
     private void OnNextButtonClick()
     {
         // Chuyển tới Scene tên là "MainMenuScene"
-        SceneManager.LoadScene("MainMenuScene");
+        SceneManager.LoadScene("Lv1");
     }
 }

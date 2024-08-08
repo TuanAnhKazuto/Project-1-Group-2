@@ -12,10 +12,13 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private Slider loadingSlider;
     [SerializeField] private TextMeshProUGUI loadingText;
+     private TheGhost player;
 
     private void Start()
     {
         loadingPanel.SetActive(false);
+        player = GameObject.FindGameObjectWithTag("Player").GetComponentInParent<TheGhost>();
+
     }
 
     public void NextLevel()
@@ -24,6 +27,8 @@ public class UIManager : MonoBehaviour
         victoryPanel.SetActive(false);
         loadingPanel.SetActive(true);
         StartCoroutine(LoadNextLevel());
+
+
     }
     public void BackToMainMenu()
     {
@@ -37,6 +42,7 @@ public class UIManager : MonoBehaviour
     {
         Time.timeScale = 1.0f;
         loadingPanel.SetActive(true);
+        victoryPanel.SetActive(false);
         gameOverPanel.SetActive(false);
         StartCoroutine(LoadReplayLevel());
     }
@@ -46,6 +52,8 @@ public class UIManager : MonoBehaviour
     }
     IEnumerator LoadNextLevel()
     {
+
+
         var value = 1f;
         loadingSlider.value = value;
         loadingText.text = value + "%";
@@ -63,6 +71,10 @@ public class UIManager : MonoBehaviour
         }
         int curIndex = SceneManager.GetActiveScene().buildIndex;
         int nextIndex = curIndex + 1;
+        if (nextIndex == 1)
+        {
+            player.StartNewGame(curIndex);
+        }
         if (nextIndex == SceneManager.sceneCountInBuildSettings)
         {
             nextIndex = 0;
@@ -108,4 +120,6 @@ public class UIManager : MonoBehaviour
         int curIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(curIndex);
     }
+
+    
 }

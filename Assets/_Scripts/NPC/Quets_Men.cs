@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Quets_Men : MonoBehaviour 
 {
-    public GameObject questPanel; // Tham chiếu đến Panel nhiệm vụ
+    public GameObject questPanel_Men; // Tham chiếu đến Panel nhiệm vụ
     private bool isQuestPanelActive = false;
 
     void Update()
@@ -16,12 +16,16 @@ public class Quets_Men : MonoBehaviour
             ToggleQuestPanel();
         }
     }
+    private void Start()
+    {
+        questPanel_Men.SetActive(false);
+    }
 
     void ToggleQuestPanel()
     {
         // Thay đổi trạng thái của Panel
         isQuestPanelActive = !isQuestPanelActive;
-        questPanel.SetActive(isQuestPanelActive);
+        questPanel_Men.SetActive(isQuestPanelActive);
     }
 }
 
