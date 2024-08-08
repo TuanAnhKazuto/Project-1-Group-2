@@ -6,7 +6,8 @@ public class BossHealthBar : MonoBehaviour
     public Slider healthBar; // Thanh máu
     public float maxHealth = 400f; // Máu tối đa
     private float currentHealth;
-
+    public GameObject objectToAppear;
+    public GameObject tori; // Prefab "tori"
     void Start()
     {
         currentHealth = maxHealth;
@@ -22,11 +23,14 @@ public class BossHealthBar : MonoBehaviour
         Debug.Log("Damage taken: " + amount + ", Current Health: " + currentHealth);
         if (currentHealth <= 0)
         {
+            tori.SetActive(true);
             Destroy(this.gameObject);
+        
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+
+private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("PlayerATK"))
         {
