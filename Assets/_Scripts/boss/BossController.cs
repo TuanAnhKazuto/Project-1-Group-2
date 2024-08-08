@@ -13,7 +13,12 @@ public class BossController : MonoBehaviour
     public GameObject ballPrefab; // Prefab của bóng
     public GameObject energyBallPrefab; // Prefab của cầu năng lượng
     public Transform firePoint; // Điểm bắn đạn
+<<<<<<< Updated upstream
 
+=======
+    public int maxHealth = 400; // Máu tối đa của boss
+    public GameObject healthBarSliderPrefab; // Prefab của thanh máu Slider
+>>>>>>> Stashed changes
 
     private Animator animator;
     private Rigidbody2D rb;
@@ -21,12 +26,31 @@ public class BossController : MonoBehaviour
     private int currentHealth;
     private int attackSequence = 0;
     private bool isCooldown = false;
+<<<<<<< Updated upstream
+=======
+    private GameObject healthBarInstance;
+    private Slider healthBarSlider;
+>>>>>>> Stashed changes
 
     void Start()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+<<<<<<< Updated upstream
  
+=======
+        currentHealth = maxHealth;
+
+        // Tạo thanh máu Slider
+        if (healthBarSliderPrefab != null)
+        {
+            GameObject canvas = GameObject.Find("Canvas"); // Tìm đối tượng Canvas trong Scene
+            healthBarInstance = Instantiate(healthBarSliderPrefab, canvas.transform); // Tạo thanh máu trên Canvas
+            healthBarSlider = healthBarInstance.GetComponent<Slider>(); // Lấy component Slider từ prefab
+            healthBarSlider.maxValue = maxHealth; // Thiết lập giá trị tối đa của thanh máu
+            healthBarSlider.value = currentHealth; // Thiết lập giá trị hiện tại của thanh máu
+        }
+>>>>>>> Stashed changes
     }
 
     void Update()
@@ -41,7 +65,7 @@ public class BossController : MonoBehaviour
         }
         else if (distanceToPlayer <= attackRange && distanceToPlayer > jumpRange && !isCooldown)
         {
-            FacePlayer(); // Đảm bảo boss quay mặt về phía nhân vật
+            FacePlayer();
             PerformAttackSequence();
         }
         else if (distanceToPlayer <= jumpRange && distanceToPlayer > retreatRange)
@@ -58,6 +82,24 @@ public class BossController : MonoBehaviour
             animator.SetBool("isIdle", true);
         }
 
+<<<<<<< Updated upstream
+=======
+        // Cập nhật vị trí và thanh máu
+        UpdateHealthBar();
+    }
+
+    void UpdateHealthBar()
+    {
+        if (healthBarSlider != null && healthBarInstance != null)
+        {
+            // Cập nhật giá trị của thanh máu
+            healthBarSlider.value = currentHealth;
+
+            // Cập nhật vị trí của thanh máu theo vị trí của boss
+            Vector3 healthBarPosition = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, 2f, 0));
+            healthBarInstance.transform.position = healthBarPosition;
+        }
+>>>>>>> Stashed changes
     }
 
     void MoveTowardsPlayer()
