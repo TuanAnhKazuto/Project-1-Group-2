@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class TheGhost : MonoBehaviour
 {
@@ -81,7 +82,17 @@ public class TheGhost : MonoBehaviour
         playerTransform = transform;
         playerHealth = GetComponent<PlayerHealth>();
 
-       
+        // Tải dữ liệu từ PlayerPrefs
+        coin = PlayerPrefs.GetInt("Coin", 0); // Nếu không có dữ liệu, mặc định là 0
+        oniginiValue = PlayerPrefs.GetInt("Onigini", 0);
+        sakekasuValue = PlayerPrefs.GetInt("Sakekasu", 0);
+
+        // Cập nhật giao diện người dùng
+        TextCoin.SetText(coin.ToString());
+        onigiriText.text = oniginiValue.ToString();
+        sakekasuText.text = sakekasuValue.ToString();
+        int curIndex = SceneManager.GetActiveScene().buildIndex;
+        StartNewGame(curIndex);
     }
 
     private void Update()
@@ -96,6 +107,7 @@ public class TheGhost : MonoBehaviour
         AttackManager();
         Healing();
         Recovery();
+        
     }
     private void UpdateAnimator()
     {
@@ -306,6 +318,8 @@ public class TheGhost : MonoBehaviour
             coin++;
             TextCoin.SetText(coin.ToString());
             Destroy(other.gameObject);
+
+            PlayerPrefs.SetInt("Coin", coin);
         }
 
         if (other.gameObject.tag == "Onigiri")
@@ -313,6 +327,8 @@ public class TheGhost : MonoBehaviour
             oniginiValue++;
             onigiriText.text = oniginiValue.ToString();
             Destroy(other.gameObject);
+
+            PlayerPrefs.SetInt("Onigini", (int)oniginiValue);
         }
 
         if (other.gameObject.tag == "Sakekasu")
@@ -320,6 +336,8 @@ public class TheGhost : MonoBehaviour
             sakekasuValue++;
             sakekasuText.text = sakekasuValue.ToString();
             Destroy(other.gameObject);
+
+            PlayerPrefs.SetInt("Sakekasu", (int)sakekasuValue);
         }
     }
     #endregion
@@ -355,5 +373,17 @@ public class TheGhost : MonoBehaviour
     }
     #endregion
 
-   
+    public void StartNewGame(int index)
+    {
+       
+        if (index == 1)
+        {
+            PlayerPrefs.DeleteAll(); // Xóa tất cả dữ liệu lưu trữ
+                                     // hoặc xóa từng giá trị cụ thể
+            PlayerPrefs.DeleteKey("Coin");
+            PlayerPrefs.DeleteKey("Onigini");
+            PlayerPrefs.DeleteKey("Sakekasu");
+        }
+        
+    }
 }
