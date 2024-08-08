@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+
 public class BossHealthBar : MonoBehaviour
 {
     public Slider healthBar; // Thanh máu
-    public float maxHealth = 100f; // Máu tối đa
+    public float maxHealth = 400f; // Máu tối đa
     private float currentHealth;
 
     void Start()
@@ -16,18 +17,21 @@ public class BossHealthBar : MonoBehaviour
     public void TakeDamage(float amount)
     {
         currentHealth -= amount;
-        if (currentHealth < 0)
-            currentHealth = 0;
-
+        if (currentHealth < 0) currentHealth = 0; // Đảm bảo không âm
         healthBar.value = currentHealth;
+        Debug.Log("Damage taken: " + amount + ", Current Health: " + currentHealth);
+        if (currentHealth <= 0)
+        {
+            DestroyObject(this.gameObject);
+        }
     }
 
-    public void Heal(float amount)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        currentHealth += amount;
-        if (currentHealth > maxHealth)
-            currentHealth = maxHealth;
-
-        healthBar.value = currentHealth;
+        if (collision.gameObject.CompareTag("PlayerATK"))
+        {
+            TakeDamage(4); 
+        }
     }
+
 }

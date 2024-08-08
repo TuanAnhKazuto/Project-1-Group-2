@@ -13,8 +13,7 @@ public class BossController : MonoBehaviour
     public GameObject ballPrefab; // Prefab của bóng
     public GameObject energyBallPrefab; // Prefab của cầu năng lượng
     public Transform firePoint; // Điểm bắn đạn
-    public int maxHealth = 400; // Máu tối đa của boss
-    public GameObject healthBarPrefab; // Prefab của thanh máu
+
 
     private Animator animator;
     private Rigidbody2D rb;
@@ -22,20 +21,12 @@ public class BossController : MonoBehaviour
     private int currentHealth;
     private int attackSequence = 0;
     private bool isCooldown = false;
-    private GameObject healthBarInstance;
-    private Image healthBarForeground;
 
     void Start()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        currentHealth = maxHealth;
-
-        if (healthBarPrefab != null)
-        {
-            healthBarInstance = Instantiate(healthBarPrefab, transform);
-            healthBarForeground = healthBarInstance.transform.Find("HealthBarForeground").GetComponent<Image>();
-        }
+ 
     }
 
     void Update()
@@ -67,12 +58,6 @@ public class BossController : MonoBehaviour
             animator.SetBool("isIdle", true);
         }
 
-        // Update health bar
-        if (healthBarForeground != null)
-        {
-            float healthPercent = (float)currentHealth / maxHealth;
-            healthBarForeground.fillAmount = healthPercent;
-        }
     }
 
     void MoveTowardsPlayer()
@@ -131,7 +116,7 @@ public class BossController : MonoBehaviour
         animator.SetTrigger("attack_boss");
         InstantiateBullet(bulletPrefab);
         isCooldown = true;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         isCooldown = false;
     }
 
@@ -140,7 +125,7 @@ public class BossController : MonoBehaviour
         animator.SetBool("isUsingSkill", true);
         InstantiateBullet(ballPrefab);
         isCooldown = true;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.5f);
         isCooldown = false;
         animator.SetBool("isUsingSkill", false);
     }
@@ -150,7 +135,7 @@ public class BossController : MonoBehaviour
         animator.SetTrigger("skill_energyball");
         InstantiateBullet(energyBallPrefab);
         isCooldown = true;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.5f);
         isCooldown = false;
     }
 
