@@ -352,4 +352,15 @@ public class TheGhost : MonoBehaviour
         }
     }
     #endregion
+
+    //Test
+    public void UpdateCoinUI()
+    {
+        TextCoin.SetText(coin.ToString());
+    }
+
+    public void UpdateItemUI(TextMeshProUGUI itemText, int itemValue)
+    {
+        itemText.text = itemValue.ToString();
+    }
 }
