@@ -42,6 +42,7 @@ public class UIManager : MonoBehaviour
     {
         Time.timeScale = 1.0f;
         loadingPanel.SetActive(true);
+        victoryPanel.SetActive(false);
         gameOverPanel.SetActive(false);
         StartCoroutine(LoadReplayLevel());
     }
