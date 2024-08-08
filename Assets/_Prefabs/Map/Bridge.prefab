@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8223610790855547928}
   - component: {fileID: 8725321682155924984}
   - component: {fileID: 2606034826877064479}
+  - component: {fileID: 4333127165059418294}
   m_Layer: 3
   m_Name: Bridge
   m_TagString: Ground
@@ -29,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 221.56, y: -2.72, z: 0}
-  m_LocalScale: {x: 0.63939, y: 0.63939, z: 0.63939}
+  m_LocalScale: {x: 1, y: 0.63939, z: 0.63939}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -143,6 +144,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26189b61d2733ac4393b36a1a68a4f4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointA: 219.35
-  pointB: 224.26
+  pointA: -35.54
+  pointB: -26.87
   speed: 1
+  bridge: {fileID: 0}
+--- !u!114 &4333127165059418294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8853818286019168708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fd44253a69f06942b4c1c51d2eb4f4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
