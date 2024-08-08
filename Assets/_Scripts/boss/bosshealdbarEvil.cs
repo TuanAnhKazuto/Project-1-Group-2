@@ -22,7 +22,7 @@ public class BossHealthBar : MonoBehaviour
         Debug.Log("Damage taken: " + amount + ", Current Health: " + currentHealth);
         if (currentHealth <= 0)
         {
-            DestroyObject(this.gameObject);
+            Destroy(this.gameObject);
         }
     }
 
