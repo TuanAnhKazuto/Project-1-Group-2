@@ -67,6 +67,7 @@ public class TheGhost : MonoBehaviour
     [SerializeField] private AudioSource attackVIPSource;
     [SerializeField] private AudioSource dashSound;
     [SerializeField] private AudioSource jumpSound;
+    [SerializeField] private AudioSource deathSound;
 
     [Header("Effect")]
     public ParticleSystem healingEffect;
