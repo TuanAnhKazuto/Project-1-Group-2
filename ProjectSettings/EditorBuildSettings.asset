@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/CutScene/CutScene.unity
     guid: e37e2ce32e587d84ea8928bfceb2be21
+  - enabled: 1
+    path: Assets/_Scenes/phim2.unity
+    guid: 2248a8246222f7843834b4c91003d318
+  - enabled: 1
+    path: Assets/_Scenes/EndGame.unity
+    guid: 2470f46a863e7a144a4398f1653497e3
   m_configObjects: {}
