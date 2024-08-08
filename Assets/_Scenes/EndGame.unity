@@ -520,7 +520,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.57007, y: -1840}
+  m_AnchoredPosition: {x: -0.57007, y: -3433}
   m_SizeDelta: {x: 1918.86, y: 808.88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1019131862
@@ -544,10 +544,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "PROJECT 1\n\nGV: Nguy\u1EC5n Ng\u1ECDc Ch\u1EA5n\n\n-----------------\n\nGA19304\nGroup
-    2\n\nPS41085 - Ph\u1EA1m Tu\u1EA5n Anh\nPS40975 - Mai \u0110\u1EE9c H\u1EADu.\r\nPS40870
-    - T\u1EA1 Th\u1EBF Tr\u01B0\u1EDDng.\r\nPS40977 - Hu\u1EF3nh V\u0103n C\u01B0\u1EDDng\r\nPS41005
-    - \u0110\u1ED7 Nguy\u1EC5n Ninh Thu\u1EADn.\r\n\n\n-----------------\n\nProject:
-    Ghost of Fukushima\n\n\n\n\n\nTHE END\n"
+    2\n\n\nPS40975 - Mai \u0110\u1EE9c H\u1EADu\nPS40870 - T\u1EA1 Th\u1EBF Tr\u01B0\u1EDDng\nPS41085
+    - Ph\u1EA1m Tu\u1EA5n Anh\nPS40977 - Hu\u1EF3nh V\u0103n C\u01B0\u1EDDng\r\nPS41005
+    - \u0110\u1ED7 Nguy\u1EC5n Ninh Thu\u1EADn.\r\n\n\n-----------------\n\n\nProject:
+    Ghost of Fukushima\n\nNhi\u1EC7m V\u1EE5 c\xE1c Th\xE0nh vi\xEAn\n\nVi\u1EBFt
+    Code\nT\u1EA5t c\u1EA3 c\xE1c th\xE0nh vi\xEAn\n\nV\u1EBD Player\nPh\u1EA1m Tu\u1EA5n
+    Anh\n\nH\u1EC7 th\u1ED1ng \u0111i\u1EC1u khi\u1EC3n\nHu\u1EF3nh V\u0103n C\u01B0\u1EDDng\r\n\nNhi\u1EC7m
+    v\u1EE5 & Item\nPh\u1EA1m Tu\u1EA5n Anh\nHu\u1EF3nh V\u0103n C\u01B0\u1EDDng\r\n\nX\u1EED
+    l\xFD logic game\nPh\u1EA1m Tu\u1EA5n Anh\nHu\u1EF3nh V\u0103n C\u01B0\u1EDDng\r\n\n\nBackground\nMai
+    \u0110\u1EE9c H\u1EADu\nT\u1EA1 Th\u1EBF Tr\u01B0\u1EDDng.\r\n\nT\xECm ki\u1EBFm
+    t\xE0i li\u1EC7u \nT\u1EA1 Th\u1EBF Tr\u01B0\u1EDDng\n\u0110\u1ED7 Nguy\u1EC5n
+    Ninh Thu\u1EADn\n\nThi\u1EBFt k\u1EBF v\xE0 x\xE2y d\u1EF1ng m\xF4i tr\u01B0\u1EDDng\nAll\n\nTHE
+    END\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
