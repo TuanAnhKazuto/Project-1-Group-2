@@ -1,42 +1,66 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 using System.Collections.Generic;
-using static UnityEditor.Progress;
 
 public class ShopManager : MonoBehaviour
 {
-    public List<Item> itemsForSale;
-    public GameObject itemPrefab;
-    public Transform itemListContent;
+    public TheGhost theGhost; // Tham chiếu đến script TheGhost
+    public TextMeshProUGUI playerGoldText;  // UI hiển thị số lượng coin của người chơi
+    public List<ShopItem> shopItems; // Danh sách các item trong shop
 
-    
-
-    void Start()
+    private void Start()
     {
-        PopulateShop();
+        if (theGhost == null)
+        {
+            Debug.LogError("TheGhost reference is not assigned!");
+        }
+        UpdateGoldText();
     }
 
-    void PopulateShop()
+    public void UpdateGoldText()
     {
-        foreach (var item in itemsForSale)
+        if (theGhost != null)
         {
-            GameObject newItem = Instantiate(itemPrefab, itemListContent);
-            newItem.transform.Find("NameText").GetComponent<Text>().text = item.itemName;
-            newItem.transform.Find("PriceText").GetComponent<Text>().text = item.itemPrice.ToString();
-            newItem.transform.Find("ItemImage").GetComponent<Image>().sprite = item.itemImage;
-            newItem.transform.Find("BuyButton").GetComponent<Button>().onClick.AddListener(() => BuyItem(item));
+            playerGoldText.text = "Gold: " + theGhost.coin.ToString();
         }
     }
 
-    void BuyItem(Item item)
+    public void BuyItem(int itemIndex)
     {
-        Debug.Log("Mua sản phẩm: " + item.itemName + " với giá " + item.itemPrice);
-       
+        if (itemIndex > 0 || itemIndex >= shopItems.Count)
+        {
+            Debug.LogError("Invalid item index!");
+            return;
+        }
+
+        ShopItem itemToBuy = shopItems[itemIndex];
+
+        if (theGhost != null && theGhost.coin >= itemToBuy.itemCost)
+        {
+            // Trừ coin
+            theGhost.coin -= itemToBuy.itemCost;
+            theGhost.UpdateCoinUI();
+
+            // Cập nhật số lượng item trong UI
+            theGhost.UpdateItemUI(itemToBuy.itemTextUI, itemToBuy.itemValue + 1);
+
+            // Cập nhật số lượng coin trên UI
+            UpdateGoldText();
+
+            Debug.Log($"Successfully bought {itemToBuy.itemName}!");
+        }
+        else
+        {
+            Debug.Log("Not enough coins!");
+        }
     }
 }
-public class Item
+
+[System.Serializable]
+public class ShopItem
 {
     public string itemName;
-    public int itemPrice;
-    public Sprite itemImage;
+    public int itemCost;
+    public TextMeshProUGUI itemTextUI; // UI để hiển thị số lượng item
+    public int itemValue; // Số lượng item hiện tại
 }
