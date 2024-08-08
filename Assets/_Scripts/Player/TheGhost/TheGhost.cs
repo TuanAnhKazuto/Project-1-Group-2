@@ -384,6 +384,5 @@ public class TheGhost : MonoBehaviour
             PlayerPrefs.DeleteKey("Onigini");
             PlayerPrefs.DeleteKey("Sakekasu");
         }
-        
     }
 }
