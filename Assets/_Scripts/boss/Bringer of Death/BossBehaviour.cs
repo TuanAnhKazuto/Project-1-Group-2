@@ -149,7 +149,6 @@ public class BossBehaviour : MonoBehaviour
         }
         else
         {
-            Debug.Log("Twist");
             rotation.y = 180;
         }
 

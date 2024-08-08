@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class BossSkill : MonoBehaviour
 {
-    // Start is called before the first frame update
+    TheGhost player;
+
     void Start()
     {
+        
         Destroy(gameObject, 1.2f); 
     }
 
