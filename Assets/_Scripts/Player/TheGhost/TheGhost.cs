@@ -80,6 +80,8 @@ public class TheGhost : MonoBehaviour
         staminaBar = GetComponent<PlayerStaminaBar>();
         playerTransform = transform;
         playerHealth = GetComponent<PlayerHealth>();
+
+        LoadData(); // Tải dữ liệu khi bắt đầu trò chơi
     }
 
     private void Update()
@@ -354,13 +356,32 @@ public class TheGhost : MonoBehaviour
     #endregion
 
     //Test
-    public void UpdateCoinUI()
+    private void SaveData()
     {
-        TextCoin.SetText(coin.ToString());
+        PlayerPrefs.SetInt("Coin", coin);
+        PlayerPrefs.SetInt("Onigiri", (int)oniginiValue);
+        PlayerPrefs.SetInt("Sakekasu", (int)sakekasuValue);
+        PlayerPrefs.Save(); // Đảm bảo dữ liệu được lưu ngay lập tức
     }
 
-    public void UpdateItemUI(TextMeshProUGUI itemText, int itemValue)
+    private void LoadData()
     {
-        itemText.text = itemValue.ToString();
+        coin = PlayerPrefs.GetInt("Coin", 0); // Giá trị mặc định là 0 nếu không có dữ liệu
+        oniginiValue = PlayerPrefs.GetInt("Onigiri", 0);
+        sakekasuValue = PlayerPrefs.GetInt("Sakekasu", 0);
+
+        // Cập nhật giao diện người dùng
+        TextCoin.SetText(coin.ToString());
+        onigiriText.text = oniginiValue.ToString();
+        sakekasuText.text = sakekasuValue.ToString();
+    }
+    private void OnDestroy()
+    {
+        SaveData(); // Lưu dữ liệu khi đối tượng bị hủy (ví dụ: chuyển cảnh)
+    }
+
+    private void OnApplicationQuit()
+    {
+        SaveData(); // Lưu dữ liệu khi ứng dụng thoát
     }
 }
