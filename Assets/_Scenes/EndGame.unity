@@ -224,7 +224,7 @@ Transform:
   m_GameObject: {fileID: 637144092}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.33760002, y: -280, z: 0}
+  m_LocalPosition: {x: -0.33760005, y: -348, z: 0}
   m_LocalScale: {x: 0.4078011, y: 0.4078011, z: 0.4078011}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  top: 27.96843
+  top: 28.79038
 --- !u!1 &734698626
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,10 +543,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "SAMPLE PROJECT\n\nGV: Nguy\u1EC5n Ng\u1ECDc Ch\u1EA5n\n\n-----------------\n\nGA19304\nGroup
-    1\n\nPS41085 - Ph\u1EA1m Tu\u1EA5n Anh\nPS42033 - Tr\u1EA7n T\u1EA5n Thi\xEAn\nPS28972
-    - Phan Xu\xE2n Ph\xFA\r\nPS41139 - Nguy\u1EC5n \u0110\u1EE9c Minh Quang\n\n-----------------\n\nProject:
-    MYSTERIOUS DARKNESS\n\n\n\n\n\nTHE END\n"
+  m_text: "PROJECT 1\n\nGV: Nguy\u1EC5n Ng\u1ECDc Ch\u1EA5n\n\n-----------------\n\nGA19304\nGroup
+    2\n\nPS41085 - Ph\u1EA1m Tu\u1EA5n Anh\nPS40975 - Mai \u0110\u1EE9c H\u1EADu.\r\nPS40870
+    - T\u1EA1 Th\u1EBF Tr\u01B0\u1EDDng.\r\nPS40977 - Hu\u1EF3nh V\u0103n C\u01B0\u1EDDng\r\nPS41005
+    - \u0110\u1ED7 Nguy\u1EC5n Ninh Thu\u1EADn.\r\n\n\n-----------------\n\nProject:
+    Ghost of Fukushima\n\n\n\n\n\nTHE END\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
