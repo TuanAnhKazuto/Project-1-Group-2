@@ -54212,7 +54212,7 @@ PrefabInstance:
     - target: {fileID: 3885293611879651405, guid: 9dcbb2bc63eacd343b1fe0c78e81ef79, type: 3}
       propertyPath: checkpointSound
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 768871530}
     - target: {fileID: 7701983163776600406, guid: 9dcbb2bc63eacd343b1fe0c78e81ef79, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.2720985
@@ -82290,6 +82290,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5259449825527658909, guid: 014abe02bf5076a4eb98cdbcf166fb3a, type: 3}
   m_PrefabInstance: {fileID: 768068487}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &768871530 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 628319715303452471, guid: 68a08daded7f1a14f9d21025d48faf1c, type: 3}
+  m_PrefabInstance: {fileID: 1795676994}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &804975062 stripped
 GameObject:
