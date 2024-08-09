@@ -23,7 +23,7 @@ public class BossFinalHealth : MonoBehaviour
     {
         if(collision.gameObject.tag == "PlayerATK")
         {
-            curHP -= 10;
+            curHP -= 5;
             bossHealth.UpdateBar(maxHP, curHP);
         }
     }

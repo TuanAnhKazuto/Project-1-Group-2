@@ -10,5 +10,11 @@ public class HealthBarBoss : MonoBehaviour
     public void UpdateBar(int maxHP, int curHP)
     {
         fillBar.fillAmount = (float)curHP / (float)maxHP;
+
+        if(curHP <= 0)
+        {
+            curHP = 0;
+            Destroy(gameObject);
+        }
     }
 }
