@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -16,14 +17,18 @@ public class BossBehaviour : MonoBehaviour
     [HideInInspector] public bool inRange; //Check if Player is in range
     public GameObject hotZone;
     public GameObject triggerArea;
+    public GameObject bossSkill;
     #endregion
 
     #region Private Variables
     private Animator anim;
+    private TheGhost player;
     private float distance; //Store the distance b/w enemy and player
     private bool attackMode;
     private bool cooling; //Check if Enemy is cooling after attack
     private float intTimer;
+    private bool isUesSkill;
+    private BossFinalHealth bossHealth;
     #endregion
 
     void Awake()
@@ -31,13 +36,26 @@ public class BossBehaviour : MonoBehaviour
         SelectTarget();
         intTimer = timer; //Store the inital value of timer
         anim = GetComponent<Animator>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponentInParent<TheGhost>();
+        bossHealth = GetComponent<BossFinalHealth>();
+    }
+
+    private void Start()
+    {
+        if (bossHealth.isDeading) return;
+        InvokeRepeating("UseSkill", 0.5f, 3f);
     }
 
     void Update()
     {
-        if (!attackMode)
+        if (!attackMode || !anim.GetCurrentAnimatorStateInfo(0).IsName("BossThunderAttack") || !bossHealth.isDeading)
         {
             Move();
+        }
+
+        if(bossHealth.isDeading)
+        {
+            transform.position = new Vector2(0,0);
         }
 
         if (!InsideOfLimits() && !inRange && !anim.GetCurrentAnimatorStateInfo(0).IsName("AttackNormal"))
@@ -45,7 +63,7 @@ public class BossBehaviour : MonoBehaviour
             SelectTarget();
         }
 
-        if (inRange)
+        if (inRange && !bossHealth.isDeading)
         {
             EnemyLogic();
         }
@@ -113,6 +131,18 @@ public class BossBehaviour : MonoBehaviour
     public void TriggerCooling()
     {
         cooling = true;
+    }
+
+    public void UseSkill()
+    {
+        anim.SetBool("UseSkill", true);
+        GameObject skill = Instantiate(bossSkill, new Vector3(player.transform.position.x, player.transform.position.y + 2.47f, player.transform.position.z), Quaternion.identity);
+        Invoke("StopUseSkill", 0.3f);
+    }
+
+    private void StopUseSkill()
+    {
+        anim.SetBool("UseSkill", false);
     }
 
     private bool InsideOfLimits()
