@@ -69,7 +69,7 @@ public class TheGhost : MonoBehaviour
     [SerializeField] private AudioSource jumpSound;
     [SerializeField] private AudioSource deathSound;
     [SerializeField] private AudioSource healingSound;
-    [SerializeField] private AudioSource recoverSound;
+    [SerializeField] private AudioSource recoverySound;
 
     [Header("Effect")]
     public ParticleSystem healingEffect;
@@ -351,6 +351,7 @@ public class TheGhost : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.C))
             {
                 healingEffect.Play();
+                healingSound.Play();
                 playerHealth.HealingInBar(30);
                 oniginiValue--;
                 onigiriText.text = oniginiValue.ToString();
@@ -365,6 +366,7 @@ public class TheGhost : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.V))
             {
                 recoveryEffect.Play();
+                recoverySound.Play();
                 staminaBar.RecoveryInBar(25);
                 sakekasuValue--;
                 sakekasuText.text = sakekasuValue.ToString();

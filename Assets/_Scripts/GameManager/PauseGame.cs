@@ -35,6 +35,7 @@ public class PauseGame : MonoBehaviour
                 ResumeGame();
             }
         }
+
     }
 
     public void PauseGamePanel()
@@ -70,6 +71,7 @@ public class PauseGame : MonoBehaviour
             player.coin -= 20;
             player.oniginiValue += 1;
             player.onigiriText.text = player.oniginiValue.ToString();
+            player.TextCoin.text = player.coin.ToString();
         }
         else
         {
@@ -83,6 +85,7 @@ public class PauseGame : MonoBehaviour
             player.coin -= 20;
             player.sakekasuValue += 1;
             player.sakekasuText.text = player.sakekasuValue.ToString();
+            player.TextCoin.text = player.coin.ToString();
         }
         else
         {
