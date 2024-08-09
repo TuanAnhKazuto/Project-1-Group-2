@@ -54184,6 +54184,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eec342a9ef029d84eb157176ec23cc7f, type: 3}
+--- !u!1 &549834379 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8495095363901313527, guid: eec342a9ef029d84eb157176ec23cc7f, type: 3}
+  m_PrefabInstance: {fileID: 549834378}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &550174651
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -97850,7 +97855,7 @@ PrefabInstance:
     - target: {fileID: 7730532670543162171, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
       propertyPath: questPanel_Men
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 549834379}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
