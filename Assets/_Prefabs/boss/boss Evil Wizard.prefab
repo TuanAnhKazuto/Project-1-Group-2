@@ -135,7 +135,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 2285409155624488437}
-  maxHealth: 102.1
+  maxHealth: 100
+  objectToAppear: {fileID: 1147974861569273889, guid: 4459d98ee38eddd49b86aeed4c097296, type: 3}
+  tori: {fileID: 1147974861569273889, guid: 4459d98ee38eddd49b86aeed4c097296, type: 3}
 --- !u!114 &-1749723076405794007
 MonoBehaviour:
   m_ObjectHideFlags: 0
