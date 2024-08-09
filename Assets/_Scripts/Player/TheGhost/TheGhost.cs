@@ -70,6 +70,7 @@ public class TheGhost : MonoBehaviour
     [SerializeField] private AudioSource deathSound;
     [SerializeField] private AudioSource healingSound;
     [SerializeField] private AudioSource recoverySound;
+    [SerializeField] private AudioSource takeCoinSound;
 
     [Header("Effect")]
     public ParticleSystem healingEffect;
@@ -315,6 +316,7 @@ public class TheGhost : MonoBehaviour
     {
         if (other.CompareTag("Coin"))
         {
+            takeCoinSound.Play();
             coin++;
             TextCoin.SetText(coin.ToString());
             Destroy(other.gameObject);
