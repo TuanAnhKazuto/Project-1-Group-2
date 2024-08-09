@@ -105172,6 +105172,18 @@ PrefabInstance:
       value: Torri
       objectReference: {fileID: 0}
     - target: {fileID: 1558661810946648837, guid: 4459d98ee38eddd49b86aeed4c097296, type: 3}
+      propertyPath: m_Color.b
+      value: 0.06988807
+      objectReference: {fileID: 0}
+    - target: {fileID: 1558661810946648837, guid: 4459d98ee38eddd49b86aeed4c097296, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1558661810946648837, guid: 4459d98ee38eddd49b86aeed4c097296, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8113208
+      objectReference: {fileID: 0}
+    - target: {fileID: 1558661810946648837, guid: 4459d98ee38eddd49b86aeed4c097296, type: 3}
       propertyPath: m_SortingLayer
       value: 3
       objectReference: {fileID: 0}
@@ -105205,11 +105217,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4037593220800836747, guid: 4459d98ee38eddd49b86aeed4c097296, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 143.43
+      value: 143.49
       objectReference: {fileID: 0}
     - target: {fileID: 4037593220800836747, guid: 4459d98ee38eddd49b86aeed4c097296, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.58
+      value: 14.56
       objectReference: {fileID: 0}
     - target: {fileID: 4037593220800836747, guid: 4459d98ee38eddd49b86aeed4c097296, type: 3}
       propertyPath: m_LocalPosition.z
