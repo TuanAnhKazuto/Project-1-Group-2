@@ -109859,6 +109859,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheGhost
       objectReference: {fileID: 0}
+    - target: {fileID: 3002089212737262188, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3636734017242840280, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.4
@@ -109924,9 +109928,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 689824067}
     - target: {fileID: 5652264241565298241, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
+      propertyPath: healingSound
+      value: 
+      objectReference: {fileID: 1807786957}
+    - target: {fileID: 5652264241565298241, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
       propertyPath: sakekasuText
       value: 
       objectReference: {fileID: 1010800144}
+    - target: {fileID: 5652264241565298241, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
+      propertyPath: recoverySound
+      value: 
+      objectReference: {fileID: 1807786958}
     - target: {fileID: 5652264241565298241, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
       propertyPath: attackVIPSource
       value: 
@@ -109947,6 +109959,10 @@ PrefabInstance:
       propertyPath: gameOverPanel
       value: 
       objectReference: {fileID: 1250084624}
+    - target: {fileID: 7730532670543162171, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -110098,6 +110114,16 @@ PrefabInstance:
 --- !u!82 &1807786956 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 6283276869134239080, guid: 68a08daded7f1a14f9d21025d48faf1c, type: 3}
+  m_PrefabInstance: {fileID: 1807786955}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1807786957 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1302522446065949447, guid: 68a08daded7f1a14f9d21025d48faf1c, type: 3}
+  m_PrefabInstance: {fileID: 1807786955}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1807786958 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1987574938618018109, guid: 68a08daded7f1a14f9d21025d48faf1c, type: 3}
   m_PrefabInstance: {fileID: 1807786955}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1812780879
@@ -113546,6 +113572,8 @@ SceneRoots:
   - {fileID: 810101049}
   - {fileID: 359520768}
   - {fileID: 808811640}
+  - {fileID: 634722639}
+  - {fileID: 1083460848}
   - {fileID: 1802094915}
   - {fileID: 1619692507}
   - {fileID: 719148800}
@@ -113560,10 +113588,8 @@ SceneRoots:
   - {fileID: 1807786955}
   - {fileID: 584209026}
   - {fileID: 193672912}
-  - {fileID: 1083460848}
   - {fileID: 159468989}
   - {fileID: 1156142618}
   - {fileID: 552702117}
-  - {fileID: 634722639}
   - {fileID: 184222027}
   - {fileID: 1116530547}
