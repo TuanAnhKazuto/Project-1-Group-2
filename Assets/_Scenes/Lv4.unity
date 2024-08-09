@@ -97890,9 +97890,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1078368523}
     - target: {fileID: 5652264241565298241, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
+      propertyPath: healingSound
+      value: 
+      objectReference: {fileID: 1795676995}
+    - target: {fileID: 5652264241565298241, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
       propertyPath: sakekasuText
       value: 
       objectReference: {fileID: 1686027511}
+    - target: {fileID: 5652264241565298241, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
+      propertyPath: recoverySound
+      value: 
+      objectReference: {fileID: 1795676996}
     - target: {fileID: 5652264241565298241, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
       propertyPath: attackVIPSource
       value: 
@@ -104399,6 +104407,21 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68a08daded7f1a14f9d21025d48faf1c, type: 3}
+--- !u!82 &1795676995 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1302522446065949447, guid: 68a08daded7f1a14f9d21025d48faf1c, type: 3}
+  m_PrefabInstance: {fileID: 1795676994}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1795676996 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1987574938618018109, guid: 68a08daded7f1a14f9d21025d48faf1c, type: 3}
+  m_PrefabInstance: {fileID: 1795676994}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1795676997 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4164790898007553324, guid: 68a08daded7f1a14f9d21025d48faf1c, type: 3}
+  m_PrefabInstance: {fileID: 1795676994}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1799896558 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1479834645282042021, guid: 20cd082783cc8ee4eac512c992b31ab0, type: 3}
@@ -105157,9 +105180,17 @@ PrefabInstance:
       value: -1921853287
       objectReference: {fileID: 0}
     - target: {fileID: 2423019030092525039, guid: 4459d98ee38eddd49b86aeed4c097296, type: 3}
+      propertyPath: mainSound
+      value: 
+      objectReference: {fileID: 1471184876}
+    - target: {fileID: 2423019030092525039, guid: 4459d98ee38eddd49b86aeed4c097296, type: 3}
       propertyPath: victoryPanel
       value: 
       objectReference: {fileID: 970453862}
+    - target: {fileID: 2423019030092525039, guid: 4459d98ee38eddd49b86aeed4c097296, type: 3}
+      propertyPath: victoryAudioSource
+      value: 
+      objectReference: {fileID: 1795676997}
     - target: {fileID: 4037593220800836747, guid: 4459d98ee38eddd49b86aeed4c097296, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4112457
