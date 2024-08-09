@@ -21,7 +21,7 @@ public class EndGame : MonoBehaviour
 
     IEnumerator TheEnd()
     {
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(20f);
         SceneManager.LoadScene(0);
     }
 }
