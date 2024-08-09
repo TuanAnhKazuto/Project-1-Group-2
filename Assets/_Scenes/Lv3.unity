@@ -2179,6 +2179,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lamp
       objectReference: {fileID: 0}
+    - target: {fileID: 3885293611879651405, guid: 9dcbb2bc63eacd343b1fe0c78e81ef79, type: 3}
+      propertyPath: checkpointSound
+      value: 
+      objectReference: {fileID: 1990292729}
     - target: {fileID: 7701983163776600406, guid: 9dcbb2bc63eacd343b1fe0c78e81ef79, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -6675,9 +6679,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2423019030092525039, guid: 4459d98ee38eddd49b86aeed4c097296, type: 3}
+      propertyPath: mainSound
+      value: 
+      objectReference: {fileID: 1064853602}
+    - target: {fileID: 2423019030092525039, guid: 4459d98ee38eddd49b86aeed4c097296, type: 3}
       propertyPath: victoryPanel
       value: 
       objectReference: {fileID: 291664338}
+    - target: {fileID: 2423019030092525039, guid: 4459d98ee38eddd49b86aeed4c097296, type: 3}
+      propertyPath: victoryAudioSource
+      value: 
+      objectReference: {fileID: 1064853610}
     - target: {fileID: 4037593220800836747, guid: 4459d98ee38eddd49b86aeed4c097296, type: 3}
       propertyPath: m_LocalPosition.x
       value: 308.79572
@@ -12214,7 +12226,7 @@ Transform:
   m_GameObject: {fileID: 900132173}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.65671, y: 14.75, z: 0}
+  m_LocalPosition: {x: 17.65671, y: 16.91, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13541,6 +13553,51 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68a08daded7f1a14f9d21025d48faf1c, type: 3}
+--- !u!82 &1064853602 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6283276869134239080, guid: 68a08daded7f1a14f9d21025d48faf1c, type: 3}
+  m_PrefabInstance: {fileID: 1064853601}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1064853603 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1302522446065949447, guid: 68a08daded7f1a14f9d21025d48faf1c, type: 3}
+  m_PrefabInstance: {fileID: 1064853601}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1064853604 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1987574938618018109, guid: 68a08daded7f1a14f9d21025d48faf1c, type: 3}
+  m_PrefabInstance: {fileID: 1064853601}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1064853605 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5196627510645046880, guid: 68a08daded7f1a14f9d21025d48faf1c, type: 3}
+  m_PrefabInstance: {fileID: 1064853601}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1064853606 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1746029294917846577, guid: 68a08daded7f1a14f9d21025d48faf1c, type: 3}
+  m_PrefabInstance: {fileID: 1064853601}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1064853607 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3237377158396638948, guid: 68a08daded7f1a14f9d21025d48faf1c, type: 3}
+  m_PrefabInstance: {fileID: 1064853601}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1064853608 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7749890504175806969, guid: 68a08daded7f1a14f9d21025d48faf1c, type: 3}
+  m_PrefabInstance: {fileID: 1064853601}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1064853609 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1026825772788968161, guid: 68a08daded7f1a14f9d21025d48faf1c, type: 3}
+  m_PrefabInstance: {fileID: 1064853601}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1064853610 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4164790898007553324, guid: 68a08daded7f1a14f9d21025d48faf1c, type: 3}
+  m_PrefabInstance: {fileID: 1064853601}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1065384984 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8789945638459105455, guid: f9ff68862306a2e4ca2843caa6f450f5, type: 3}
@@ -131999,11 +132056,15 @@ PrefabInstance:
     - target: {fileID: 5652264241565298241, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
       propertyPath: dashSound
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1064853607}
     - target: {fileID: 5652264241565298241, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
       propertyPath: jumpSound
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1064853606}
+    - target: {fileID: 5652264241565298241, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 1064853605}
     - target: {fileID: 5652264241565298241, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
       propertyPath: onigiriText
       value: 
@@ -132011,19 +132072,35 @@ PrefabInstance:
     - target: {fileID: 5652264241565298241, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
       propertyPath: attackSource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1064853609}
+    - target: {fileID: 5652264241565298241, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
+      propertyPath: healingSound
+      value: 
+      objectReference: {fileID: 1064853603}
     - target: {fileID: 5652264241565298241, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
       propertyPath: sakekasuText
       value: 
       objectReference: {fileID: 300041676}
     - target: {fileID: 5652264241565298241, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
+      propertyPath: recoverySound
+      value: 
+      objectReference: {fileID: 1064853604}
+    - target: {fileID: 5652264241565298241, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
       propertyPath: attackVIPSource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1064853608}
     - target: {fileID: 5772735567670939841, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
       propertyPath: healhtBar
       value: 
       objectReference: {fileID: 1725694613}
+    - target: {fileID: 5772735567670939841, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
+      propertyPath: mainSound
+      value: 
+      objectReference: {fileID: 1064853602}
+    - target: {fileID: 5772735567670939841, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 1064853605}
     - target: {fileID: 5772735567670939841, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
       propertyPath: gameOverPanel
       value: 
