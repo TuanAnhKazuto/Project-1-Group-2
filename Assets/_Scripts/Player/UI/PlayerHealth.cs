@@ -61,7 +61,12 @@ public class PlayerHealth : MonoBehaviour
 
         if(other.gameObject.tag == "BossATK")
         {
-            TakeDamage(35);
+            TakeDamage(20);
+        }
+
+        if(other.gameObject.tag == "BossFinalSkill")
+        {
+            TakeDamage(25);
         }
     }
 
@@ -113,7 +118,7 @@ public class PlayerHealth : MonoBehaviour
         isDeading = true;
         rb.simulated = false;
         animator.SetBool("isDead", true);
-        StartCoroutine(WaitForAnimationAndStopGame("Dead"));
+        StartCoroutine(WaitForAnimationAndStopGame("Die"));
     }
 
     private IEnumerator WaitForAnimationAndStopGame(string animationName)
