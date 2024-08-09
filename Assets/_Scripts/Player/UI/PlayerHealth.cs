@@ -12,7 +12,7 @@ public class PlayerHealth : MonoBehaviour
     [HideInInspector] public int curHP;
     private float safeTime = 0.7f;
     private float _safeTimeCoolDown;
-    public bool isDeading = false;
+    [HideInInspector] public bool isDeading = false;
 
     public HealthBar healhtBar;
     TheGhost player;
