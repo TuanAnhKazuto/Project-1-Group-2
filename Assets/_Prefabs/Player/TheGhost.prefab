@@ -4912,6 +4912,7 @@ MonoBehaviour:
   deathSound: {fileID: 0}
   healingSound: {fileID: 0}
   recoverySound: {fileID: 0}
+  takeCoinSound: {fileID: 0}
   healingEffect: {fileID: 6599705002405835354}
   recoveryEffect: {fileID: 1469307549442458512}
 --- !u!114 &5772735567670939841
@@ -5013,7 +5014,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2597536360977779204}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32a508e4954154b4a95bee2ee6e16a4d, type: 3}
   m_Name: 
@@ -5027,7 +5028,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2597536360977779204}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e10751a7033aaa0498256ef2900e098b, type: 3}
   m_Name: 
