@@ -259,6 +259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1236111211440951050}
   - component: {fileID: 6101049736367421150}
+  - component: {fileID: 3762246432869348050}
   - component: {fileID: 4603506826422628922}
   - component: {fileID: 6588681790582263766}
   m_Layer: 0
@@ -310,6 +311,21 @@ MonoBehaviour:
   inRange: 0
   hotZone: {fileID: 6817582081184739673}
   triggerArea: {fileID: 6631295988418651881}
+  bossSkill: {fileID: 42844688978110958, guid: 74444463748d22a4ca1a8e557e5e6332, type: 3}
+--- !u!114 &3762246432869348050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6427578200529511993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 054191fc161f77c45b8991f19feefaf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curHP: 0
+  isDeading: 0
 --- !u!50 &4603506826422628922
 Rigidbody2D:
   serializedVersion: 4

@@ -20,4 +20,13 @@ public class TriggerAreaCheck : MonoBehaviour
             bossParent.hotZone.SetActive(true);
         }
     }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            bossParent.UseSkill();
+            Debug.Log("Skill!!!");
+        }
+    }
 }

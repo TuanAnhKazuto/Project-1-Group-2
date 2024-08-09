@@ -12,7 +12,7 @@ public class PlayerHealth : MonoBehaviour
     [HideInInspector] public int curHP;
     private float safeTime = 0.7f;
     private float _safeTimeCoolDown;
-    [HideInInspector] public bool isDeading = false;
+    public bool isDeading = false;
 
     public HealthBar healhtBar;
     TheGhost player;
@@ -21,7 +21,7 @@ public class PlayerHealth : MonoBehaviour
     Rigidbody2D rb;
 
     [SerializeField] private GameObject gameOverPanel;
-    [SerializeField] private AudioSource gameOverSound;
+    [SerializeField] private AudioSource deathSound;
     [SerializeField] private AudioSource mainSound;
 
     private void Start()
@@ -61,7 +61,12 @@ public class PlayerHealth : MonoBehaviour
 
         if(other.gameObject.tag == "BossATK")
         {
-            TakeDamage(35);
+            TakeDamage(20);
+        }
+
+        if(other.gameObject.tag == "BossFinalSkill")
+        {
+            TakeDamage(25);
         }
     }
 
@@ -113,7 +118,7 @@ public class PlayerHealth : MonoBehaviour
         isDeading = true;
         rb.simulated = false;
         animator.SetBool("isDead", true);
-        StartCoroutine(WaitForAnimationAndStopGame("Dead"));
+        StartCoroutine(WaitForAnimationAndStopGame("Die"));
     }
 
     private IEnumerator WaitForAnimationAndStopGame(string animationName)
@@ -124,7 +129,7 @@ public class PlayerHealth : MonoBehaviour
         // Lấy thời lượng của animation
         float animationLength = GetAnimationLength(animationName);
         yield return new WaitForSeconds(animationLength);
-        gameOverSound.Play();
+        deathSound.Play();
         mainSound.Stop();
         gameOverPanel.SetActive(true);
         Time.timeScale = 0f;
