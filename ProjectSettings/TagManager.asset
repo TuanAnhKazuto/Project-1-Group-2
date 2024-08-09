@@ -22,6 +22,9 @@ TagManager:
   - Next
   - phim2
   - End
+  - BossHealth
+  - BossFinalSkill
+  - UIManager
   layers:
   - Default
   - TransparentFX

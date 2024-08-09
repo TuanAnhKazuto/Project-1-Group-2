@@ -27,8 +27,6 @@ public class UIManager : MonoBehaviour
         victoryPanel.SetActive(false);
         loadingPanel.SetActive(true);
         StartCoroutine(LoadNextLevel());
-
-
     }
     public void BackToMainMenu()
     {

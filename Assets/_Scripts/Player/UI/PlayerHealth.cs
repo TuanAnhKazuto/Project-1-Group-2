@@ -12,7 +12,7 @@ public class PlayerHealth : MonoBehaviour
     [HideInInspector] public int curHP;
     private float safeTime = 0.7f;
     private float _safeTimeCoolDown;
-    public bool isDeading = false;
+    [HideInInspector] public bool isDeading = false;
 
     public HealthBar healhtBar;
     TheGhost player;
@@ -61,7 +61,12 @@ public class PlayerHealth : MonoBehaviour
 
         if(other.gameObject.tag == "BossATK")
         {
-            TakeDamage(35);
+            TakeDamage(20);
+        }
+
+        if(other.gameObject.tag == "BossFinalSkill")
+        {
+            TakeDamage(25);
         }
     }
 
@@ -113,7 +118,7 @@ public class PlayerHealth : MonoBehaviour
         isDeading = true;
         rb.simulated = false;
         animator.SetBool("isDead", true);
-        StartCoroutine(WaitForAnimationAndStopGame("Dead"));
+        StartCoroutine(WaitForAnimationAndStopGame("Die"));
     }
 
     private IEnumerator WaitForAnimationAndStopGame(string animationName)
