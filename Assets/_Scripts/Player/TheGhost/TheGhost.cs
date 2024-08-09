@@ -53,12 +53,12 @@ public class TheGhost : MonoBehaviour
 
     //Take item
     [Header("Item")]
-    public int coin = 0;
-    public TextMeshProUGUI TextCoin;
-    private float oniginiValue;
-    private float sakekasuValue;
-    [SerializeField] private TextMeshProUGUI onigiriText;
-    [SerializeField] private TextMeshProUGUI sakekasuText;
+    [HideInInspector] public int coin = 0;
+    [HideInInspector] public TextMeshProUGUI TextCoin;
+    [HideInInspector] public float oniginiValue;
+    [HideInInspector] public float sakekasuValue;
+    [HideInInspector] public TextMeshProUGUI onigiriText;
+    [HideInInspector] public TextMeshProUGUI sakekasuText;
     PlayerHealth playerHealth;
 
     //Audio
@@ -68,6 +68,8 @@ public class TheGhost : MonoBehaviour
     [SerializeField] private AudioSource dashSound;
     [SerializeField] private AudioSource jumpSound;
     [SerializeField] private AudioSource deathSound;
+    [SerializeField] private AudioSource healingSound;
+    [SerializeField] private AudioSource recoverSound;
 
     [Header("Effect")]
     public ParticleSystem healingEffect;
