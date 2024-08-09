@@ -43,7 +43,7 @@ public class BossBehaviour : MonoBehaviour
     private void Start()
     {
         if (bossHealth.isDeading) return;
-        InvokeRepeating("UseSkill", 0.5f, 3f);
+        InvokeRepeating("UseSkill", 1f, 3f);
     }
 
     void Update()
