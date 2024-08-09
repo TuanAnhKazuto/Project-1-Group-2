@@ -109940,6 +109940,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1807786958}
     - target: {fileID: 5652264241565298241, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
+      propertyPath: takeCoinSound
+      value: 
+      objectReference: {fileID: 1807786959}
+    - target: {fileID: 5652264241565298241, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
       propertyPath: attackVIPSource
       value: 
       objectReference: {fileID: 200158759}
@@ -110124,6 +110128,11 @@ AudioSource:
 --- !u!82 &1807786958 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 1987574938618018109, guid: 68a08daded7f1a14f9d21025d48faf1c, type: 3}
+  m_PrefabInstance: {fileID: 1807786955}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1807786959 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8594440387572862783, guid: 68a08daded7f1a14f9d21025d48faf1c, type: 3}
   m_PrefabInstance: {fileID: 1807786955}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1812780879

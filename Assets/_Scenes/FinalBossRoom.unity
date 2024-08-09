@@ -15523,6 +15523,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68a08daded7f1a14f9d21025d48faf1c, type: 3}
+--- !u!82 &1503377074 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8594440387572862783, guid: 68a08daded7f1a14f9d21025d48faf1c, type: 3}
+  m_PrefabInstance: {fileID: 1503377073}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1531217762
 GameObject:
   m_ObjectHideFlags: 0
@@ -15968,6 +15973,10 @@ PrefabInstance:
       propertyPath: recoverySound
       value: 
       objectReference: {fileID: 2013984178}
+    - target: {fileID: 5652264241565298241, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
+      propertyPath: takeCoinSound
+      value: 
+      objectReference: {fileID: 1503377074}
     - target: {fileID: 5652264241565298241, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
       propertyPath: attackVIPSource
       value: 

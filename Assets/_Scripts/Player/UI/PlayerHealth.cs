@@ -118,7 +118,7 @@ public class PlayerHealth : MonoBehaviour
         isDeading = true;
         rb.simulated = false;
         animator.SetBool("isDead", true);
-        StartCoroutine(WaitForAnimationAndStopGame("Die"));
+        StartCoroutine(WaitForAnimationAndStopGame("Dead"));
     }
 
     private IEnumerator WaitForAnimationAndStopGame(string animationName)

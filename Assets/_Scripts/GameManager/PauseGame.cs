@@ -52,6 +52,12 @@ public class PauseGame : MonoBehaviour
         Time.timeScale = 1f;
     }
 
+    public void ClosePanel()
+    {
+        isPauseGame = false;
+        pausePanel.SetActive(false);
+    }
+
     public void ShopPanel()
     {
         shopPanel.SetActive(true);
