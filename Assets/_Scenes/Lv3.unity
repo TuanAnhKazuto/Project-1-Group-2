@@ -2923,6 +2923,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5259449825527658909, guid: 014abe02bf5076a4eb98cdbcf166fb3a, type: 3}
   m_PrefabInstance: {fileID: 1300982140}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &219351392 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8594440387572862783, guid: 68a08daded7f1a14f9d21025d48faf1c, type: 3}
+  m_PrefabInstance: {fileID: 1064853601}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &222340831 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8789945638459105455, guid: f9ff68862306a2e4ca2843caa6f450f5, type: 3}
@@ -132101,6 +132106,10 @@ PrefabInstance:
       propertyPath: recoverySound
       value: 
       objectReference: {fileID: 1064853604}
+    - target: {fileID: 5652264241565298241, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
+      propertyPath: takeCoinSound
+      value: 
+      objectReference: {fileID: 219351392}
     - target: {fileID: 5652264241565298241, guid: abf78e45bb5ca074b85a32c7c9dbff25, type: 3}
       propertyPath: attackVIPSource
       value: 
